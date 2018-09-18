@@ -5,7 +5,6 @@
   "description": "Material Components Web for RSCSS",
   "license": "MIT",
   "main": "index.js",
-  "authoer": "",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RSMDC/material-components-web.git"

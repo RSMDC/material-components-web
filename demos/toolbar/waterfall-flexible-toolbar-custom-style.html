@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="/ready.js"></script>
     <style>
-      .demo-custom-scroll-title {
+      .mdc-toolbar > .row > .section > .demo-custom-scroll-title {
         line-height: 130%;
         margin-left: 0;
       }
@@ -40,17 +40,17 @@
         --mdc-toolbar-ratio-to-extend-flexible: 2;
         background-color: rgb(255, 64, 129);
       }
-      #my-flexible-header .mdc-toolbar__title {
+      #my-flexible-header .title {
         font-size: 5rem;
         transform: translateY(-30px);
       }
     </style>
   </head>
   <body class="mdc-typography">
-    <header class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall mdc-toolbar--flexible demo-toolbar" id="my-flexible-header">
-      <div class="mdc-toolbar__row">
-        <section class="mdc-toolbar__section mdc-toolbar__section--align-center">
-          <span class="mdc-toolbar__title demo-custom-scroll-title">Hey!</span>
+    <header class="mdc-toolbar -fixed -waterfall -flexible demo-toolbar" id="my-flexible-header">
+      <div class="row">
+        <section class="section -aligncenter">
+          <span class="title demo-custom-scroll-title">Hey!</span>
         </section>
       </div>
     </header>
@@ -132,7 +132,7 @@
         var endTransY = 0;
         var ratioSpan = document.querySelector("#ratio");
         var myFlexibleHeader = document.querySelector("#my-flexible-header");
-        var myFlexibleHeaderTitle = document.querySelector("#my-flexible-header .mdc-toolbar__title");
+        var myFlexibleHeaderTitle = document.querySelector("#my-flexible-header .title");
         var toolbar = mdc.toolbar.MDCToolbar.attachTo(document.querySelector('.mdc-toolbar'));
         toolbar.listen('MDCToolbar:change', function(evt) {
           var flexibleExpansionRatio = evt.detail.flexibleExpansionRatio;

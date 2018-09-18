@@ -34,29 +34,29 @@
   @include mdc-states(on-secondary);
 }
 
-.mdc-fab--mini {
+.mdc-fab.-mini {
   @include mdc-fab--mini_;
 }
 
-.mdc-fab--extended {
+.mdc-fab.-extended {
   @include mdc-fab--extended_;
 }
 
-.mdc-fab__label {
+.mdc-fab > .label {
   @include mdc-fab--label_;
 }
 
-.mdc-fab__icon {
+.mdc-fab > .icon {
   @include mdc-fab__icon_;
 }
 
 // Increase specificity for FAB icon styles that need to override styles defined for .material-icons
 // (which is loaded separately so the order of CSS definitions is not guaranteed)
-.mdc-fab .mdc-fab__icon {
+.mdc-fab > .icon {
   @include mdc-fab__icon-overrides_;
 }
 
-.mdc-fab--exited {
+.mdc-fab.-exited {
   @include mdc-fab--exited_;
 }
 

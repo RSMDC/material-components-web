@@ -54,11 +54,11 @@
   z-index: 1;
 }
 
-.mdc-tab--min-width {
+.mdc-tab.-minwidth {
   flex: 0 1 auto;
 }
 
-.mdc-tab__ripple {
+.mdc-tab > .tabripple {
   @include mdc-ripple-surface;
   @include mdc-ripple-radius-bounded;
   @include mdc-states(primary);
@@ -71,7 +71,7 @@
   overflow: hidden;
 }
 
-.mdc-tab__content {
+.mdc-tab > .content {
   @include mdc-tab-indicator-surface;
 
   display: flex;
@@ -81,13 +81,13 @@
   pointer-events: none;
 }
 
-.mdc-tab__text-label,
-.mdc-tab__icon {
+.mdc-tab > .content > .textlabel,
+.mdc-tab > .content > .icon {
   transition: 150ms color linear, 150ms opacity linear;
   z-index: 2;
 }
 
-.mdc-tab__text-label {
+.mdc-tab > .content > .textlabel {
   display: inline-block;
   opacity: $mdc-tab-text-label-opacity;
   // Setting line-height here overrides the line-height from the typography
@@ -97,42 +97,42 @@
   line-height: 1;
 }
 
-.mdc-tab__icon {
+.mdc-tab > .content > .icon {
   width: $mdc-tab-icon-size;
   height: $mdc-tab-icon-size;
   opacity: $mdc-tab-icon-opacity;
 }
 
-.mdc-tab--stacked {
+.mdc-tab.-stacked {
   height: $mdc-tab-stacked-height;
 }
 
-.mdc-tab--stacked .mdc-tab__content {
+.mdc-tab.-stacked > .content {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 
-.mdc-tab--stacked .mdc-tab__icon {
+.mdc-tab.-stacked > .content > .icon {
   padding-top: 12px;
 }
 
-.mdc-tab--stacked .mdc-tab__text-label {
+.mdc-tab.-stacked > .content > .textlabel {
   padding-bottom: 16px;
 }
 
-.mdc-tab--active {
+.mdc-tab.-active {
   @include mdc-tab-text-label-color(primary);
   @include mdc-tab-icon-color(primary);
 
-  .mdc-tab__text-label,
-  .mdc-tab__icon {
+  > .content > .textlabel,
+  > .content > .icon {
     transition-delay: 100ms;
     opacity: 1;
   }
 }
 
-.mdc-tab:not(.mdc-tab--stacked) .mdc-tab__icon + .mdc-tab__text-label {
+.mdc-tab:not(.-stacked) > .content > .icon + .textlabel {
   @include mdc-rtl-reflexive-box(padding, left, 8px);
 }
 

@@ -34,19 +34,19 @@
   </head>
   <body class="mdc-typography demo-body">
     <header id="demo-top-app-bar" class="mdc-top-app-bar">
-      <div class="mdc-top-app-bar__row">
-        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-          <a href="#" class="material-icons mdc-top-app-bar__navigation-icon">menu</a>
-          <span class="mdc-top-app-bar__title">San Francisco, CA</span>
+      <div class="row">
+        <section class="section -alignstart">
+          <a href="#" class="material-icons navicon">menu</a>
+          <span class="title">San Francisco, CA</span>
         </section>
-        <section id="iconSection" class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
-          <a href="#" id="right-item" class="material-icons mdc-top-app-bar__action-item" aria-label="Download" alt="Download">file_download</a>
+        <section id="iconSection" class="section -alignend">
+          <a href="#" id="right-item" class="material-icons actionitem" aria-label="Download" alt="Download">file_download</a>
         </section>
       </div>
     </header>
 
     <main class="demo-main">
-      <div id="content-main" class="mdc-top-app-bar--fixed-adjust">
+      <div id="content-main" class="mdc-top-app-bar-fixed-adjust">
         <p class="demo-paragraph">
           Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
         </p>
@@ -124,10 +124,10 @@
     </main>
 
     <div class="demo-controls-container" dir="ltr">
-      <h3 class="mdc-typography--headline6">Demo Controls</h3>
+      <h3 class="typoheadline6">Demo Controls</h3>
       <div class="demo-row">
         <div class="demo-col">
-          <span class="mdc-typography--subtitle1 demo-options-heading">Common Options</span>
+          <span class="typosubtitle1 demo-options-heading">Common Options</span>
           <div>
             <input type="checkbox" id="rtl-checkbox"/>
             <label for="rtl-checkbox">RTL</label>
@@ -138,7 +138,7 @@
           </div>
         </div>
         <div class="demo-col">
-          <span class="mdc-typography--subtitle1 demo-options-heading">Top App Bar Specific Options</span>
+          <span class="typosubtitle1 demo-options-heading">Top App Bar Specific Options</span>
           <div>
             <input type="checkbox" id="dense-checkbox"/>
             <label for="dense-checkbox">Dense</label>
@@ -153,7 +153,7 @@
           </div>
         </div>
         <div class="demo-col">
-          <span class="mdc-typography--subtitle1 demo-options-heading">Short Top App Bar Specific Options</span>
+          <span class="typosubtitle1 demo-options-heading">Short Top App Bar Specific Options</span>
           <div>
             <input type="checkbox" id="short-checkbox"/>
             <label for="short-checkbox">Short</label>
@@ -190,16 +190,16 @@
         noActionItemCheckbox.addEventListener('change', function()  {
           if (this.checked) {
             rightSection.removeChild(rightItemEl);
-            appBarEl.classList.remove('mdc-top-app-bar--short-has-action-item');
+            appBarEl.classList.remove('-actionitem');
           } else {
             rightSection.appendChild(rightItemEl);
-            appBarEl.classList.add('mdc-top-app-bar--short-has-action-item');
+            appBarEl.classList.add('-actionitem');
           }
         });
 
         rtlCheckbox.addEventListener('change', function()  {
           document.body.setAttribute('dir', this.checked ? 'rtl': 'ltr');
-          appBarEl.classList.remove('mdc-top-app-bar--short-has-action-item');
+          appBarEl.classList.remove('-actionitem');
 
           appBar.destroy();
           appBar = mdc.topAppBar.MDCTopAppBar.attachTo(appBarEl);
@@ -207,10 +207,10 @@
 
         // Top App Bar Specific Options
         denseCheckbox.addEventListener('change', function()  {
-          appBarEl.classList[this.checked ? 'add' : 'remove']('mdc-top-app-bar--dense');
-          contentMainEl.classList[this.checked ? 'add' : 'remove']('mdc-top-app-bar--dense-fixed-adjust');
+          appBarEl.classList[this.checked ? 'add' : 'remove']('-dense');
+          contentMainEl.classList[this.checked ? 'add' : 'remove']('-densefixedadjust');
           if (prominentCheckbox.checked) {
-            contentMainEl.classList[this.checked ? 'add' : 'remove']('mdc-top-app-bar--dense-prominent-fixed-adjust');
+            contentMainEl.classList[this.checked ? 'add' : 'remove']('-all');
           }
 
 
@@ -222,8 +222,8 @@
 
         fixedCheckbox.addEventListener('change', function()  {
           var addScrolledClass = this.checked ? window.pageYOffset > 0 : false;
-          appBarEl.classList[this.checked ? 'add' : 'remove']('mdc-top-app-bar--fixed');
-          appBarEl.classList[addScrolledClass ? 'add' : 'remove']('mdc-top-app-bar--fixed-scrolled');
+          appBarEl.classList[this.checked ? 'add' : 'remove']('mdc-top-app-bar-fixed');
+          appBarEl.classList[addScrolledClass ? 'add' : 'remove']('-scrolled');
 
           appBar.destroy();
           appBar = mdc.topAppBar.MDCTopAppBar.attachTo(appBarEl);
@@ -232,11 +232,11 @@
         });
 
         prominentCheckbox.addEventListener('change', function()  {
-          appBarEl.classList[this.checked ? 'add' : 'remove']('mdc-top-app-bar--prominent');
-          contentMainEl.classList[this.checked ? 'add' : 'remove']('mdc-top-app-bar--prominent-fixed-adjust');
+          appBarEl.classList[this.checked ? 'add' : 'remove']('-prominent');
+          contentMainEl.classList[this.checked ? 'add' : 'remove']('-prominentfixedadjust');
 
           if (denseCheckbox.checked) {
-            contentMainEl.classList[this.checked ? 'add' : 'remove']('mdc-top-app-bar--dense-prominent-fixed-adjust');
+            contentMainEl.classList[this.checked ? 'add' : 'remove']('-all');
           }
 
           appBar.destroy();
@@ -247,16 +247,16 @@
 
         // Short Top App Bar Specific Options
         shortCheckbox.addEventListener('change', function() {
-          appBarEl.classList[this.checked ? 'add' : 'remove']('mdc-top-app-bar--short');
-          appBarEl.classList.remove('mdc-top-app-bar--short-has-action-item');
-          contentMainEl.classList[this.checked ? 'add' : 'remove']('mdc-top-app-bar--short-fixed-adjust');
+          appBarEl.classList[this.checked ? 'add' : 'remove']('-short');
+          appBarEl.classList.remove('-actionitem');
+          contentMainEl.classList[this.checked ? 'add' : 'remove']('-shortfixedadjust');
 
           appBar.destroy();
           appBar = mdc.topAppBar.MDCTopAppBar.attachTo(appBarEl);
 
           if (!this.checked) {
-            appBarEl.classList.remove('mdc-top-app-bar--short-collapsed');
-            appBarEl.classList.remove('mdc-top-app-bar--short-has-action-item');
+            appBarEl.classList.remove('-collapsed');
+            appBarEl.classList.remove('-actionitem');
             alwaysCollapsedCheckbox.checked = false;
           }
 
@@ -267,7 +267,7 @@
         });
 
         alwaysCollapsedCheckbox.addEventListener('change', function() {
-          appBarEl.classList[this.checked ? 'add' : 'remove']('mdc-top-app-bar--short-collapsed');
+          appBarEl.classList[this.checked ? 'add' : 'remove']('-collapsed');
 
           appBar.destroy();
           appBar = mdc.topAppBar.MDCTopAppBar.attachTo(appBarEl);

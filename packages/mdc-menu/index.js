@@ -68,7 +68,9 @@ class MDCMenu extends MDCComponent {
   }
 
   initialSyncWithDOM() {
-    this.afterOpenedCallback_ = () => this.handleAfterOpened_();
+    this.afterOpenedCallback_ = () => {
+      console.log('abc')
+      return this.handleAfterOpened_()};
     this.handleKeydown_ = (evt) => this.foundation_.handleKeydown(evt);
     this.handleClick_ = (evt) => this.foundation_.handleClick(evt);
 
@@ -176,6 +178,7 @@ class MDCMenu extends MDCComponent {
 
   handleAfterOpened_() {
     const list = this.items;
+    console.log(list)
     if (list.length > 0) {
       list[0].focus();
     }
@@ -202,7 +205,9 @@ class MDCMenu extends MDCComponent {
       },
       elementContainsClass: (element, className) => element.classList.contains(className),
       closeSurface: () => this.open = false,
-      getElementIndex: (element) => this.items.indexOf(element),
+      getElementIndex: (element) => {
+        console.log(element)
+        return this.items.indexOf(element)},
       getParentElement: (element) => element.parentElement,
       getSelectedElementIndex: (selectionGroup) => {
         return this.items.indexOf(selectionGroup.querySelector(`.${cssClasses.MENU_SELECTED_LIST_ITEM}`));

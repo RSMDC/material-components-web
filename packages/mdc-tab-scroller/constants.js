@@ -23,15 +23,15 @@
 
 /** @enum {string} */
 const cssClasses = {
-  ANIMATING: 'mdc-tab-scroller--animating',
-  SCROLL_TEST: 'mdc-tab-scroller__test',
-  SCROLL_AREA_SCROLL: 'mdc-tab-scroller__scroll-area--scroll',
+  ANIMATING: '-animating',
+  SCROLL_TEST: 'test',
+  SCROLL_AREA_SCROLL: '-scroll',
 };
 
 /** @enum {string} */
 const strings = {
-  AREA_SELECTOR: '.mdc-tab-scroller__scroll-area',
-  CONTENT_SELECTOR: '.mdc-tab-scroller__scroll-content',
+  AREA_SELECTOR: '.scrollarea',
+  CONTENT_SELECTOR: '.scrollcontent',
 };
 
 export {

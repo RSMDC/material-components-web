@@ -39,7 +39,7 @@
   box-sizing: border-box;
   width: 100%;
 
-  &__row {
+  > .row {
     display: flex;
     position: relative;
     align-items: center;
@@ -60,7 +60,7 @@
     }
   }
 
-  &__section {
+  > .row > .section {
     display: inline-flex;
     flex: 1;
     align-items: start;
@@ -80,7 +80,7 @@
       padding: $mdc-toolbar-element-mobile-section-padding 0;
     }
 
-    &--align-start {
+    &.-alignstart {
       @include mdc-rtl-reflexive-box(padding, "left", $mdc-toolbar-section-horizontal-padding);
 
       justify-content: flex-start;
@@ -96,7 +96,7 @@
       }
     }
 
-    &--align-end {
+    &.-alignend {
       @include mdc-rtl-reflexive-box(padding, "right", $mdc-toolbar-section-horizontal-padding);
 
       justify-content: flex-end;
@@ -113,7 +113,7 @@
     }
   }
 
-  &__title {
+  > .row > .section > .title {
     @include mdc-typography(headline6);
     @include mdc-typography-overflow-ellipsis;
     @include mdc-rtl-reflexive-box(margin, left, $mdc-toolbar-element-horizontal-padding-desktop);
@@ -124,23 +124,23 @@
     z-index: 1;
   }
 
-  &__icon,
-  &__menu-icon {
+  > .row > .section > .icon,
+  > .row > .section > .menuicon {
     @include mdc-toolbar-icon_;
   }
 }
 
-.mdc-toolbar__menu-icon + .mdc-toolbar__title {
+.mdc-toolbar > .row > .section > .menuicon + .title {
   @include mdc-rtl-reflexive-box(margin, left, $mdc-toolbar-title-margin-to-menu-icon-desktop);
 }
 
 @media (max-width: $mdc-toolbar-mobile-breakpoint) {
-  .mdc-toolbar__title {
+  .mdc-toolbar > .row > .section > .title {
     @include mdc-rtl-reflexive-box(margin, left, $mdc-toolbar-element-horizontal-padding-mobile);
   }
 }
 
-.mdc-toolbar--fixed {
+.mdc-toolbar.-fixed {
   @include mdc-elevation(4);
 
   position: fixed;
@@ -149,12 +149,12 @@
   z-index: 4;
 }
 
-.mdc-toolbar--flexible {
+.mdc-toolbar.-flexible {
   // bem linter is disabled because it cannot correctly reconcile mdc prefix for css variables.
   // stylelint-disable-next-line plugin/selector-bem-pattern
   --mdc-toolbar-ratio-to-extend-flexible: #{$mdc-toolbar-ratio-to-extend-flexible};
 
-  .mdc-toolbar__row:first-child {
+  > .row:first-child {
     height: $mdc-toolbar-row-height * $mdc-toolbar-ratio-to-extend-flexible;
     height: calc(#{$mdc-toolbar-row-height} * var(--mdc-toolbar-ratio-to-extend-flexible, #{$mdc-toolbar-ratio-to-extend-flexible}));
 
@@ -172,15 +172,15 @@
 
   // stylelint-disable plugin/selector-bem-pattern
   // bem linter is disabled because it cannot handle multiple top level selector
-  &-default-behavior {
-    .mdc-toolbar__title {
+    &.-default {
+    > .row > .section > .title {
       @include mdc-typography(headline6);
 
       align-self: flex-end;
       line-height: 1.5rem;
     }
 
-    .mdc-toolbar__row:first-child::after {
+    > .row:first-child::after {
       top: 0;
       left: 0;
       width: 100%;
@@ -189,35 +189,35 @@
       opacity: 1;
     }
 
-    &.mdc-toolbar--flexible-space-minimized {
-      .mdc-toolbar__row:first-child::after {
+    &.-spaceminimized {
+      >.row:first-child::after {
         opacity: 0;
       }
 
-      .mdc-toolbar__title {
+      > .row > .section > .title {
         font-weight: #{map-get($mdc-typography-font-weight-values, medium)};
       }
     }
   }
 }
 
-.mdc-toolbar--waterfall {
-  &.mdc-toolbar--fixed {
+.mdc-toolbar.-waterfall {
+  &.-fixed {
     @include mdc-elevation(0);
 
     transition: mdc-elevation-transition-value();
     will-change: $mdc-elevation-property;
 
-    &.mdc-toolbar--flexible-space-minimized {
+    &.-spaceminimized {
       @include mdc-elevation(4);
     }
 
-    &.mdc-toolbar--fixed-lastrow-only {
+    &.-lastrowonly {
       &.mdc-toolbar--flexible-space-minimized {
         @include mdc-elevation(0);
       }
 
-      &.mdc-toolbar--fixed-at-last-row {
+      &.-fixedlastrow {
         @include mdc-elevation(4);
       }
     }
@@ -239,6 +239,6 @@
   }
 }
 
-.mdc-toolbar__section--shrink-to-fit {
+.mdc-toolbar > .section.-shrinkfit {
   flex: none;
 }

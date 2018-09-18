@@ -23,14 +23,14 @@
 
 /** @enum {string} */
 const cssClasses = {
-  ACTIVE: 'mdc-tab-indicator--active',
-  FADE: 'mdc-tab-indicator--fade',
-  NO_TRANSITION: 'mdc-tab-indicator--no-transition',
+  ACTIVE: '-active',
+  FADE: '-fade',
+  NO_TRANSITION: '-notransition',
 };
 
 /** @enum {string} */
 const strings = {
-  CONTENT_SELECTOR: '.mdc-tab-indicator__content',
+  CONTENT_SELECTOR: '.content',
 };
 
 export {

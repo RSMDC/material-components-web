@@ -52,7 +52,9 @@
 
 .hero {
   // Override background mask color for buttons in hero section
-  @include mdc-shape-angled-corner-background($hero-background-color);
+  > .mdc-shape-container {
+    @include mdc-shape-angled-corner-background($hero-background-color);
+  }
 
   // For whatever reason, this aligns the shape borders better in Chrome on OS X,
   // as opposed to having the buttons centered side by side. Other browsers don't seem to have an issue.

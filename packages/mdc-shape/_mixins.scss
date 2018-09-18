@@ -36,7 +36,7 @@
       // Fortunately, if we assume 45 degree cutouts all the time, a^2 + b^2 = c^2 simplifies to a*sqrt(2).
       $diagonal-length: $size * 1.4142135623730951;
 
-      .mdc-shape-container__corner--#{$y}-#{$x} {
+      .-#{$y}#{$x} {
         #{$y}: -$diagonal-length / 2;
         #{$x}: -$diagonal-length / 2;
         width: $diagonal-length;
@@ -51,13 +51,13 @@
 // Sets the background color used for masking.
 // Exposed separately to allow overriding for some shapes within a page which happen to be over a different background.
 @mixin mdc-shape-angled-corner-background($background-color) {
-  .mdc-shape-container__corner::after {
+  > .corner::after {
     background-color: $background-color;
   }
 }
 
 @mixin mdc-shape-angled-corner-outline($outline-width, $outline-color, $outline-style: solid) {
-  .mdc-shape-container__corner::before {
+  > .corner::before {
     top: $outline-width;
     border-bottom: $outline-width $outline-style $outline-color;
   }

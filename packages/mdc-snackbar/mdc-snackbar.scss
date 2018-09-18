@@ -56,7 +56,7 @@
   }
 }
 
-.mdc-snackbar--align-start {
+.mdc-snackbar.-alignstart {
   @media (min-width: $mdc-snackbar-tablet-breakpoint) {
     @include mdc-rtl-reflexive-position(left, 24px);
 
@@ -72,12 +72,12 @@
   }
 }
 
-.mdc-snackbar--active {
+.mdc-snackbar.-active {
   transform: translate(0);
   transition: mdc-animation-enter(transform, .25s);
   pointer-events: auto;
 
-  &:not(.mdc-snackbar--align-start) {
+  &:not(.-alignstart) {
     transform: translate(-50%, 0);
 
     @media (max-width: ($mdc-snackbar-tablet-breakpoint - 1)) {
@@ -89,15 +89,15 @@
   }
 }
 
-.mdc-snackbar__action-wrapper {
+.mdc-snackbar > .actionwrapper {
   @include mdc-rtl-reflexive-property(padding, 24px, 0);
 }
 
-.mdc-snackbar--action-on-bottom {
+.mdc-snackbar.-actionbottom {
   flex-direction: column;
 }
 
-.mdc-snackbar__text {
+.mdc-snackbar > .text {
   @include mdc-typography(body1);
   @include mdc-rtl-reflexive-box(margin, right, auto, ".mdc-snackbar");
 
@@ -113,11 +113,11 @@
   }
 }
 
-.mdc-snackbar--action-on-bottom .mdc-snackbar__text {
+.mdc-snackbar.-actionbottom > .text {
   margin-right: inherit;
 }
 
-.mdc-snackbar--action-on-bottom .mdc-snackbar__action-wrapper {
+.mdc-snackbar.-actionbottom > .actionwrapper {
   @include mdc-rtl-reflexive-box(margin, left, auto);
 
   flex-direction: column;
@@ -126,11 +126,11 @@
   margin-bottom: 8px;
 }
 
-.mdc-snackbar--multiline .mdc-snackbar__text {
+.mdc-snackbar.-multiline > .text {
   height: 80px;
 }
 
-.mdc-snackbar__action-button {
+.mdc-snackbar > .actionwrapper > .actionbutton {
   @include mdc-typography(button);
   @include mdc-theme-prop(color, secondary);
 
@@ -157,14 +157,14 @@
   }
 }
 
-.mdc-snackbar--active .mdc-snackbar__text,
-.mdc-snackbar--active .mdc-snackbar__action-button:not([aria-hidden]) {
+.mdc-snackbar.-active > .text,
+.mdc-snackbar.-active > .actionwrapper > .actionbutton:not([aria-hidden]) {
   transition: mdc-animation-exit-permanent(opacity, .3s);
   opacity: 1;
 }
 
 // stylelint-disable plugin/selector-bem-pattern
-.mdc-snackbar--multiline.mdc-snackbar--action-on-bottom .mdc-snackbar__text {
+.mdc-snackbar.-multiline.-actionbottom > .text {
   margin: 0;
 }
 // stylelint-enable plugin/selector-bem-pattern

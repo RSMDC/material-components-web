@@ -36,10 +36,8 @@
   will-change: opacity;
 }
 
-.mdc-text-field-helper-text--persistent {
+.mdc-text-field-helper-text.-persistent {
   transition: none;
   opacity: 1;
   will-change: initial;
 }
-
-// postcss-bem-linter: end

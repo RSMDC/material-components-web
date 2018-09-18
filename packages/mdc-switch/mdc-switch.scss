@@ -41,7 +41,7 @@
   user-select: none;
 }
 
-.mdc-switch__native-control {
+.mdc-switch > .underlay > .thumb > .nativecontrol {
   @include mdc-rtl-reflexive-position(left, 0);
 
   position: absolute;
@@ -54,7 +54,7 @@
   pointer-events: auto;
 }
 
-.mdc-switch__track {
+.mdc-switch > .track {
   box-sizing: border-box;
   width: $mdc-switch-track-width;
   height: $mdc-switch-track-height;
@@ -67,7 +67,7 @@
   opacity: .38;
 }
 
-.mdc-switch__thumb-underlay {
+.mdc-switch > .underlay {
   @include mdc-rtl-reflexive-position(left, $mdc-switch-tap-target-initial-position);
   @include mdc-ripple-surface();
   @include mdc-ripple-radius-unbounded;
@@ -88,7 +88,7 @@
     mdc-switch-transition(border-color);
 }
 
-.mdc-switch__thumb {
+.mdc-switch > .underlay > .thumb {
   @include mdc-elevation(2);
 
   box-sizing: border-box;
@@ -101,12 +101,12 @@
   z-index: 1;
 }
 
-.mdc-switch--checked {
-  .mdc-switch__track {
+.mdc-switch.-checked {
+  > .track {
     opacity: .54;
   }
 
-  .mdc-switch__thumb-underlay {
+  > .underlay {
     transform: translateX($mdc-switch-thumb-active-margin);
 
     @include mdc-rtl {
@@ -115,7 +115,7 @@
   }
 
   // Translate the native control the opposite direction so that the tap target stays the same.
-  .mdc-switch__native-control {
+  .underlay > .thumb > .nativecontrol {
     transform: translateX(-($mdc-switch-thumb-active-margin));
 
     @include mdc-rtl {
@@ -124,15 +124,15 @@
   }
 }
 
-.mdc-switch--disabled {
+.mdc-switch.-disabled {
   opacity: .38;
   pointer-events: none;
 
-  .mdc-switch__thumb {
+  > .underlay > .thumb {
     border-width: 1px;  // In high contrast mode, only show outline of knob.
   }
 
-  .mdc-switch__native-control {
+  > .underlay > .thumb> .nativecontrol {
     cursor: default;
     pointer-events: none;
   }

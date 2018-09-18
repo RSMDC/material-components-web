@@ -61,11 +61,11 @@
 }
 
 @mixin mdc-chip-selected-ink-color($color) {
-  &.mdc-chip {
+  // &.mdc-chip {
     @include mdc-states-selected($color);
-  }
+  // }
 
-  &.mdc-chip--selected {
+  &.-selected {
     @include mdc-theme-prop(color, $color);
     @include mdc-chip-leading-icon-color($color);
 
@@ -74,7 +74,7 @@
     }
   }
 
-  .mdc-chip__checkmark-path {
+  > .checkmark > .svg > .path {
     @include mdc-theme-prop(stroke, $color);
   }
 }
@@ -108,8 +108,7 @@
 
 @mixin mdc-chip-set-spacing($gap-size) {
   padding: $gap-size / 2;
-
-  .mdc-chip {
+  > .mdc-chip {
     margin: $gap-size / 2;
   }
 }
@@ -119,7 +118,7 @@
 // loaded separately, so the order of CSS definitions is not guaranteed.
 
 @mixin mdc-chip-leading-icon-color($color, $opacity: $mdc-chip-icon-opacity) {
-  .mdc-chip__icon.mdc-chip__icon--leading {
+  > .icon.-leading {
     color: rgba(mdc-theme-prop-value($color), $opacity);
   }
 }
@@ -129,7 +128,7 @@
   $opacity: $mdc-chip-icon-opacity,
   $hover-opacity: $mdc-chip-trailing-icon-hover-opacity,
   $focus-opacity: $mdc-chip-trailing-icon-focus-opacity) {
-  .mdc-chip__icon.mdc-chip__icon--trailing {
+  > .icon.-trailing {
     color: rgba(mdc-theme-prop-value($color), $opacity);
 
     &:hover {
@@ -143,13 +142,13 @@
 }
 
 @mixin mdc-chip-leading-icon-size($size) {
-  .mdc-chip__icon.mdc-chip__icon--leading:not(.mdc-chip__icon--leading-hidden) {
+  > .icon.-leading:not(.-leadhidden) {
     @include mdc-chip-icon-size_($size);
   }
 }
 
 @mixin mdc-chip-trailing-icon-size($size) {
-  .mdc-chip__icon.mdc-chip__icon--trailing {
+  > .icon.-trailing {
     @include mdc-chip-icon-size_($size);
   }
 }

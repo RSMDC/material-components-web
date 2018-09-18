@@ -46,48 +46,48 @@
         margin-top: 0.8em;
       }
 
-      .hero .mdc-grid-list {
+      .hero > .mdc-grid-list {
         width: 320px;
         background-color: white;
       }
 
-      .hero .mdc-grid-tile__primary {
+      .hero > .mdc-grid-list > .tiles > .tile > .primary {
         background-color: #212121;
       }
 
-      .hero .mdc-grid-tile {
+      .hero > .mdc-grid-list > .tiles > .tile {
         width: 76px;
       }
     </style>
   </head>
   <body class="mdc-typography">
-    <header class="mdc-toolbar mdc-toolbar--fixed">
-      <div class="mdc-toolbar__row">
-        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-          <a href="/" class="catalog-back mdc-toolbar__menu-icon"><i class="material-icons">&#xE5C4;</i></a>
-          <span class="mdc-toolbar__title catalog-title">Grid List</span>
+    <header class="mdc-toolbar -fixed">
+      <div class="row">
+        <section class="section -alignstart">
+          <a href="/" class="catalog-back menuicon"><i class="material-icons">&#xE5C4;</i></a>
+          <span class="title catalog-title">Grid List</span>
         </section>
       </div>
     </header>
     <main>
       <div class="mdc-toolbar-fixed-adjust"></div>
       <section class="hero">
-        <div class="mdc-grid-list">
-          <ul class="mdc-grid-list__tiles">
-            <li class="mdc-grid-tile"><div class="mdc-grid-tile__primary"></div></li>
-            <li class="mdc-grid-tile"><div class="mdc-grid-tile__primary"></div></li>
-            <li class="mdc-grid-tile"><div class="mdc-grid-tile__primary"></div></li>
-            <li class="mdc-grid-tile"><div class="mdc-grid-tile__primary"></div></li>
+        <div class="mdc-grid-list demogridlist">
+          <ul class="tiles">
+            <li class="tile"><div class="primary"></div></li>
+            <li class="tile"><div class="primary"></div></li>
+            <li class="tile"><div class="primary"></div></li>
+            <li class="tile"><div class="primary"></div></li>
 
-            <li class="mdc-grid-tile"><div class="mdc-grid-tile__primary"></div></li>
-            <li class="mdc-grid-tile"><div class="mdc-grid-tile__primary"></div></li>
-            <li class="mdc-grid-tile"><div class="mdc-grid-tile__primary"></div></li>
-            <li class="mdc-grid-tile"><div class="mdc-grid-tile__primary"></div></li>
+            <li class="tile"><div class="primary"></div></li>
+            <li class="tile"><div class="primary"></div></li>
+            <li class="tile"><div class="primary"></div></li>
+            <li class="tile"><div class="primary"></div></li>
 
-            <li class="mdc-grid-tile"><div class="mdc-grid-tile__primary"></div></li>
-            <li class="mdc-grid-tile"><div class="mdc-grid-tile__primary"></div></li>
-            <li class="mdc-grid-tile"><div class="mdc-grid-tile__primary"></div></li>
-            <li class="mdc-grid-tile"><div class="mdc-grid-tile__primary"></div></li>
+            <li class="tile"><div class="primary"></div></li>
+            <li class="tile"><div class="primary"></div></li>
+            <li class="tile"><div class="primary"></div></li>
+            <li class="tile"><div class="primary"></div></li>
           </ul>
         </div>
       </section>
@@ -95,12 +95,12 @@
       <section class="example">
         <div class="mdc-form-field">
           <div class="mdc-checkbox">
-            <input type="checkbox" class="mdc-checkbox__native-control" id="toggle-rtl" aria-labelledby="toggle-rtl-label" />
-            <div class="mdc-checkbox__background">
-              <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+            <input type="checkbox" class="nativecontrol" id="toggle-rtl" aria-labelledby="toggle-rtl-label" />
+            <div class="background">
+              <svg class="checkmark" viewBox="0 0 24 24">
+                <path class="path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
               </svg>
-              <div class="mdc-checkbox__mixedmark"></div>
+              <div class="mixedmark"></div>
             </div>
           </div>
           <label for="toggle-rtl" id="toggle-rtl-label">Toggle RTL</label>
@@ -110,613 +110,613 @@
       <section class="example examples">
         <h2>Grid List (Default): empty grid</h2>
         <div class="mdc-grid-list">
-          <ul class="mdc-grid-list__tiles">
+          <ul class="tiles">
           </ul>
         </div>
 
         <h2>Grid List (Default): tile aspect ratio 1x1 with oneline footer caption</h2>
         <div class="mdc-grid-list">
-          <ul class="mdc-grid-list__tiles">
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+          <ul class="tiles">
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
           </ul>
         </div>
         <h2>Grid List: tile aspect ratio 1x1 with 1px gutter</h2>
-        <div class="mdc-grid-list mdc-grid-list--tile-gutter-1">
-          <ul class="mdc-grid-list__tiles">
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+        <div class="mdc-grid-list -gutter1">
+          <ul class="tiles">
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
           </ul>
         </div>
         <h2>Grid List: tile aspect ratio 1x1 image only</h2>
         <div class="mdc-grid-list">
-          <ul class="mdc-grid-list__tiles">
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+          <ul class="tiles">
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
             </li>
           </ul>
         </div>
         <h2>Grid List: tile aspect ratio 1x1 with oneline header caption</h2>
-        <div class="mdc-grid-list mdc-grid-list--header-caption">
-          <ul class="mdc-grid-list__tiles">
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+        <div class="mdc-grid-list -headercaption">
+          <ul class="tiles">
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
           </ul>
         </div>
         <h2>Grid List: tile aspect ratio 1x1 with twoline footer caption</h2>
-        <div class="mdc-grid-list mdc-grid-list--twoline-caption">
-          <ul class="mdc-grid-list__tiles">
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+        <div class="mdc-grid-list -twolinecaption">
+          <ul class="tiles">
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
-                <span class="mdc-grid-tile__support-text">Support text</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
+                <span class="supporttext">Support text</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
-                <span class="mdc-grid-tile__support-text">Support text</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
+                <span class="supporttext">Support text</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
-                <span class="mdc-grid-tile__support-text">Support text</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
+                <span class="supporttext">Support text</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
-                <span class="mdc-grid-tile__support-text">Support text</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
+                <span class="supporttext">Support text</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
-                <span class="mdc-grid-tile__support-text">Support text</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
+                <span class="supporttext">Support text</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
-                <span class="mdc-grid-tile__support-text">Support text</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
+                <span class="supporttext">Support text</span>
               </span>
             </li>
           </ul>
         </div>
         <h2>Grid List: tile aspect ratio 1x1 with oneline footer caption and icon at start of the caption</h2>
-        <div class="mdc-grid-list mdc-grid-list--with-icon-align-start">
-          <ul class="mdc-grid-list__tiles">
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+        <div class="mdc-grid-list -alignstart">
+          <ul class="tiles">
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
           </ul>
         </div>
         <h2>Grid List: tile aspect ratio 1x1 with twoline footer caption and icon at start of the caption</h2>
-        <div class="mdc-grid-list mdc-grid-list--twoline-caption mdc-grid-list--with-icon-align-start">
-          <ul class="mdc-grid-list__tiles">
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+        <div class="mdc-grid-list -twolinecaption -alignstart">
+          <ul class="tiles">
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
-                <span class="mdc-grid-tile__support-text">Support text</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
+                <span class="supporttext">Support text</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
-                <span class="mdc-grid-tile__support-text">Support text</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
+                <span class="supporttext">Support text</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
-                <span class="mdc-grid-tile__support-text">Support text</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
+                <span class="supporttext">Support text</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
-                <span class="mdc-grid-tile__support-text">Support text</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
+                <span class="supporttext">Support text</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
-                <span class="mdc-grid-tile__support-text">Support text</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
+                <span class="supporttext">Support text</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
-                <span class="mdc-grid-tile__support-text">Support text</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
+                <span class="supporttext">Support text</span>
               </span>
             </li>
           </ul>
         </div>
         <h2>Grid List: tile aspect ratio 1x1 with oneline footer caption and icon at end of the caption</h2>
-        <div class="mdc-grid-list mdc-grid-list--with-icon-align-end">
-          <ul class="mdc-grid-list__tiles">
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+        <div class="mdc-grid-list -alignend">
+          <ul class="tiles">
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
           </ul>
         </div>
         <h2>Grid List: tile aspect ratio 1x1 with twoline footer caption and icon at end of the caption</h2>
-        <div class="mdc-grid-list mdc-grid-list--twoline-caption mdc-grid-list--with-icon-align-end">
-          <ul class="mdc-grid-list__tiles">
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+        <div class="mdc-grid-list -twolinecaption -alignend">
+          <ul class="tiles">
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
-                <span class="mdc-grid-tile__support-text">Support text</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
+                <span class="supporttext">Support text</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
-                <span class="mdc-grid-tile__support-text">Support text</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
+                <span class="supporttext">Support text</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
-                <span class="mdc-grid-tile__support-text">Support text</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
+                <span class="supporttext">Support text</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
-                <span class="mdc-grid-tile__support-text">Support text</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
+                <span class="supporttext">Support text</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
-                <span class="mdc-grid-tile__support-text">Support text</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
+                <span class="supporttext">Support text</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/1-1.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/1-1.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <i class="mdc-grid-tile__icon material-icons">star_border</i>
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
-                <span class="mdc-grid-tile__support-text">Support text</span>
+              <span class="secondary">
+                <i class="icon material-icons">star_border</i>
+                <span class="title">Single Very Long Grid Title Line</span>
+                <span class="supporttext">Support text</span>
               </span>
             </li>
           </ul>
         </div>
         <h2>Grid List: tile aspect ratio 16x9 with oneline footer caption (Support: 16:9, 4:3, 3:4, 2:3, 3:2 as well)</h2>
-        <div class="mdc-grid-list mdc-grid-list--tile-aspect-16x9">
-          <ul class="mdc-grid-list__tiles">
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/16-9.jpg" />
+        <div class="mdc-grid-list -aspect16x9">
+          <ul class="tiles">
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/16-9.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/16-9.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/16-9.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/16-9.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/16-9.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/16-9.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/16-9.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/16-9.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/16-9.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <img class="mdc-grid-tile__primary-content" src="images/16-9.jpg" />
+            <li class="tile">
+              <div class="primary">
+                <img class="content" src="images/16-9.jpg" />
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
           </ul>
         </div>
         <h2>Grid List: use div's background instead of img tag (useful when image ratio cannot be ensured)</h2>
-        <div class="mdc-grid-list mdc-grid-list--header-caption">
-          <ul class="mdc-grid-list__tiles">
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <div class="mdc-grid-tile__primary-content demo-grid-tile-content"></div>
+        <div class="mdc-grid-list -headercaption">
+          <ul class="tiles">
+            <li class="tile">
+              <div class="primary">
+                <div class="content demo-grid-tile-content"></div>
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <div class="mdc-grid-tile__primary-content demo-grid-tile-content"></div>
+            <li class="tile">
+              <div class="primary">
+                <div class="content demo-grid-tile-content"></div>
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <div class="mdc-grid-tile__primary-content demo-grid-tile-content"></div>
+            <li class="tile">
+              <div class="primary">
+                <div class="content demo-grid-tile-content"></div>
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <div class="mdc-grid-tile__primary-content demo-grid-tile-content"></div>
+            <li class="tile">
+              <div class="primary">
+                <div class="content demo-grid-tile-content"></div>
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <div class="mdc-grid-tile__primary-content demo-grid-tile-content"></div>
+            <li class="tile">
+              <div class="primary">
+                <div class="content demo-grid-tile-content"></div>
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
-            <li class="mdc-grid-tile">
-              <div class="mdc-grid-tile__primary">
-                <div class="mdc-grid-tile__primary-content demo-grid-tile-content"></div>
+            <li class="tile">
+              <div class="primary">
+                <div class="content demo-grid-tile-content"></div>
               </div>
-              <span class="mdc-grid-tile__secondary">
-                <span class="mdc-grid-tile__title">Single Very Long Grid Title Line</span>
+              <span class="secondary">
+                <span class="title">Single Very Long Grid Title Line</span>
               </span>
             </li>
           </ul>

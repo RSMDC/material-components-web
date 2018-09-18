@@ -25,14 +25,14 @@
 @import "../variables";
 @import "../mixins";
 
-.mdc-drawer--dismissible {
+.mdc-drawer.-dismissible {
   @include mdc-rtl-reflexive-position(left, 0);
 
   display: none;
   position: absolute;
   top: 0;
 
-  &.mdc-drawer--open {
+  &.-open {
     display: flex;
   }
 }
@@ -42,7 +42,7 @@
 
   position: relative;
 
-  .mdc-drawer--closing + & {
+  .mdc-drawer.-closing + & {
     @include mdc-rtl-reflexive-box(margin, left, 0);
   }
 }

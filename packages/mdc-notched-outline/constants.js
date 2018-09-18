@@ -23,13 +23,13 @@
 
 /** @enum {string} */
 const strings = {
-  PATH_SELECTOR: '.mdc-notched-outline__path',
-  IDLE_OUTLINE_SELECTOR: '.mdc-notched-outline__idle',
+  PATH_SELECTOR: '.path',
+  IDLE_OUTLINE_SELECTOR: '.mdc-notched-outline-idle',
 };
 
 /** @enum {string} */
 const cssClasses = {
-  OUTLINE_NOTCHED: 'mdc-notched-outline--notched',
+  OUTLINE_NOTCHED: '-notched',
 };
 
 export {cssClasses, strings};

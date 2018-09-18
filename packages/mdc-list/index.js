@@ -75,7 +75,7 @@ class MDCList extends MDCComponent {
     this.vertical = direction !== strings.ARIA_ORIENTATION_HORIZONTAL;
 
     // List items need to have at least tabindex=-1 to be focusable.
-    [].slice.call(this.root_.querySelectorAll('.mdc-list-item:not([tabindex])'))
+    [].slice.call(this.root_.querySelectorAll('.item:not([tabindex])'))
       .forEach((ele) => {
         ele.setAttribute('tabindex', -1);
       });
@@ -94,7 +94,6 @@ class MDCList extends MDCComponent {
   getListItemIndex_(evt) {
     let eventTarget = /** @type {HTMLElement} */ (evt.target);
     let index = -1;
-
     // Find the first ancestor that is a list item or the list.
     while (!eventTarget.classList.contains(cssClasses.LIST_ITEM_CLASS)
     && !eventTarget.classList.contains(cssClasses.ROOT)) {

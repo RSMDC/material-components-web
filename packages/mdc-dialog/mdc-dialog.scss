@@ -43,38 +43,15 @@
   height: 100%;
 }
 
-.mdc-dialog {
-  @include mdc-dialog-container-fill-color(surface);
-  @include mdc-dialog-scrim-color($mdc-dialog-scrim-color);
-  @include mdc-dialog-title-ink-color($mdc-dialog-title-ink-color);
-  @include mdc-dialog-content-ink-color($mdc-dialog-content-ink-color);
-  @include mdc-dialog-scroll-divider-color($mdc-dialog-scroll-divider-color);
-  @include mdc-dialog-min-width($mdc-dialog-min-width);
-  @include mdc-dialog-max-width($mdc-dialog-max-width, $mdc-dialog-margin);
-  @include mdc-dialog-max-height(null, $mdc-dialog-margin);
-  @include mdc-dialog-corner-radius($mdc-dialog-corner-radius);
-
-  // Use `display: none` instead of `visibility: hidden` to avoid recalculating layout when the dialog is closed.
-  display: none;
-  z-index: 5;
-}
+.mdc-dialog > .backdrop {
+  @include mdc-theme-prop(background-color, text-primary-on-light);
 
 .mdc-dialog__scrim {
   opacity: 0;
   z-index: -1;
 }
 
-// This wrapper element is needed to make max-height work in IE 11.
-// See https://github.com/philipwalton/flexbugs/issues/216
-.mdc-dialog__container {
-  display: flex;
-  flex-direction: row; // IE 11
-  box-sizing: border-box;
-  transform: scale(.8);
-  opacity: 0;
-}
-
-.mdc-dialog__surface {
+.mdc-dialog > .surface {
   @include mdc-elevation(24);
 
   display: flex;
@@ -90,46 +67,47 @@
   }
 }
 
-.mdc-dialog__title {
-  @include mdc-typography-baseline-top(40px);
-  @include mdc-typography(headline6);
-
-  display: block;
-  position: relative;
-  flex-shrink: 0;
-  box-sizing: border-box;
-  min-height: 64px;
-  margin: 0;
-  padding: 0 24px 15px;
-  border-bottom: 1px solid transparent;
+.mdc-dialog > .surface > .header {
+  display: flex;
+  align-items: center;
+  padding: 24px 24px 0;
 
   @include mdc-rtl(".mdc-dialog") {
     text-align: right;
   }
 }
 
-.mdc-dialog__content {
-  @include mdc-typography(body1);
+.mdc-dialog > .surface > .header > .empty {
+  padding: 0;
+}
+
+.mdc-dialog > .surface > .header > .title {
+  @include mdc-typography(headline6);
 
   flex-grow: 1;
   box-sizing: border-box;
   margin: 0;
-  padding: 10px 24px 20px;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
+}
+
+.mdc-dialog > .surface > .body {
+  @include mdc-theme-prop(color, text-secondary-on-light);
+  @include mdc-typography(body1);
 
   // The content element already has top/bottom padding, so we need to suppress margins on its first/last children.
   > :first-child {
     margin-top: 0;
   }
 
-  // The content element already has top/bottom padding, so we need to suppress margins on its first/last children.
-  > :last-child {
-    margin-bottom: 0;
-  }
+.mdc-dialog> .surface > .body.-scrollable {
+  max-height: 195px;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  overflow-x: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
-.mdc-dialog__actions {
+.mdc-dialog > .surface > .footer {
   display: flex;
   position: relative;
   flex-shrink: 0;
@@ -140,7 +118,10 @@
   min-height: 52px;
   margin: 0;
   padding: 8px;
-  border-top: 1px solid transparent;
+}
+
+.mdc-dialog > .surface > .footer > .button {
+  @include mdc-rtl-reflexive-box(margin, right, 8px);
 
   .mdc-dialog--stacked & {
     flex-direction: column;
@@ -148,60 +129,44 @@
   }
 }
 
-.mdc-dialog__button {
-  @include mdc-rtl-reflexive-box(margin, left, 8px);
+.mdc-dialog > .surface.-action:not(:disabled) {
+  @include mdc-theme-prop(color, secondary);
+}
 
   &:first-child {
     @include mdc-rtl-reflexive-box(margin, left, 0);
   }
 
-  max-width: 100%; // Prevent long text from overflowing parent element in IE 11
-  text-align: right;
-
-  @include mdc-rtl(".mdc-dialog") {
-    text-align: left;
+  .mdc-dialog > .surface {
+    min-width: 280px;
   }
 
-  .mdc-dialog--stacked &:not(:first-child) {
-    margin-top: 12px;
+  .mdc-dialog > .surface > .body {
+    line-height: 24px;
   }
 }
 
-.mdc-dialog--open,
-.mdc-dialog--opening,
-.mdc-dialog--closing {
-  display: flex;
-}
+.mdc-dialog.-animating {
+  visibility: visible;
 
-.mdc-dialog--opening {
-  .mdc-dialog__scrim {
-    transition: opacity 150ms linear;
+  > .backdrop {
+    transition: mdc-animation-enter(opacity, 120ms);
   }
 
-  .mdc-dialog__container {
-    transition: opacity 75ms linear, mdc-animation-enter(transform, 150ms);
+  > .surface {
+    transition: mdc-animation-enter(opacity, 120ms), mdc-animation-enter(transform, 120ms);
   }
 }
 
-.mdc-dialog--closing {
-  .mdc-dialog__scrim,
-  .mdc-dialog__container {
-    transition: opacity 75ms linear;
+.mdc-dialog.-open {
+  visibility: visible;
+
+  > .backdrop {
+    opacity: .3;
   }
 
-  .mdc-dialog__container {
-    // Dialog container scales up while opening, but should remain scaled up while closing
-    transform: scale(1);
-  }
-}
-
-.mdc-dialog--open {
-  .mdc-dialog__scrim {
-    opacity: 1;
-  }
-
-  .mdc-dialog__container {
-    transform: scale(1);
+  > .surface {
+    transform: translateY(0) scale(1);
     opacity: 1;
   }
 }

@@ -26,21 +26,21 @@ const ROOT = 'mdc-checkbox';
 
 /** @enum {string} */
 const cssClasses = {
-  UPGRADED: 'mdc-checkbox--upgraded',
-  CHECKED: 'mdc-checkbox--checked',
-  INDETERMINATE: 'mdc-checkbox--indeterminate',
-  DISABLED: 'mdc-checkbox--disabled',
-  ANIM_UNCHECKED_CHECKED: 'mdc-checkbox--anim-unchecked-checked',
-  ANIM_UNCHECKED_INDETERMINATE: 'mdc-checkbox--anim-unchecked-indeterminate',
-  ANIM_CHECKED_UNCHECKED: 'mdc-checkbox--anim-checked-unchecked',
-  ANIM_CHECKED_INDETERMINATE: 'mdc-checkbox--anim-checked-indeterminate',
-  ANIM_INDETERMINATE_CHECKED: 'mdc-checkbox--anim-indeterminate-checked',
-  ANIM_INDETERMINATE_UNCHECKED: 'mdc-checkbox--anim-indeterminate-unchecked',
+  UPGRADED: '-upgraded',
+  CHECKED: '-checked',
+  INDETERMINATE: '-indeterminate',
+  DISABLED: '-disabled',
+  ANIM_UNCHECKED_CHECKED: '-anim-unchecked-checked',
+  ANIM_UNCHECKED_INDETERMINATE: '-anim-unchecked-indeterminate',
+  ANIM_CHECKED_UNCHECKED: '-anim-checked-unchecked',
+  ANIM_CHECKED_INDETERMINATE: '-anim-checked-indeterminate',
+  ANIM_INDETERMINATE_CHECKED: '-anim-indeterminate-checked',
+  ANIM_INDETERMINATE_UNCHECKED: '-anim-indeterminate-unchecked',
 };
 
 /** @enum {string} */
 const strings = {
-  NATIVE_CONTROL_SELECTOR: `.${ROOT}__native-control`,
+  NATIVE_CONTROL_SELECTOR: `.nativecontrol`,
   TRANSITION_STATE_INIT: 'init',
   TRANSITION_STATE_CHECKED: 'checked',
   TRANSITION_STATE_UNCHECKED: 'unchecked',

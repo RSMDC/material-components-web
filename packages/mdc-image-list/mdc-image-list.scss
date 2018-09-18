@@ -31,23 +31,23 @@
   padding: 0;
 }
 
-.mdc-image-list__item,
-.mdc-image-list__image-aspect-container {
+.mdc-image-list > .item,
+.mdc-image-list > .item > .aspectcontainer {
   // Supports absolute positioning of protected supporting content for item, and image for image-aspect-container
   position: relative;
   box-sizing: border-box;
 }
 
-.mdc-image-list__item {
+.mdc-image-list > .item {
   list-style-type: none;
 }
 
-.mdc-image-list__image {
+.mdc-image-list > .item > .image {
   width: 100%;
 }
 
 // Descendant selector allows image-aspect-container to be optional in DOM structure
-.mdc-image-list__image-aspect-container .mdc-image-list__image {
+.mdc-image-list > .item > .aspectcontainer > .image {
   position: absolute;
   top: 0;
   right: 0;
@@ -60,11 +60,11 @@
   background-size: cover;
 }
 
-@at-root {
+.mdc-image-list {
   @include mdc-image-list-aspect(1);
 }
 
-.mdc-image-list__supporting {
+.mdc-image-list > .item > .supporting {
   @include mdc-theme-prop(color, text-primary-on-background);
 
   display: flex;
@@ -75,14 +75,14 @@
   line-height: $mdc-image-list-icon-size;
 }
 
-.mdc-image-list__label {
+.mdc-image-list > .item > .supporting > .label {
   @include mdc-typography(subtitle1);
   @include mdc-typography-overflow-ellipsis;
 }
 
 // Modifier for labels/icons with text protection, overlaying images.
 
-.mdc-image-list--with-text-protection .mdc-image-list__supporting {
+.mdc-image-list.-textprotection > .item > .supporting {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -94,14 +94,14 @@
 
 // Masonry Image List, using CSS columns (i.e. renders down then across)
 
-.mdc-image-list--masonry {
+.mdc-image-list.-masonry {
   display: block; // Override flex
 
-  .mdc-image-list__item {
+  > .item {
     break-inside: avoid-column;
   }
 
-  .mdc-image-list__image {
+  > .item .image {
     display: block;
     height: auto;
   }

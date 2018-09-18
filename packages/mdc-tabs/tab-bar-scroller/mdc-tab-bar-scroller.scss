@@ -36,20 +36,20 @@ $mdc-tab-bar-scroller-indicator-width: 48px;
   background-color: inherit;
   overflow: hidden;
 
-  &__scroll-frame {
+  > .scrollframe {
     display: flex;
     position: relative;
     flex: 1;
     justify-content: flex-start;
     overflow: hidden;
 
-    &__tabs {
+    > .tabs {
       transition: mdc-animation-enter(transform, 240ms);
       will-change: transform;
     }
   }
 
-  &__indicator {
+  > .indicator {
     @include mdc-theme-prop(color, text-secondary-on-background);
 
     &:hover {
@@ -63,7 +63,7 @@ $mdc-tab-bar-scroller-indicator-width: 48px;
     cursor: pointer;
     visibility: hidden;
 
-    &__inner {
+    > .inner {
       color: inherit;
       text-decoration: inherit;
       cursor: inherit;
@@ -77,12 +77,12 @@ $mdc-tab-bar-scroller-indicator-width: 48px;
       }
     }
 
-    &__inner:hover {
+    > .inner:hover {
       color: inherit;
     }
   }
 
-  &__indicator--enabled {
+  > .indicator.-enabled {
     visibility: visible;
   }
 }

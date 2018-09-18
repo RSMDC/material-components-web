@@ -24,9 +24,9 @@
 /** @enum {string} */
 const strings = {
   ARIA_CONTROLS: 'aria-controls',
-  INPUT_SELECTOR: '.mdc-text-field__input',
+  INPUT_SELECTOR: '.input',
   LABEL_SELECTOR: '.mdc-floating-label',
-  ICON_SELECTOR: '.mdc-text-field__icon',
+  ICON_SELECTOR: '.icon',
   OUTLINE_SELECTOR: '.mdc-notched-outline',
   LINE_RIPPLE_SELECTOR: '.mdc-line-ripple',
 };
@@ -34,13 +34,12 @@ const strings = {
 /** @enum {string} */
 const cssClasses = {
   ROOT: 'mdc-text-field',
-  DISABLED: 'mdc-text-field--disabled',
-  DENSE: 'mdc-text-field--dense',
-  FOCUSED: 'mdc-text-field--focused',
-  INVALID: 'mdc-text-field--invalid',
-  TEXTAREA: 'mdc-text-field--textarea',
-  OUTLINED: 'mdc-text-field--outlined',
-  WITH_LEADING_ICON: 'mdc-text-field--with-leading-icon',
+  DISABLED: '-disabled',
+  DENSE: '-dense',
+  FOCUSED: '-focused',
+  INVALID: '-invalid',
+  TEXTAREA: '-textarea',
+  OUTLINED: '-outlined',
 };
 
 /** @enum {number} */

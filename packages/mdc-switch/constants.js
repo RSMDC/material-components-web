@@ -23,14 +23,14 @@
 
 /** @enum {string} */
 const cssClasses = {
-  CHECKED: 'mdc-switch--checked',
-  DISABLED: 'mdc-switch--disabled',
+  CHECKED: '-checked',
+  DISABLED: '-disabled',
 };
 
 /** @enum {string} */
 const strings = {
-  NATIVE_CONTROL_SELECTOR: '.mdc-switch__native-control',
-  RIPPLE_SURFACE_SELECTOR: '.mdc-switch__thumb-underlay',
+  NATIVE_CONTROL_SELECTOR: '.nativecontrol',
+  RIPPLE_SURFACE_SELECTOR: '.underlay',
 };
 
 

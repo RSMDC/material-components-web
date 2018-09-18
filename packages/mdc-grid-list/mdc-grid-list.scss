@@ -32,66 +32,66 @@ $mdc-grid-list-twoline-cap-secondary-height: 68px;
 $mdc-grid-list-tile-secondary-icon-size: 24px;
 
 @mixin mdc-grid-list-tile-aspect($width-height-ratio) {
-  .mdc-grid-tile__primary {
+  > .tiles > .tile > .primary {
     padding-bottom: calc(100% / #{$width-height-ratio});
   }
 }
 
 @mixin mdc-grid-list-tile-gutter($gutter-width) {
-  .mdc-grid-tile {
+  > .tiles > .tile {
     margin: $gutter-width/2 0;
     padding: 0 $gutter-width/2;
   }
 
-  .mdc-grid-tile__secondary {
+  > .tiles > .tile > .secondary {
     left: $gutter-width/2;
     width: calc(100% - #{$gutter-width});
   }
 
-  .mdc-grid-list__tiles {
+  > .tiles {
     margin: $gutter-width/2 auto;
   }
 }
 
 // postcss-bem-linter: define grid-list
-@at-root {
+.mdc-grid-list {
   @include mdc-grid-list-tile-aspect(1);
   @include mdc-grid-list-tile-gutter(4px);
 }
 
-.mdc-grid-list__tiles {
+.mdc-grid-list > .tiles {
   display: flex;
   flex-flow: row wrap;
   padding: 0;
 }
 
-.mdc-grid-list--tile-gutter-1 {
+.mdc-grid-list.-gutter1 {
   @include mdc-grid-list-tile-gutter(1px);
 }
 
-.mdc-grid-list--tile-aspect-16x9 {
+.mdc-grid-list.-aspect16x9 {
   @include mdc-grid-list-tile-aspect(16 / 9);
 }
 
-.mdc-grid-list--tile-aspect-3x2 {
+.mdc-grid-list.-aspect3x2 {
   @include mdc-grid-list-tile-aspect(3 / 2);
 }
 
-.mdc-grid-list--tile-aspect-2x3 {
+.mdc-grid-list.-aspect2x3 {
   @include mdc-grid-list-tile-aspect(2 / 3);
 }
 
-.mdc-grid-list--tile-aspect-4x3 {
+.mdc-grid-list.-aspect4x3 {
   @include mdc-grid-list-tile-aspect(4 / 3);
 }
 
-.mdc-grid-list--tile-aspect-3x4 {
+.mdc-grid-list.-aspect3x4 {
   @include mdc-grid-list-tile-aspect(3 / 4);
 }
 // postcss-bem-linter: end
 
 // postcss-bem-linter: define grid-tile
-.mdc-grid-tile {
+.mdc-grid-list > .tiles > .tile {
   display: block;
   position: relative;
 
@@ -100,7 +100,7 @@ $mdc-grid-list-tile-secondary-icon-size: 24px;
   width: var(--mdc-grid-list-tile-width, $mdc-grid-list-tile-width);
 }
 
-.mdc-grid-tile__primary {
+.mdc-grid-list > .tiles > .tile > .primary {
   @include mdc-theme-prop(background-color, background);
   @include mdc-theme-prop(color, text-primary-on-background);
 
@@ -108,7 +108,7 @@ $mdc-grid-list-tile-secondary-icon-size: 24px;
   height: 0;
 }
 
-.mdc-grid-tile__primary-content {
+.mdc-grid-list > .tiles > .tile > .primary > .content {
   position: absolute;
   top: 0;
   right: 0;
@@ -121,7 +121,7 @@ $mdc-grid-list-tile-secondary-icon-size: 24px;
   background-size: cover;
 }
 
-.mdc-grid-tile__secondary {
+.mdc-grid-list > .tiles > .tile > .secondary {
   @include mdc-theme-prop(background-color, primary);
   @include mdc-theme-prop(color, on-primary);
 
@@ -132,7 +132,7 @@ $mdc-grid-list-tile-secondary-icon-size: 24px;
   padding: $mdc-grid-list-tile-secondary-padding;
 }
 
-.mdc-grid-tile__title {
+.mdc-grid-list > .tiles > .tile > .secondary > .title {
   @include mdc-typography-overflow-ellipsis;
 
   display: block;
@@ -143,7 +143,7 @@ $mdc-grid-list-tile-secondary-icon-size: 24px;
   line-height: 1rem;
 }
 
-.mdc-grid-tile__support-text {
+.mdc-grid-list > .tiles > .tile > .secondary > .supporttext {
   @include mdc-typography(subtitle1);
   @include mdc-typography-overflow-ellipsis;
 
@@ -153,7 +153,7 @@ $mdc-grid-list-tile-secondary-icon-size: 24px;
   padding: 0;
 }
 
-.mdc-grid-tile__icon {
+.mdc-grid-list > .tiles > .tile > .secondary > .icon {
   position: absolute;
   top: calc(50% - #{$mdc-grid-list-tile-secondary-icon-size} / 2);
   font-size: 0;
@@ -161,33 +161,33 @@ $mdc-grid-list-tile-secondary-icon-size: 24px;
 
 // stylelint-disable plugin/selector-bem-pattern
 // Linter disabled because we are nesting grid-tile under grid-list.
-.mdc-grid-list--twoline-caption .mdc-grid-tile__secondary {
+.mdc-grid-list.-twolinecaption > .tiles > .tile > .secondary {
   height: $mdc-grid-list-twoline-cap-secondary-height;
 }
 
-.mdc-grid-list--header-caption .mdc-grid-tile__secondary {
+.mdc-grid-list.-headercaption > .tiles > .tile > .secondary {
   top: 0;
   bottom: auto;
 }
 
-.mdc-grid-list--with-icon-align-start {
-  .mdc-grid-tile__secondary {
+.mdc-grid-list.-alignstart {
+  > .tiles > .tile > .secondary {
     @include mdc-rtl-reflexive-property(padding, $mdc-grid-list-tile-secondary-padding * 2 + $mdc-grid-list-tile-secondary-icon-size, $mdc-grid-list-tile-secondary-padding-narrow, ".mdc-grid-list");
   }
 
-  .mdc-grid-tile__icon {
+  > .tiles > .tile > .secondary > .icon {
     @include mdc-rtl-reflexive-position(left, $mdc-grid-list-tile-secondary-padding, ".mdc-grid-list");
 
     font-size: $mdc-grid-list-tile-secondary-icon-size;
   }
 }
 
-.mdc-grid-list--with-icon-align-end {
-  .mdc-grid-tile__secondary {
+.mdc-grid-list.-alignend {
+  > .tiles > .tile > .secondary {
     @include mdc-rtl-reflexive-property(padding, $mdc-grid-list-tile-secondary-padding, $mdc-grid-list-tile-secondary-padding * 2 + $mdc-grid-list-tile-secondary-icon-size, ".mdc-grid-list");
   }
 
-  .mdc-grid-tile__icon {
+  > .tiles > .tile > .secondary > .icon {
     @include mdc-rtl-reflexive-position(right, $mdc-grid-list-tile-secondary-padding, ".mdc-grid-list");
 
     font-size: $mdc-grid-list-tile-secondary-icon-size;

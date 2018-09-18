@@ -22,30 +22,21 @@
  */
 
 const cssClasses = {
-  OPEN: 'mdc-dialog--open',
-  OPENING: 'mdc-dialog--opening',
-  CLOSING: 'mdc-dialog--closing',
-  SCRIM: 'mdc-dialog__scrim',
-  SCROLLABLE: 'mdc-dialog--scrollable',
-  STACKED: 'mdc-dialog--stacked',
-  SCROLL_LOCK: 'mdc-dialog-scroll-lock',
+  ROOT: 'mdc-dialog',
+  OPEN: '-open',
+  ANIMATING: '-animating',
+  BACKDROP: 'backdrop',
+  SCROLL_LOCK: 'mdc-dialog-scrolllock',
+  ACCEPT_BTN: '-accept',
+  CANCEL_BTN: '-cancel',
 };
 
 const strings = {
-  CONTAINER_SELECTOR: '.mdc-dialog__container',
-  SURFACE_SELECTOR: '.mdc-dialog__surface',
-  CONTENT_SELECTOR: '.mdc-dialog__content',
-  BUTTON_SELECTOR: '.mdc-dialog__button',
-
-  OPENING_EVENT: 'MDCDialog:opening',
-  OPENED_EVENT: 'MDCDialog:opened',
-  CLOSING_EVENT: 'MDCDialog:closing',
-  CLOSED_EVENT: 'MDCDialog:closed',
-
-  ACTION_ATTRIBUTE: 'data-mdc-dialog-action',
-
-  CLOSE_ACTION: 'close',
-  DESTROY_ACTION: 'destroy',
+  OPEN_DIALOG_SELECTOR: '.-open',
+  DIALOG_SURFACE_SELECTOR: '.surface',
+  ACCEPT_SELECTOR: '.-accept',
+  ACCEPT_EVENT: 'MDCDialog:accept',
+  CANCEL_EVENT: 'MDCDialog:cancel',
 };
 
 const numbers = {

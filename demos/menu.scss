@@ -53,7 +53,7 @@ body {
   width: 360px;
 }
 
-.mdc-menu-surface--anchor {
+.mdc-menu-surface-anchor {
   position: absolute;
   margin: 16px;
 }
@@ -83,3 +83,9 @@ body {
 .hero .mdc-menu-surface {
   z-index: 1;
 }
+
+// .mdc-menu > .mdc-list > .item.-group-a {
+//   padding: 0;
+//   fill: currentColor;
+//   @include mdc-rtl-reflexive-box(padding, left, 56px); // .mdc-memu .selectiongroup
+// }

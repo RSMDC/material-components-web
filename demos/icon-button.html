@@ -34,11 +34,11 @@
   <script src="/ready.js"></script>
 </head>
 <body class="mdc-typography">
-<header class="mdc-toolbar mdc-toolbar--fixed">
-  <div class="mdc-toolbar__row">
-    <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-      <a href="/" class="catalog-back mdc-toolbar__menu-icon"><i class="material-icons">&#xE5C4;</i></a>
-      <span class="mdc-toolbar__title catalog-title">Icon Buttons</span>
+<header class="mdc-toolbar -fixed">
+  <div class="row">
+    <section class="section -alignstart">
+      <a href="/" class="catalog-back menuicon"><i class="material-icons">&#xE5C4;</i></a>
+      <span class="title catalog-title">Icon Buttons</span>
     </section>
   </div>
 </header>
@@ -50,8 +50,8 @@
               aria-label="Add to favorites"
               aria-pressed="false"
               data-demo-toggle>
-        <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</i>
-        <i class="material-icons mdc-icon-button__icon">favorite_border</i>
+        <i class="material-icons icon -onicon">favorite</i>
+        <i class="material-icons icon">favorite_border</i>
       </button>
     </div>
   </section>
@@ -59,11 +59,11 @@
   <section class="example">
     <div>
       <div>
-        <h1 class="mdc-typography--headline5">Buttons</h1>
+        <h1 class="typoheadline5">Buttons</h1>
       </div>
       <div class="toggle-examples-container">
         <div class="toggle-example">
-          <h2 class="mdc-typography--headline6">Material Icons</h2>
+          <h2 class="typoheadline6">Material Icons</h2>
           <div class="demo-wrapper">
             <button class="mdc-icon-button material-icons"
                     role="button"
@@ -80,7 +80,7 @@
         </div>
 
         <div class="toggle-example">
-          <h2 class="mdc-typography--headline6">SVG Icon</h2>
+          <h2 class="typoheadline6">SVG Icon</h2>
           <div class="demo-wrapper">
             <button class="mdc-icon-button"
                     aria-label="Add to favorites"
@@ -94,7 +94,7 @@
         </div>
 
         <div class="toggle-example">
-          <h2 class="mdc-typography--headline6">Disabled Buttons</h2>
+          <h2 class="typoheadline6">Disabled Buttons</h2>
           <div class="demo-wrapper">
             <button class="mdc-icon-button material-icons"
                     aria-label="Airplane Mode active"
@@ -113,7 +113,7 @@
         </div>
 
         <div class="toggle-example">
-          <h2 class="mdc-typography--headline6">Larger Buttons</h2>
+          <h2 class="typoheadline6">Larger Buttons</h2>
           <div class="demo-wrapper">
             <button class="mdc-icon-button material-icons demo-icon-button-large"
                     aria-label="Airplane Mode active"
@@ -135,11 +135,11 @@
   <section class="example">
     <div>
       <div>
-        <h1 class="mdc-typography--headline5">Button Toggles</h1>
+        <h1 class="typoheadline5">Button Toggles</h1>
       </div>
       <div class="toggle-examples-container">
         <div class="toggle-example">
-          <h2 class="mdc-typography--headline6">Using Material Icons</h2>
+          <h2 class="typoheadline6">Using Material Icons</h2>
           <div class="demo-wrapper">
             <button
                     id="add-to-favorites"
@@ -147,38 +147,38 @@
                     aria-label="Add to favorites"
                     aria-pressed="false"
                     data-demo-toggle>
-              <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</i>
-              <i class="material-icons mdc-icon-button__icon">favorite_border</i>
+              <i class="material-icons icon -onicon">favorite</i>
+              <i class="material-icons icon">favorite_border</i>
             </button>
           </div>
           <p>Favorited? <span id="favorited-status">no</span></p>
         </div>
 
         <div class="toggle-example">
-          <h2 class="mdc-typography--headline6">Using Font Awesome</h2>
+          <h2 class="typoheadline6">Using Font Awesome</h2>
           <div class="demo-wrapper">
-            <button class="mdc-icon-button mdc-icon-button--on"
+            <button class="mdc-icon-button -on"
                     aria-label="Unstar this item"
                     aria-pressed="true"
                     data-demo-toggle>
-              <i class="fa fa-star mdc-icon-button__icon mdc-icon-button__icon--on"></i>
-              <i class="fa fa-star-o mdc-icon-button__icon"></i>
+              <i class="fa fa-star icon -onicon"></i>
+              <i class="fa fa-star-o icon"></i>
             </button>
           </div>
         </div>
 
         <div class="toggle-example">
-          <h2 class="mdc-typography--headline6">Using SVG Icons</h2>
+          <h2 class="typoheadline6">Using SVG Icons</h2>
           <div class="demo-wrapper">
-            <button class="mdc-icon-button mdc-icon-button--on"
+            <button class="mdc-icon-button -on"
                     aria-label="Unstar this item"
                     aria-pressed="true"
                     data-demo-toggle>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="mdc-icon-button__icon mdc-icon-button__icon--on">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="icon -onicon">
                 <path d="M0 0h24v24H0z" fill="none"></path>
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"></path>
               </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="mdc-icon-button__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="icon">
                 <path d="M0 0h24v24H0z" fill="none"></path>
                 <path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path>
               </svg>
@@ -187,35 +187,35 @@
         </div>
 
         <div class="toggle-example">
-          <h2 class="mdc-typography--headline6">Using Image Icons</h2>
+          <h2 class="typoheadline6">Using Image Icons</h2>
           <div class="demo-wrapper">
-            <button class="mdc-icon-button mdc-icon-button--on"
+            <button class="mdc-icon-button -on"
                     aria-label="Unstar this item"
                     aria-pressed="true"
                     data-demo-toggle>
-              <img src="images/ic_button_24px.svg" class="mdc-icon-button__icon mdc-icon-button__icon--on"/>
-              <img src="images/ic_card_24px.svg" class="mdc-icon-button__icon"/>
+              <img src="images/ic_button_24px.svg" class="icon -onicon"/>
+              <img src="images/ic_card_24px.svg" class="icon"/>
             </button>
           </div>
         </div>
 
         <div class="toggle-example">
-          <h2 class="mdc-typography--headline6">Disabled Icons</h2>
+          <h2 class="typoheadline6">Disabled Icons</h2>
           <div class="demo-wrapper">
             <button class="mdc-icon-button"
                     aria-label="Add to favorites"
                     aria-pressed="false"
                     data-demo-toggle
                     disabled>
-              <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</i>
-              <i class="material-icons mdc-icon-button__icon">favorite_border</i>
+              <i class="material-icons icon -onicon">favorite</i>
+              <i class="material-icons icon">favorite_border</i>
             </button>
           </div>
         </div>
       </div>
 
       <div class="toggle-example">
-        <h2 class="mdc-typography--headline6">Additional Color Combinations</h2>
+        <h2 class="typoheadline6">Additional Color Combinations</h2>
         <div id="demo-color-combos">
           <div id="light-on-bg" class="demo-color-combo">
             <div>
@@ -223,20 +223,20 @@
                       aria-label="Add to favorites"
                       aria-pressed="false"
                       data-demo-toggle>
-                <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</i>
-                <i class="material-icons mdc-icon-button__icon">favorite_border</i>
+                <i class="material-icons icon -onicon">favorite</i>
+                <i class="material-icons icon">favorite_border</i>
               </button>
             </div>
             <div class="mdc-theme--on-primary">Light icon on background</div>
           </div>
           <div id="dark-on-bg" class="demo-color-combo">
             <div class="mdc-theme--primary">
-              <button class="mdc-icon-button mdc-icon-button--on"
+              <button class="mdc-icon-button -on"
                       aria-label="Add to favorites"
                       aria-pressed="true"
                       data-demo-toggle>
-                <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</i>
-                <i class="material-icons mdc-icon-button__icon">favorite_border</i>
+                <i class="material-icons icon -onicon">favorite</i>
+                <i class="material-icons icon">favorite_border</i>
               </button>
             </div>
             <div>Dark icon on background</div>
@@ -247,8 +247,8 @@
                       aria-label="Add to favorites"
                       aria-pressed="false"
                       data-demo-toggle>
-                <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</i>
-                <i class="material-icons mdc-icon-button__icon">favorite_border</i>
+                <i class="material-icons icon -onicon">favorite</i>
+                <i class="material-icons icon">favorite_border</i>
               </button>
             </div>
             <div>Custom color</div>

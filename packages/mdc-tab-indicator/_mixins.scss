@@ -21,40 +21,41 @@
  * THE SOFTWARE.
  */
 
-@import "@material/theme/mixins";
+ @import "@material/theme/mixins";
 
-@mixin mdc-tab-indicator-surface {
-  position: relative;
-}
-
-@mixin mdc-tab-indicator-underline-color($color) {
-  > .mdc-tab-indicator__content--underline {
-    @include mdc-theme-prop(background-color, $color);
-  }
-}
-
-@mixin mdc-tab-indicator-underline-height($height) {
-  > .mdc-tab-indicator__content--underline {
-    height: $height;
-  }
-}
-
-@mixin mdc-tab-indicator-underline-top-corner-radius($radius) {
-  > .mdc-tab-indicator__content--underline {
-    border-top-left-radius: $radius;
-    border-top-right-radius: $radius;
-  }
-}
-
-@mixin mdc-tab-indicator-icon-color($color) {
-  > .mdc-tab-indicator__content--icon {
-    @include mdc-theme-prop(color, $color);
-  }
-}
-
-@mixin mdc-tab-indicator-icon-height($height) {
-  > .mdc-tab-indicator__content--icon {
-    height: $height;
-    font-size: $height;
-  }
-}
+ @mixin mdc-tab-indicator-surface {
+   position: relative;
+ }
+ 
+ @mixin mdc-tab-indicator-underline-color($color) {
+   > .content.-underline {
+     @include mdc-theme-prop(background-color, $color);
+   }
+ }
+ 
+ @mixin mdc-tab-indicator-underline-height($height) {
+   > .content.-underline {
+     height: $height;
+   }
+ }
+ 
+ @mixin mdc-tab-indicator-underline-top-corner-radius($radius) {
+   > .content.-underline {
+     border-top-left-radius: $radius;
+     border-top-right-radius: $radius;
+   }
+ }
+ 
+ @mixin mdc-tab-indicator-icon-color($color) {
+   > .content.-icon {
+     @include mdc-theme-prop(color, $color);
+   }
+ }
+ 
+ @mixin mdc-tab-indicator-icon-height($height) {
+   > .content.-icon {
+     height: $height;
+     font-size: $height;
+   }
+ }
+ 

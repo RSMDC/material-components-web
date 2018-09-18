@@ -55,11 +55,11 @@
   </head>
 
   <body class="mdc-typography">
-    <header class="mdc-toolbar mdc-toolbar--fixed demo-header-toolbar">
-      <div class="mdc-toolbar__row">
-        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-          <a href="/" class="catalog-back mdc-toolbar__menu-icon"><i class="material-icons">&#xE5C4;</i></a>
-          <span class="mdc-toolbar__title catalog-title">Switch</span>
+    <header class="mdc-toolbar -fixed demo-header-toolbar">
+      <div class="row">
+        <section class="section -alignstart">
+          <a href="/" class="catalog-back menuicon"><i class="material-icons">&#xE5C4;</i></a>
+          <span class="title catalog-title">Switch</span>
         </section>
       </div>
     </header>
@@ -70,10 +70,10 @@
       <div class="demo-wrapper">
         <section class="hero">
           <div class="mdc-switch">
-            <div class="mdc-switch__track"></div>
-            <div class="mdc-switch__thumb-underlay">
-              <div class="mdc-switch__thumb">
-                <input type="checkbox" class="mdc-switch__native-control" role="switch">
+            <div class="track"></div>
+            <div class="underlay">
+              <div class="thumb">
+                <input type="checkbox" class="nativecontrol" role="switch">
               </div>
             </div>
           </div>
@@ -83,23 +83,23 @@
           <h2>Enabled</h2>
           <div class="demo-switch-wrapper">
             <div class="mdc-switch">
-              <div class="mdc-switch__track"></div>
-              <div class="mdc-switch__thumb-underlay">
-                <div class="mdc-switch__thumb">
-                  <input type="checkbox" id="basic-switch" class="mdc-switch__native-control" role="switch">
+              <div class="track"></div>
+              <div class="underlay">
+                <div class="thumb">
+                  <input type="checkbox" id="basic-switch" class="nativecontrol" role="switch">
                 </div>
               </div>
             </div>
             <label for="basic-switch" class="mdc-switch-label">off/on</label>
           </div>
           <div class="demo-switch-wrapper">
-            <div class="mdc-switch demo-switch--custom mdc-switch--checked">
-              <div class="mdc-switch__track"></div>
-              <div class="mdc-switch__thumb-underlay">
-                <div class="mdc-switch__thumb">
+            <div class="mdc-switch demo-switch--custom -checked">
+              <div class="track"></div>
+              <div class="underlay">
+                <div class="thumb">
                   <input type="checkbox"
                   id="basic-switch-custom"
-                  class="mdc-switch__native-control"
+                  class="nativecontrol"
                   role="switch" checked>
                 </div>
               </div>
@@ -110,13 +110,13 @@
         <section class="example">
           <h2>Disabled</h2>
           <div class="demo-switch-wrapper">
-            <div class="mdc-switch mdc-switch--disabled">
-              <div class="mdc-switch__track"></div>
-              <div class="mdc-switch__thumb-underlay">
-                <div class="mdc-switch__thumb">
+            <div class="mdc-switch -disabled">
+              <div class="track"></div>
+              <div class="underlay">
+                <div class="thumb">
                   <input type="checkbox"
                   id="basic-switch--disabled"
-                  class="mdc-switch__native-control"
+                  class="nativecontrol"
                   role="switch"
                   disabled>
                 </div>

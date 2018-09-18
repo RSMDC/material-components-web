@@ -36,13 +36,13 @@
 @mixin mdc-text-field-textarea-corner-radius($radius) {
   border-radius: $radius;
 
-  .mdc-floating-label {
+  > .mdc-floating-label {
     // Bottom corners are square to prevent weird edge cases
     // where text would be visible outside of the curve.
     border-radius: $radius $radius 0 0;
   }
 
-  .mdc-text-field__input {
+  > .input {
     // The input element is required to have 2 pixels shaved off
     // of the radius of its parent. This prevents an ugly space of
     // background between the two borders in each corner when the
@@ -53,85 +53,85 @@
 }
 
 @mixin mdc-text-field-ink-color($color) {
-  &:not(.mdc-text-field--disabled) {
+  &:not(.-disabled) {
     @include mdc-text-field-ink-color_($color);
   }
 }
 
 @mixin mdc-text-field-fill-color($color) {
-  &:not(.mdc-text-field--disabled) {
+  &:not(.-disabled) {
     @include mdc-text-field-fill-color_($color);
   }
 }
 
 @mixin mdc-text-field-textarea-stroke-color($color) {
-  &:not(.mdc-text-field--disabled) {
+  &:not(.-disabled) {
     @include mdc-text-field-textarea-stroke-color_($color);
   }
 }
 
 @mixin mdc-text-field-textarea-fill-color($color) {
-  &:not(.mdc-text-field--disabled) {
+  &:not(.-disabled) {
     @include mdc-text-field-textarea-fill-color_($color);
 
     // Automatically add label background color the same color as well to ensure
     // the label can be seen if the input scrolls behind the label
-    .mdc-floating-label {
+    > .mdc-floating-label {
       @include mdc-floating-label-fill-color($color);
     }
   }
 }
 
 @mixin mdc-text-field-fullwidth-bottom-line-color($color) {
-  &:not(.mdc-text-field--disabled) {
+  &:not(.-disabled) {
     @include mdc-text-field-fullwidth-bottom-line-color_($color);
   }
 }
 
 @mixin mdc-text-field-bottom-line-color($color) {
-  &:not(.mdc-text-field--disabled):not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) {
+  &:not(.-disabled):not(.-outlined):not(.-textarea) {
     @include mdc-text-field-bottom-line-color_($color);
   }
 }
 
 @mixin mdc-text-field-hover-bottom-line-color($color) {
-  &:not(.mdc-text-field--disabled):not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) {
+  &:not(.-disabled):not(.-outlined):not(.-textarea) {
     @include mdc-text-field-hover-bottom-line-color_($color);
   }
 }
 
 @mixin mdc-text-field-line-ripple-color($color) {
-  &:not(.mdc-text-field--disabled) {
+  &:not(.-disabled) {
     @include mdc-text-field-line-ripple-color_($color);
   }
 }
 
 @mixin mdc-text-field-label-color($color) {
-  &:not(.mdc-text-field--disabled) {
+  &:not(.-disabled) {
     @include mdc-text-field-label-ink-color_($color);
   }
 }
 
 @mixin mdc-text-field-outline-color($color) {
-  &:not(.mdc-text-field--disabled) {
+  &:not(.-disabled) {
     @include mdc-text-field-outline-color_($color);
   }
 }
 
 @mixin mdc-text-field-hover-outline-color($color) {
-  &:not(.mdc-text-field--disabled) {
+  &:not(.-disabled) {
     @include mdc-text-field-hover-outline-color_($color);
   }
 }
 
 @mixin mdc-text-field-focused-outline-color($color) {
-  &:not(.mdc-text-field--disabled) {
+  &:not(.-disabled) {
     @include mdc-text-field-focused-outline-color_($color);
   }
 }
 
 @mixin mdc-text-field-caret-color($color) {
-  .mdc-text-field__input {
+  > .input {
     @include mdc-theme-prop(caret-color, $color);
   }
 }
@@ -152,7 +152,7 @@
   border-bottom: none;
   pointer-events: none;
 
-  .mdc-floating-label {
+  > .mdc-floating-label {
     cursor: default;
   }
 }
@@ -165,17 +165,11 @@
   @include mdc-text-field-helper-text-validation-color($mdc-text-field-error);
   @include mdc-text-field-caret-color($mdc-text-field-error);
 
-  &.mdc-text-field--with-trailing-icon {
-    &:not(.mdc-text-field--with-leading-icon) {
-      @include mdc-text-field-icon-color($mdc-text-field-error);
-    }
-
-    &.mdc-text-field--with-leading-icon {
-      @include mdc-text-field-icon-color($mdc-text-field-error, /* styleSecondIcon */ true);
-    }
+  &.-trailingicon {
+    @include mdc-text-field-icon-color($mdc-text-field-error);
   }
 
-  + .mdc-text-field-helper-text--validation-msg {
+  + .-validation {
     opacity: 1;
   }
 }
@@ -187,7 +181,7 @@
     color: $mdc-text-field-error;
   }
 
-  + .mdc-text-field-helper-text:not(.mdc-text-field-helper-text--validation-msg) {
+  + .mdc-text-field-helper-text:not(.-validation) {
     opacity: 1;
   }
 }
@@ -196,17 +190,17 @@
   @include mdc-floating-label-float-position($mdc-text-field-dense-label-position-y, 0%, $mdc-text-field-dense-label-scale);
   @include mdc-floating-label-shake-animation(text-field-dense);
 
-  .mdc-text-field__input {
+  > .input {
     padding: 12px 12px 0;
   }
 
-  .mdc-floating-label {
+  > .mdc-floating-label {
     font-size: .813rem;
   }
 }
 
 @mixin mdc-required-text-field-label-asterisk_() {
-  .mdc-text-field__input:required + .mdc-floating-label::after {
+  > .input:required + .mdc-floating-label::after {
     @content;
   }
 }
@@ -218,7 +212,7 @@
   // this is because .mdc-notched-outline and .mdc-notched-outline__idle
   // are siblings. .mdc-notched-outline__idle needs to be a child of
   // .mdc-notched-outline in order to remedy this issue.
-  .mdc-notched-outline {
+  > .mdc-notched-outline {
     @include mdc-notched-outline-corner-radius($radius);
   }
 
@@ -226,14 +220,14 @@
 }
 
 @mixin mdc-text-field-floating-label_ {
-  .mdc-floating-label {
+  > .mdc-floating-label {
     @include mdc-rtl-reflexive-position(left, 16px);
 
     bottom: 20px;
   }
 
-  &:not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) {
-    .mdc-floating-label {
+  &:not(.-outlined):not(.-textarea) {
+    > .mdc-floating-label {
       // @include mdc-floating-label-max-width(calc(100% - #{$mdc-text-field-icon-padding}));
       max-width: calc(100% - #{$mdc-text-field-icon-padding});
     }
@@ -246,7 +240,7 @@
   @include mdc-text-field-outline-color_($mdc-text-field-outlined-disabled-border);
   @include mdc-text-field-fill-color_(transparent);
 
-  .mdc-text-field__input {
+  > .input {
     border-bottom: none;
   }
 }
@@ -267,15 +261,15 @@
 
   height: 48px;
 
-  .mdc-text-field__input {
+  > .input {
     padding: 12px 12px 7px;
   }
 
-  .mdc-floating-label {
+  > .mdc-floating-label {
     bottom: 16px;
   }
 
-  .mdc-text-field__icon {
+  > .icon {
     top: 12px;
   }
 }
@@ -293,7 +287,7 @@
   border: none;
   overflow: visible;
 
-  .mdc-text-field__input {
+  > .input {
     display: flex;
     padding: 12px 16px 14px;
     border: none !important;  // FF adds unwanted border in HC mode on windows.
@@ -301,11 +295,11 @@
     z-index: 1;
   }
 
-  .mdc-text-field__icon {
+  > .icon {
     z-index: 2;
   }
 
-  .mdc-floating-label {
+  > .mdc-floating-label {
     @include mdc-rtl-reflexive-position(left, 16px);
 
     width: auto;
@@ -322,9 +316,9 @@
 }
 
 @mixin mdc-text-field-hover-outline-color_($color) {
-  &:not(.mdc-text-field--focused) {
-    .mdc-text-field__input:hover ~,
-    .mdc-text-field__icon:hover ~ {
+  &:not(.-focused) {
+    > .input:hover ~,
+    > .icon:hover ~ {
       @include mdc-notched-outline-idle-color($color);
 
       // tldr; this doesn't break BEM:
@@ -333,7 +327,7 @@
       // outline html structure has .mdc-notched-outline
       // and .mdc-notched-outline__idle as siblings, while
       // .mdc-notched-outline__path is a child of .mdc-notched-outline
-      .mdc-notched-outline {
+      > .mdc-notched-outline {
         @include mdc-notched-outline-color($color);
       }
     }
@@ -341,7 +335,7 @@
 }
 
 @mixin mdc-text-field-focused-outline-color_($color) {
-  &.mdc-text-field--focused {
+  &.-focused {
     @include mdc-notched-outline-color($color);
   }
 }
@@ -378,7 +372,7 @@
   @include mdc-text-field-icon-horizontal-position_(right, $mdc-text-field-trailing-icon-position, $mdc-text-field-icon-padding);
 
   // Outlined uses 16px for text alignment when using a trailing icon.
-  &.mdc-text-field--outlined {
+  &.-outlined {
     @include mdc-text-field-icon-horizontal-position_(right, $mdc-text-field-icon-position, $mdc-text-field-icon-padding);
   }
 }
@@ -399,13 +393,13 @@
 @mixin mdc-text-field-fullwidth_ {
   width: 100%;
 
-  &:not(.mdc-text-field--textarea) {
+  &:not(.-textarea) {
     @include mdc-states-base-color(transparent);
     @include mdc-text-field-fill-color(transparent);
 
     display: block;
 
-    .mdc-text-field__input {
+    > .input {
       padding: 0;
     }
   }
@@ -423,11 +417,11 @@
   border-bottom-width: 1px;
   border-style: solid;
 
-  .mdc-text-field__input {
+  > .input {
     border: 1px solid transparent;
   }
 
-  .mdc-floating-label {
+  > .mdc-floating-label {
     @include mdc-floating-label-fill-color($mdc-textarea-disabled-background);
   }
 }
@@ -458,7 +452,7 @@
   border: 1px solid;
   overflow: hidden;
 
-  .mdc-text-field__input {
+  > .input {
     align-self: auto;
     box-sizing: content-box;
     height: auto;
@@ -468,7 +462,7 @@
     border: 1px solid transparent;
   }
 
-  .mdc-floating-label {
+  > .mdc-floating-label {
     @include mdc-floating-label-fill-color($mdc-textarea-background);
     @include mdc-rtl-reflexive(left, 1px, right, 0);
     @include mdc-rtl-reflexive-property(margin, 8px, 0);
@@ -486,7 +480,7 @@
 // Customization
 
 @mixin mdc-text-field-ink-color_($color) {
-  .mdc-text-field__input {
+  > .input {
     @include mdc-theme-prop(color, $color);
   }
 }
@@ -498,7 +492,7 @@
 @mixin mdc-text-field-textarea-stroke-color_($color) {
   @include mdc-theme-prop(border-color, $color);
 
-  .mdc-text-field__input:focus {
+  > .input:focus {
     @include mdc-theme-prop(border-color, $color);
   }
 }
@@ -508,36 +502,36 @@
 }
 
 @mixin mdc-text-field-fullwidth-bottom-line-color_($color) {
-  &:not(.mdc-text-field--textarea) {
+  &:not(.-textarea) {
     @include mdc-theme-prop(border-bottom-color, $color);
   }
 }
 
 @mixin mdc-text-field-bottom-line-color_($color) {
-  .mdc-text-field__input {
+  > .input {
     @include mdc-theme-prop(border-bottom-color, $color);
   }
 }
 
 @mixin mdc-text-field-hover-bottom-line-color_($color) {
-  .mdc-text-field__input:hover {
+  > .input:hover {
     @include mdc-theme-prop(border-bottom-color, $color);
   }
 }
 
 @mixin mdc-text-field-line-ripple-color_($color) {
-  .mdc-line-ripple {
+  > .mdc-line-ripple {
     @include mdc-line-ripple-color($color);
   }
 }
 
 @mixin mdc-text-field-label-ink-color_($color) {
-  .mdc-floating-label {
+  > .mdc-floating-label {
     @include mdc-floating-label-ink-color($color);
   }
 
   // CSS-only version
-  .mdc-text-field__input::placeholder {
+  > .input::placeholder {
     @include mdc-theme-prop(color, $color);
   }
 }

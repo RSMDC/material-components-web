@@ -23,9 +23,9 @@
 
 /** @enum {string} */
 const cssClasses = {
-  DISABLED: 'mdc-select--disabled',
+  DISABLED: '-disabled',
   ROOT: 'mdc-select',
-  OUTLINED: 'mdc-select--outlined',
+  OUTLINED: '-outlined',
 };
 
 /** @enum {string} */
@@ -33,7 +33,7 @@ const strings = {
   CHANGE_EVENT: 'MDCSelect:change',
   LINE_RIPPLE_SELECTOR: '.mdc-line-ripple',
   LABEL_SELECTOR: '.mdc-floating-label',
-  NATIVE_CONTROL_SELECTOR: '.mdc-select__native-control',
+  NATIVE_CONTROL_SELECTOR: '.nativecontrol',
   OUTLINE_SELECTOR: '.mdc-notched-outline',
 };
 

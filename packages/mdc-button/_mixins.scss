@@ -57,7 +57,7 @@
 }
 
 @mixin mdc-button-icon-color($color) {
-  &:not(:disabled) .mdc-button__icon {
+  &:not(:disabled) > .icon {
     @include mdc-theme-prop(color, $color);
   }
 }

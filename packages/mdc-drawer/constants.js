@@ -23,12 +23,12 @@
 /** @enum {string} */
 const cssClasses = {
   ROOT: 'mdc-drawer',
-  DISMISSIBLE: 'mdc-drawer--dismissible',
-  MODAL: 'mdc-drawer--modal',
-  OPEN: 'mdc-drawer--open',
-  ANIMATE: 'mdc-drawer--animate',
-  OPENING: 'mdc-drawer--opening',
-  CLOSING: 'mdc-drawer--closing',
+  DISMISSIBLE: '-dismissible',
+  MODAL: '-modal',
+  OPEN: '-open',
+  ANIMATE: '-animate',
+  OPENING: '-opening',
+  CLOSING: '-closing',
 };
 
 /** @enum {string} */

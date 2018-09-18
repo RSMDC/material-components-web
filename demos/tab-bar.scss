@@ -49,11 +49,11 @@
     @include mdc-tab-icon-color($material-color-blue-600);
   }
 
-  .mdc-tab__ripple {
+  .tabripple {
     @include mdc-states($material-color-yellow-700);
   }
 
-  .mdc-tab--active {
+  .-active {
     @include mdc-tab-text-label-color($material-color-blue-900);
     @include mdc-tab-icon-color($material-color-blue-900);
   }

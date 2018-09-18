@@ -55,7 +55,7 @@
 }
 
 @mixin mdc-floating-label-float-position($positionY, $positionX: 0%, $scale: .75) {
-  .mdc-floating-label--float-above {
+  .-floatabove {
     @if $positionX == 0 {
       transform: translateY(-1 * $positionY) scale($scale);
     } @else {
@@ -69,7 +69,7 @@
 }
 
 @mixin mdc-floating-label-shake-animation($modifier) {
-  .mdc-floating-label--shake {
+  &.-shake {
     animation: mdc-floating-label-shake-float-above-#{$modifier} 250ms 1;
   }
 }

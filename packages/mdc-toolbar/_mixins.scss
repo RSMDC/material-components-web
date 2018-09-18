@@ -39,7 +39,7 @@
   @include mdc-toolbar-fill-color($color);
   @include mdc-toolbar-ink-color(mdc-theme-accessible-ink-color($color));
 
-  .mdc-toolbar__icon {
+  > .row > .section > .icon {
     @include mdc-toolbar-icon-ink-color(mdc-theme-accessible-ink-color($color));
   }
 }

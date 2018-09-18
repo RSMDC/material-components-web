@@ -34,69 +34,69 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body class="mdc-typography demo-body">
-    <aside id="demo-drawer" class="mdc-drawer mdc-drawer--dismissible mdc-drawer--open demo-drawer">
-      <div class="mdc-drawer__header">
-        <h3 class="mdc-drawer__title">Mail</h3>
-        <h6 class="mdc-drawer__subtitle">email@material.io</h6>
+    <aside id="demo-drawer" class="mdc-drawer -dismissible -open demo-drawer">
+      <div class="header">
+        <h3 class="title">Mail</h3>
+        <h6 class="subtitle">email@material.io</h6>
       </div>
-      <div class="mdc-drawer__content">
+      <div class="content">
         <nav class="mdc-list">
-          <a class="mdc-list-item mdc-list-item--activated" href="#" aria-selected="true" tabindex="0">
-            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>
-            <span class="mdc-list-item__text">
+          <a class="item -activated" href="#" aria-selected="true" tabindex="0">
+            <i class="material-icons graphic" aria-hidden="true">inbox</i>
+            <span class="text">
               Inbox
             </span>
           </a>
-          <a class="mdc-list-item" href="#">
-            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">star</i>
-            <span class="mdc-list-item__text">
+          <a class="item" href="#">
+            <i class="material-icons graphic" aria-hidden="true">star</i>
+            <span class="text">
               Star
             </span>
           </a>
-          <a class="mdc-list-item" href="#">
-            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">send</i>
-            <span class="mdc-list-item__text">
+          <a class="item" href="#">
+            <i class="material-icons graphic" aria-hidden="true">send</i>
+            <span class="text">
               Sent Mail
             </span>
           </a>
-          <a class="mdc-list-item" href="#">
-            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">drafts</i>
-            <span class="mdc-list-item__text">
+          <a class="item" href="#">
+            <i class="material-icons graphic" aria-hidden="true">drafts</i>
+            <span class="text">
               Drafts
             </span>
           </a>
 
           <hr class="mdc-list-divider">
-          <h6 class="mdc-list-group__subheader">Labels</h6>
-          <a class="mdc-list-item" href="#">
-            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">bookmark</i>
-            <span class="mdc-list-item__text">
+          <h6 class="subheader">Labels</h6>
+          <a class="item" href="#">
+            <i class="material-icons graphic" aria-hidden="true">bookmark</i>
+            <span class="text">
               Family
             </span>
           </a>
-          <a class="mdc-list-item" href="#">
-            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">bookmark</i>
-            <span class="mdc-list-item__text">
+          <a class="item" href="#">
+            <i class="material-icons graphic" aria-hidden="true">bookmark</i>
+            <span class="text">
               Friends
             </span>
           </a>
-          <a class="mdc-list-item" href="#">
-            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">bookmark</i>
-            <span class="mdc-list-item__text">
+          <a class="item" href="#">
+            <i class="material-icons graphic" aria-hidden="true">bookmark</i>
+            <span class="text">
               Work
             </span>
           </a>
 
           <hr class="mdc-list-divider">
-          <a class="mdc-list-item" href="#">
-            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">settings</i>
-            <span class="mdc-list-item__text">
+          <a class="item" href="#">
+            <i class="material-icons graphic" aria-hidden="true">settings</i>
+            <span class="text">
               Settings
             </span>
           </a>
-          <a class="mdc-list-item" href="#">
-            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">announcement</i>
-            <span class="mdc-list-item__text">
+          <a class="item" href="#">
+            <i class="material-icons graphic" aria-hidden="true">announcement</i>
+            <span class="text">
               Help & feedback
             </span>
           </a>
@@ -105,49 +105,49 @@
     </aside>
     <div class="demo-content mdc-drawer-app-content" id="demo-content">
       <header class="mdc-top-app-bar demo-top-app-bar" id="app-bar">
-        <div class="mdc-top-app-bar__row">
-          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-            <a href="#" class="demo-menu material-icons mdc-top-app-bar__navigation-icon">menu</a>
-            <span class="mdc-top-app-bar__title">Dismissible Drawer</span>
+        <div class="row">
+          <section class="section -alignstart">
+            <a href="#" class="demo-menu material-icons navicon">menu</a>
+            <span class="title">Dismissible Drawer</span>
           </section>
-          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-            <a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Download" alt="Download">file_download</a>
+          <section class="section -alignend" role="toolbar">
+            <a href="#" class="material-icons actionitem" aria-label="Download" alt="Download">file_download</a>
           </section>
         </div>
       </header>
 
       <main class="demo-main" id="demo-main">
-        <div class="mdc-top-app-bar--fixed-adjust"></div>
-        <h1 class="mdc-typography--headline4">Dismissible Drawer</h1>
-        <p class="mdc-typography--body1">It sits to the left of this content. Currently active destination: <strong class="demo-selected-destination">Inbox</strong></p>
+        <div class="mdc-top-app-bar-fixed-adjust"></div>
+        <h1 class="typoheadline4">Dismissible Drawer</h1>
+        <p class="typobody1">It sits to the left of this content. Currently active destination: <strong class="demo-selected-destination">Inbox</strong></p>
 
         <div id="demo-radio-buttons">
           <div class="mdc-form-field">
             <div class="mdc-radio">
-              <input class="mdc-radio__native-control" type="radio" id="theme-radio-default" name="theme" checked>
-              <div class="mdc-radio__background">
-                <div class="mdc-radio__outer-circle"></div>
-                <div class="mdc-radio__inner-circle"></div>
+              <input class="nativecontrol" type="radio" id="theme-radio-default" name="theme" checked>
+              <div class="background">
+                <div class="outer"></div>
+                <div class="inner"></div>
               </div>
             </div>
             <label for="theme-radio-default">Default</label>
           </div>
           <div class="mdc-form-field">
             <div class="mdc-radio">
-              <input class="mdc-radio__native-control" type="radio" id="theme-radio-custom" name="theme">
-              <div class="mdc-radio__background">
-                <div class="mdc-radio__outer-circle"></div>
-                <div class="mdc-radio__inner-circle"></div>
+              <input class="nativecontrol" type="radio" id="theme-radio-custom" name="theme">
+              <div class="background">
+                <div class="outer"></div>
+                <div class="inner"></div>
               </div>
             </div>
             <label for="theme-radio-custom">Custom Theme</label>
           </div>
           <div class="mdc-form-field">
             <div class="mdc-radio">
-              <input class="mdc-radio__native-control" type="radio" id="theme-radio-accessible" name="theme">
-              <div class="mdc-radio__background">
-                <div class="mdc-radio__outer-circle"></div>
-                <div class="mdc-radio__inner-circle"></div>
+              <input class="nativecontrol" type="radio" id="theme-radio-accessible" name="theme">
+              <div class="background">
+                <div class="outer"></div>
+                <div class="inner"></div>
               </div>
             </div>
             <label for="theme-radio-accessible">Accessible Theme</label>
@@ -155,15 +155,15 @@
         </div>
 
         <div class="extra-content-wrapper">
-          <button type="button" class="mdc-button mdc-button--outlined mdc-button--dense demo-toolbar-example-heading__rtl-toggle-button">Toggle RTL</button>
+          <button type="button" class="mdc-button -outlined -dense demo-toolbar-example-heading__rtl-toggle-button">Toggle RTL</button>
         </div>
         <div class="extra-content-wrapper">
-          <button id="toggle-wide" class="mdc-button mdc-button--outlined mdc-button--dense">Toggle extra-wide content</button>
-          <div id="extra-wide-content" class="mdc-elevation--z2">&nbsp;</div>
+          <button id="toggle-wide" class="mdc-button -outlined -dense">Toggle extra-wide content</button>
+          <div id="extra-wide-content" class="mdc-elevation -z2">&nbsp;</div>
         </div>
         <div class="extra-content-wrapper">
-          <button id="toggle-tall" class="mdc-button mdc-button--outlined mdc-button--dense">Toggle extra-tall content</button>
-          <div id="extra-tall-content" class="mdc-elevation--z2">&nbsp;</div>
+          <button id="toggle-tall" class="mdc-button -outlined -dense">Toggle extra-tall content</button>
+          <div id="extra-tall-content" class="mdc-elevation -z2">&nbsp;</div>
         </div>
       </main>
     </div>
@@ -188,7 +188,6 @@
         radioEl.addEventListener('change', function(e) {
           drawerEl.classList.remove('demo-drawer--custom');
           drawerEl.classList.remove('demo-drawer--accessible');
-
           if(e.target.id === 'theme-radio-custom') {
             drawerEl.classList.add('demo-drawer--custom');
           } else if(e.target.id === 'theme-radio-accessible') {

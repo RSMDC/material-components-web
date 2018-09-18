@@ -34,11 +34,11 @@
   </head>
 
   <body class="mdc-typography">
-    <header class="mdc-toolbar mdc-toolbar--fixed">
-      <div class="mdc-toolbar__row">
-        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-          <a href="/" class="catalog-back mdc-toolbar__menu-icon"><i class="material-icons">&#xE5C4;</i></a>
-          <span class="mdc-toolbar__title catalog-title">Card</span>
+    <header class="mdc-toolbar -fixed">
+      <div class="row">
+        <section class="section -alignstart">
+          <a href="/" class="catalog-back menuicon"><i class="material-icons">&#xE5C4;</i></a>
+          <span class="title catalog-title">Card</span>
         </section>
       </div>
     </header>
@@ -48,33 +48,33 @@
 
       <section class="hero">
         <div class="mdc-card demo-card">
-          <a class="mdc-card__primary-action" href="#">
-            <div class="mdc-card__media mdc-card__media--16-9 demo-card__media demo-card__media--16-9"></div>
+          <a class="primaryaction" href="#">
+            <div class="media -size169 demo-card__media demo-card__media--16-9"></div>
             <div class="demo-card__primary">
-              <h2 class="demo-card__title mdc-typography--headline6">Our Changing Planet</h2>
-              <h3 class="demo-card__subtitle mdc-typography--subtitle2">by Kurt Wagner</h3>
+              <h2 class="demo-card__title typoheadline6">Our Changing Planet</h2>
+              <h3 class="demo-card__subtitle typosubtitle2">by Kurt Wagner</h3>
             </div>
-            <div class="demo-card__secondary mdc-typography--body2">
+            <div class="demo-card__secondary typobody2">
               Visit ten places on our planet that are undergoing the biggest changes today.
             </div>
           </a>
-          <div class="mdc-card__actions">
-            <div class="mdc-card__action-buttons">
-              <button class="mdc-button mdc-card__action mdc-card__action--button">Read</button>
-              <button class="mdc-button mdc-card__action mdc-card__action--button">Bookmark</button>
+          <div class="actions">
+            <div class="buttons">
+              <button class="mdc-button action -button">Read</button>
+              <button class="mdc-button action -button">Bookmark</button>
             </div>
-            <div class="mdc-card__action-icons">
-              <button class="mdc-icon-button mdc-card__action mdc-card__action--icon"
+            <div class="icons">
+              <button class="mdc-icon-button action -icon"
                  aria-pressed="false"
                  aria-label="Add to favorites"
                  title="Add to favorites" data-demo-toggle>
-                <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</i>
-                <i class="material-icons mdc-icon-button__icon">favorite_border</i>
+                <i class="material-icons icon -onicon">favorite</i>
+                <i class="material-icons icon">favorite_border</i>
               </button>
-              <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon"
+              <button class="mdc-icon-button material-icons action -icon"
                  data-mdc-ripple-is-unbounded
                  title="Share">share</button>
-              <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon"
+              <button class="mdc-icon-button material-icons action -icon"
                  data-mdc-ripple-is-unbounded
                  title="More options">more_vert</button>
             </div>
@@ -85,12 +85,12 @@
       <section class="demo-card-toggles">
         <div class="mdc-form-field">
           <div class="mdc-checkbox">
-            <input type="checkbox" class="mdc-checkbox__native-control" id="toggle-rtl" aria-labelledby="toggle-rtl-label" />
-            <div class="mdc-checkbox__background">
-              <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+            <input type="checkbox" class="nativecontrol" id="toggle-rtl" aria-labelledby="toggle-rtl-label" />
+            <div class="background">
+              <svg class="checkmark" viewBox="0 0 24 24">
+                <path class="path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
               </svg>
-              <div class="mdc-checkbox__mixedmark"></div>
+              <div class="mixedmark"></div>
             </div>
           </div>
           <label for="toggle-rtl" id="toggle-rtl-label">Toggle RTL</label>
@@ -98,14 +98,14 @@
       </section>
 
       <section class="demo-card-collection">
-        <div class="mdc-card mdc-card--outlined demo-card">
-          <div class="demo-card-article-group-heading mdc-typography--subtitle2">Headlines</div>
+        <div class="mdc-card -outlined demo-card">
+          <div class="demo-card-article-group-heading typosubtitle2">Headlines</div>
 
           <hr class="mdc-list-divider">
 
           <a class="demo-card-article mdc-ripple-surface" href="#">
-            <h2 class="demo-card-article__title mdc-typography--headline5">Copper on the rise</h2>
-            <p class="demo-card-article__snippet mdc-typography--body2">
+            <h2 class="demo-card-article__title typoheadline5">Copper on the rise</h2>
+            <p class="demo-card-article__snippet typobody2">
               Copper price soars amid global market optimism and increased demand.
             </p>
           </a>
@@ -113,8 +113,8 @@
           <hr class="mdc-list-divider">
 
           <a class="demo-card-article mdc-ripple-surface" href="#">
-            <h2 class="demo-card-article__title mdc-typography--headline5">U.S. tech startups rebound</h2>
-            <p class="demo-card-article__snippet mdc-typography--body2">
+            <h2 class="demo-card-article__title typoheadline5">U.S. tech startups rebound</h2>
+            <p class="demo-card-article__snippet typobody2">
               Favorable business conditions have allowed startups to secure more fundraising deals compared to last
               year.
             </p>
@@ -123,8 +123,8 @@
           <hr class="mdc-list-divider">
 
           <a class="demo-card-article mdc-ripple-surface" href="#">
-            <h2 class="demo-card-article__title mdc-typography--headline5">Asia's clean energy ambitions</h2>
-            <p class="demo-card-article__snippet mdc-typography--body2">
+            <h2 class="demo-card-article__title typoheadline5">Asia's clean energy ambitions</h2>
+            <p class="demo-card-article__snippet typobody2">
               China plans to invest billions of dollars for the development of over 300 clean energy projects in
               Southeast Asia.
             </p>
@@ -132,8 +132,8 @@
 
           <hr class="mdc-list-divider">
 
-          <div class="mdc-card__actions mdc-card__actions--full-bleed">
-            <a class="mdc-button mdc-card__action mdc-card__action--button demo-card-action" href="#">
+          <div class="actions -fullbleed">
+            <a class="mdc-button action -button demo-card-action" href="#">
               All Business Headlines
               <i class="material-icons" aria-hidden="true">arrow_forward</i>
             </a>
@@ -141,51 +141,51 @@
         </div>
 
         <div class="mdc-card demo-card demo-card--photo">
-          <a class="mdc-card__primary-action demo-card__primary-action" href="#">
-            <div class="mdc-card__media mdc-card__media--square demo-card__media">
-              <div class="mdc-card__media-content demo-card__media-content--with-title">
-                <div class="demo-card__media-title mdc-typography--subtitle2">
+          <a class="primaryaction demo-card__primary-action" href="#">
+            <div class="media -square demo-card__media">
+              <div class="content demo-card__media-content--with-title">
+                <div class="demo-card__media-title typosubtitle2">
                   Vacation Photos
                 </div>
               </div>
             </div>
           </a>
-          <div class="mdc-card__actions mdc-card__action-icons">
-            <button class="mdc-icon-button mdc-card__action mdc-card__action--icon"
+          <div class="actions icons">
+            <button class="mdc-icon-button action -icon"
                aria-pressed="false"
                aria-label="Add to favorites"
                title="Add to favorites" data-demo-toggle>
-              <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</i>
-              <i class="material-icons mdc-icon-button__icon">favorite_border</i>
+              <i class="material-icons icon -onicon">favorite</i>
+              <i class="material-icons icon">favorite_border</i>
             </button>
-            <button class="mdc-icon-button mdc-card__action mdc-card__action--icon"
+            <button class="mdc-icon-button action -icon"
                aria-pressed="false"
                aria-label="Add bookmark"
                title="Add bookmark" data-demo-toggle>
-              <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">bookmark</i>
-              <i class="material-icons mdc-icon-button__icon">bookmark_border</i>
+              <i class="material-icons icon -onicon">bookmark</i>
+              <i class="material-icons icon">bookmark_border</i>
             </button>
-            <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon"
+            <button class="mdc-icon-button material-icons action -icon"
                data-mdc-ripple-is-unbounded
                title="Share">share</button>
           </div>
         </div>
 
         <div class="mdc-card demo-card demo-card--music">
-          <a class="mdc-card__primary-action demo-card__primary-action" href="#">
+          <a class="primaryaction demo-card__primary-action" href="#">
             <div class="demo-card__music-row">
-              <div class="mdc-card__media mdc-card__media--square demo-card__media demo-card__media--music"></div>
+              <div class="media -square demo-card__media demo-card__media--music"></div>
               <div class="demo-card__music-info">
-                <div class="demo-card__music-title mdc-typography--headline5">Rozes</div>
-                <div class="demo-card__music-artist mdc-typography--body2">Under the Grave</div>
-                <div class="demo-card__music-year mdc-typography--body2">(2016)</div>
+                <div class="demo-card__music-title typoheadline5">Rozes</div>
+                <div class="demo-card__music-artist typobody2">Under the Grave</div>
+                <div class="demo-card__music-year typobody2">(2016)</div>
               </div>
             </div>
           </a>
           <hr class="mdc-list-divider">
-          <div class="mdc-card__actions">
-            <div class="mdc-card__action-buttons demo-card__action-buttons--text-only">Rate this album</div>
-            <div class="mdc-card__action-icons">
+          <div class="actions">
+            <div class="buttons demo-card__action-buttons--text-only">Rate this album</div>
+            <div class="icons">
               <i class="material-icons demo-card__action-icon--star"
                  tabindex="0"
                  role="button"
@@ -248,7 +248,7 @@
           mdc.ripple.MDCRipple.attachTo(surface);
         });
 
-        [].forEach.call(document.querySelectorAll('.mdc-card__primary-action'), function(el) {
+        [].forEach.call(document.querySelectorAll('.primaryaction'), function(el) {
           mdc.ripple.MDCRipple.attachTo(el);
         });
       });

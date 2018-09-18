@@ -123,7 +123,6 @@ class MDCComponent {
       evt = document.createEvent('CustomEvent');
       evt.initCustomEvent(evtType, shouldBubble, false, evtData);
     }
-
     this.root_.dispatchEvent(evt);
   }
 }

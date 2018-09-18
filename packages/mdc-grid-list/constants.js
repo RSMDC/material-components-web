@@ -21,6 +21,6 @@
  * THE SOFTWARE.
  */
 export const strings = {
-  TILES_SELECTOR: '.mdc-grid-list__tiles',
-  TILE_SELECTOR: '.mdc-grid-tile',
+  TILES_SELECTOR: '.tiles',
+  TILE_SELECTOR: '.tile',
 };

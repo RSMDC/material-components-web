@@ -28,63 +28,63 @@
 // Public
 
 @mixin mdc-select-ink-color($color) {
-  &:not(.mdc-select--disabled) {
+  &:not(.-disabled) {
     @include mdc-select-ink-color_($color);
   }
 }
 
 @mixin mdc-select-container-fill-color($color) {
-  &:not(.mdc-select--disabled) {
+  &:not(.-disabled) {
     @include mdc-select-container-fill-color_($color);
   }
 }
 
 @mixin mdc-select-focused-label-color($color) {
-  &:not(.mdc-select--disabled) {
-    .mdc-select__native-control:focus ~ .mdc-floating-label {
+  &:not(.-disabled) {
+   > .nativecontrol:focus ~ .mdc-floating-label {
       @include mdc-floating-label-ink-color(mdc-theme-prop-value($color));
     }
   }
 }
 
 @mixin mdc-select-hover-bottom-line-color($color) {
-  &:not(.mdc-select--disabled) .mdc-select__native-control:hover {
+  &:not(.-disabled) > .nativecontrol:hover {
     @include mdc-select-native-control-bottom-line-color_($color);
   }
 }
 
 @mixin mdc-select-bottom-line-color($color) {
-  &:not(.mdc-select--disabled) {
+  &:not(.-disabled) {
     @include mdc-select-bottom-line-color_($color);
   }
 }
 
 @mixin mdc-select-focused-bottom-line-color($color) {
-  &:not(.mdc-select--disabled) {
+  &:not(.-disabled) {
     @include mdc-select-focused-line-ripple-color_($color);
   }
 }
 
 @mixin mdc-select-label-color($color) {
-  &:not(.mdc-select--disabled) .mdc-floating-label {
+  &:not(.-disabled) > .mdc-floating-label {
     @include mdc-floating-label-ink-color($color);
   }
 }
 
 @mixin mdc-select-outline-color($color) {
-  &:not(.mdc-select--disabled) {
+  &:not(.-disabled) {
     @include mdc-select-outline-color_($color);
   }
 }
 
 @mixin mdc-select-hover-outline-color($color) {
-  &:not(.mdc-select--disabled) {
+  &:not(.-disabled) {
     @include mdc-select-hover-outline-color_($color);
   }
 }
 
 @mixin mdc-select-focused-outline-color($color) {
-  &:not(.mdc-select--disabled) {
+  &:not(.-disabled) {
     @include mdc-select-focused-outline-color_($color);
   }
 }
@@ -100,7 +100,7 @@
   // this is because .mdc-notched-outline and .mdc-notched-outline__idle
   // are siblings. .mdc-notched-outline__idle needs to be a child of
   // .mdc-notched-outline in order to remedy this issue.
-  .mdc-notched-outline {
+  > .mdc-floating-label > .mdc-notched-outline {
     @include mdc-notched-outline-corner-radius($radius);
   }
 
@@ -109,20 +109,20 @@
 
 // Private
 @mixin mdc-select-focused-line-ripple_ {
-  .mdc-select__native-control:focus ~ .mdc-line-ripple {
+  > .nativecontrol:focus ~ .mdc-line-ripple {
     @content;
   }
 }
 
 @mixin mdc-select-focused-outline_ {
-  .mdc-select__native-control:focus ~ .mdc-notched-outline {
+  > .nativecontrol:focus ~ .mdc-notched-outline {
     @include mdc-notched-outline-stroke-width(2px);
     @content;
   }
 }
 
 @mixin mdc-select-ink-color_($color) {
-  .mdc-select__native-control {
+  > .nativecontrol {
     @include mdc-theme-prop(color, $color);
   }
 }
@@ -132,7 +132,7 @@
 }
 
 @mixin mdc-select-bottom-line-color_($color) {
-  .mdc-select__native-control {
+  > .nativecontrol {
     @include mdc-select-native-control-bottom-line-color_($color);
   }
 }
@@ -161,11 +161,11 @@
 }
 
 @mixin mdc-select-hover-outline-color_($color) {
-  &:not(.mdc-select__native-control:focus) .mdc-select__native-control:hover ~ {
+  > :not(.nativecontrol:focus).nativecontrol:hover ~ {
     @include mdc-notched-outline-idle-color($color);
 
     // stylelint-disable-next-line selector-max-specificity
-    .mdc-notched-outline {
+    > .mdc-notched-outline {
       @include mdc-notched-outline-color($color);
     }
   }
@@ -178,7 +178,7 @@
 }
 
 @mixin mdc-select-floating-label_ {
-  .mdc-floating-label {
+  > .mdc-floating-label {
     @include mdc-rtl-reflexive-position(left, 16px);
 
     bottom: 12px;

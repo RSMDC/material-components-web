@@ -29,7 +29,7 @@
 // Notched Outline is intended for use by multiple components, but its styles should only be emitted once when bundled
 @include mdc-base-emit-once("mdc-notched-outline") {
   .mdc-notched-outline,
-  .mdc-notched-outline__idle {
+  .mdc-notched-outline-idle {
     position: absolute;
     top: 0;
     left: 0;
@@ -49,7 +49,7 @@
     }
 
     // stylelint-disable selector-max-type
-    svg {
+    > svg {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -57,7 +57,7 @@
     // stylelint-enable selector-max-type
   }
 
-  .mdc-notched-outline__idle {
+  .mdc-notched-outline-idle {
     transition:
       opacity $mdc-notched-outline-transition-duration $mdc-animation-standard-curve-timing-function,
       border-color $mdc-notched-outline-transition-duration $mdc-animation-standard-curve-timing-function;
@@ -65,7 +65,7 @@
     opacity: 1;
   }
 
-  .mdc-notched-outline__path {
+  .mdc-notched-outline > svg > .path {
     stroke-width: 1px;
     transition:
       stroke $mdc-notched-outline-transition-duration $mdc-animation-standard-curve-timing-function,
@@ -73,11 +73,11 @@
     fill: transparent;
   }
 
-  .mdc-notched-outline--notched {
+  .mdc-notched-outline.-notched {
     opacity: 1;
   }
 
-  .mdc-notched-outline--notched ~ .mdc-notched-outline__idle {
+  .mdc-notched-outline.-notched ~ .mdc-notched-outline-idle {
     opacity: 0;
   }
 }

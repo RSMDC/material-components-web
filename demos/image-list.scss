@@ -33,7 +33,7 @@
   margin: 0;
 }
 
-.hero-image-list .mdc-image-list__image {
+.hero-image-list .image {
   background-color: #000;
 }
 
@@ -49,7 +49,7 @@
   max-width: 1000px;
 }
 
-.hide-supporting .mdc-image-list__supporting {
+.hide-supporting > .item > .supporting {
   display: none;
 }
 

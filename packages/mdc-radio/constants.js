@@ -23,13 +23,13 @@
 
 /** @enum {string} */
 const strings = {
-  NATIVE_CONTROL_SELECTOR: '.mdc-radio__native-control',
+  NATIVE_CONTROL_SELECTOR: '.nativecontrol',
 };
 
 /** @enum {string} */
 const cssClasses = {
   ROOT: 'mdc-radio',
-  DISABLED: 'mdc-radio--disabled',
+  DISABLED: '-disabled',
 };
 
 export {strings, cssClasses};

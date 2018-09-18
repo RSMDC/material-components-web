@@ -40,12 +40,12 @@
     z-index: 2;
   }
 
-  .mdc-line-ripple--active {
+  &.-active {
     transform: scaleX(1);
     opacity: 1;
   }
 
-  .mdc-line-ripple--deactivating {
+  &.-deactivating {
     opacity: 0;
   }
 }

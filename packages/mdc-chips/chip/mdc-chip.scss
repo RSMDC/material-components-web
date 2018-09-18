@@ -57,114 +57,108 @@
   }
 }
 
-.mdc-chip--exit {
+.mdc-chip.-exit {
   transition:
-    opacity 75ms $mdc-animation-standard-curve-timing-function,
-    width 150ms $mdc-animation-deceleration-curve-timing-function,
-    padding 100ms linear,
-    margin 100ms linear;
+  opacity 75ms $mdc-animation-standard-curve-timing-function,
+  width 150ms $mdc-animation-deceleration-curve-timing-function,
+  padding 100ms linear,
+  margin 100ms linear;
   opacity: 0;
 }
 
-.mdc-chip__text {
+.mdc-chip > .text {
   white-space: nowrap;
 }
 
-.mdc-chip__icon {
+.mdc-chip > .icon {
   border-radius: 50%;
   outline: none;
   vertical-align: middle;
 }
 
-.mdc-chip__icon--trailing {
+.mdc-chip > .icon.-trailing {
   margin: 0 -4px 0 4px;
 }
 
-.mdc-chip__checkmark,
-.mdc-chip__icon--leading {
+.mdc-chip > .checkmark, 
+.mdc-chip > .icon.-leading {
   height: $mdc-chip-leading-icon-size;
   margin: -4px 4px -4px -4px;
 }
 
-.mdc-chip__checkmark-path {
+.mdc-chip > .checkmark > .svg > .path {
   transition:
-    mdc-checkbox-transition-exit(
-      stroke-dashoffset,
-      $mdc-chip-checkmark-animation-delay,
-      $mdc-chip-checkmark-animation-duration
-    );
+  mdc-checkbox-transition-exit(
+    stroke-dashoffset,
+    $mdc-chip-checkmark-animation-delay,
+    $mdc-chip-checkmark-animation-duration
+  );
   stroke-width: 2px;
   stroke-dashoffset: $mdc-checkbox-mark-path-length_;
   stroke-dasharray: $mdc-checkbox-mark-path-length_;
+
 }
 
-.mdc-chip--selected .mdc-chip__checkmark-path {
-  stroke-dashoffset: 0;
+.mdc-chip.-selected > .checkmark > .svg > .path {
+    stroke-dashoffset: 0;
 }
 
-// Change color of selected choice chips
-
-.mdc-chip-set--choice {
-  .mdc-chip {
+.mdc-chip-set.-choice {
+  > .mdc-chip {
     @include mdc-chip-selected-ink-color(primary);
   }
-
-  .mdc-chip--selected {
+  > .mdc-chip.-selected {
     @include mdc-theme-prop(background-color, surface);
   }
 }
 
-// Add leading checkmark to filter chips with no leading icon
-
-.mdc-chip__checkmark-svg {
+.mdc-chip > .checkmark > .svg {
   width: 0;
   height: $mdc-chip-leading-icon-size;
   transition: width $mdc-chip-width-animation-duration $mdc-animation-standard-curve-timing-function;
 }
 
-.mdc-chip--selected .mdc-chip__checkmark-svg {
+.mdc-chip.-selected > .checkmark > .svg {
   width: $mdc-chip-leading-icon-size;
 }
 
-// Add leading checkmark to filter chips with a leading icon
-
-.mdc-chip-set--filter {
-  .mdc-chip__icon--leading {
+.mdc-chip-set.-filter {
+  .mdc-chip > .icon.-leading {
     transition: opacity $mdc-chip-opacity-animation-duration linear;
     transition-delay: $mdc-chip-leading-icon-delay;
     opacity: 1;
 
-    + .mdc-chip__checkmark {
+    + .checkmark {
       transition: opacity $mdc-chip-opacity-animation-duration linear;
-
+  
       // Delay the checkmark transition.
       transition-delay: $mdc-chip-checkmark-with-leading-icon-delay;
       opacity: 0;
-
-      .mdc-chip__checkmark-svg {
+  
+      > .svg {
         transition: width 0ms;
       }
     }
   }
 
-  .mdc-chip--selected .mdc-chip__icon--leading {
+  .mdc-chip.-selected  > .icon.-leading {
     opacity: 0;
 
-    + .mdc-chip__checkmark {
+    + .checkmark {
       // This ensures that the checkmark has zero width while the leading icon is still animating.
       width: 0;
       opacity: 1;
     }
   }
+}
 
-  .mdc-chip__icon--leading-hidden.mdc-chip__icon--leading {
-    width: 0;
+.mdc-chip  > .icon.-leadhidden.-leading {
+  width: 0;
 
-    // This ensures that the leading icon doesn't fade in while the checkmark is fading out.
-    opacity: 0;
+  // This ensures that the leading icon doesn't fade in while the checkmark is fading out.
+  opacity: 0!important;
 
-    + .mdc-chip__checkmark {
-      width: $mdc-chip-leading-icon-size;
-    }
+  + .checkmark {
+    width: $mdc-chip-leading-icon-size!important;
   }
 }

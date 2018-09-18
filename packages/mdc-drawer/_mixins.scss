@@ -26,7 +26,7 @@
 @import "./variables";
 
 @mixin mdc-drawer-activated-overlay-color($color) {
-  :not(.mdc-list--non-interactive) > .mdc-list-item {
+  :not(.-noninteractive) > .item {
     @include mdc-states-activated($color);
   }
 }
@@ -50,7 +50,7 @@
 @mixin mdc-drawer-title-ink-color($color) {
   $value: rgba(mdc-theme-prop-value($color), $mdc-drawer-title-ink-opacity);
 
-  .mdc-drawer__title {
+  > .header > .title {
     @include mdc-theme-prop(color, $value);
   }
 }
@@ -60,7 +60,7 @@
 
   @include mdc-list-group-subheader-ink-color($value);
 
-  .mdc-drawer__subtitle {
+  > .header > .subtitle {
     @include mdc-theme-prop(color, $value);
   }
 }
@@ -84,7 +84,7 @@
 @mixin mdc-drawer-item-activated-icon-ink-color($color) {
   $value: rgba(mdc-theme-prop-value($color), $mdc-drawer-item-active-icon-ink-opacity);
 
-  .mdc-list-item--activated {
+  .mdc-list > .item.-activated {
     @include mdc-list-item-graphic-ink-color($value);
   }
 }
@@ -92,7 +92,7 @@
 @mixin mdc-drawer-item-activated-text-ink-color($color) {
   $value: rgba(mdc-theme-prop-value($color), $mdc-drawer-item-active-text-ink-opacity);
 
-  .mdc-list-item--activated {
+  .mdc-list > .item.-activated {
     @include mdc-list-item-primary-text-ink-color($value);
   }
 }
@@ -100,7 +100,7 @@
 @mixin mdc-drawer-item-text-ink-color($color) {
   $value: rgba(mdc-theme-prop-value($color), $mdc-drawer-item-inactive-text-ink-opacity);
 
-  .mdc-list-item {
+  .mdc-list > .item {
     @include mdc-list-item-primary-text-ink-color($value);
   }
 }
@@ -126,7 +126,7 @@
 @mixin mdc-drawer-width($width) {
   width: $width;
 
-  &.mdc-drawer--open:not(.mdc-drawer--closing) + .mdc-drawer-app-content {
+  &.-open:not(.-closing) + .mdc-drawer-app-content {
     @include mdc-rtl-reflexive-box(margin, left, $width);
   }
 }

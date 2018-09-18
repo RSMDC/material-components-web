@@ -44,14 +44,14 @@
   list-style-type: none;
 }
 
-@at-root {
+.mdc-list {
   @include mdc-list-item-secondary-text-ink-color(text-secondary-on-background);
   @include mdc-list-item-graphic-fill-color(transparent);
   @include mdc-list-item-graphic-ink-color(text-icon-on-background);
   @include mdc-list-item-meta-ink-color(text-hint-on-background);
 }
 
-.mdc-list--dense {
+.mdc-list.-dense {
   padding-top: 4px;
   padding-bottom: 4px;
   font-size: .812rem;
@@ -61,7 +61,7 @@
 
 // postcss-bem-linter: define list-item
 
-.mdc-list-item {
+.mdc-list > .item {
   display: flex;
   position: relative;
   align-items: center;
@@ -77,17 +77,17 @@
 
 // "Selected" is ephemeral and likely to change soon. E.g., selecting one or more photos to share in Google Photos.
 // "Activated" is more permanent. E.g., the currently highlighted navigation destination in a drawer.
-.mdc-list-item--selected,
-.mdc-list-item--activated {
+.mdc-list > .item.-selected,
+.mdc-list > .item.-activated {
   @include mdc-list-item-primary-text-ink-color(primary);
   @include mdc-list-item-graphic-ink-color(primary);
 }
 
-.mdc-list-item--disabled {
+.mdc-list > .item.-disabled {
   @include mdc-list-item-primary-text-ink-color(text-disabled-on-background);
 }
 
-.mdc-list-item__graphic {
+.mdc-list > .item > .graphic {
   @include mdc-list-graphic-size_(24px);
 
   display: inline-flex;
@@ -97,11 +97,11 @@
   fill: currentColor;
 }
 
-.mdc-list-item__meta {
+.mdc-list > .item > .meta {
   @include mdc-rtl-reflexive-property(margin, auto, 0, ".mdc-list-item");
 }
 
-.mdc-list-item__text {
+.mdc-list > .item > .text {
   @include mdc-typography-overflow-ellipsis;
 }
 
@@ -109,7 +109,7 @@ $mdc-list-item-primary-text-baseline-height_: 32px;
 $mdc-list-item-secondary-text-baseline-height_: 20px;
 $mdc-list-dense-item-primary-text-baseline-height_: 24px;
 
-.mdc-list-item__primary-text {
+.mdc-list > .item > .text > .primary {
   @include mdc-typography-overflow-ellipsis;
   @include mdc-typography-baseline-top($mdc-list-item-primary-text-baseline-height_);
   @include mdc-typography-baseline-bottom($mdc-list-item-secondary-text-baseline-height_);
@@ -117,14 +117,14 @@ $mdc-list-dense-item-primary-text-baseline-height_: 24px;
   display: block;
 
   // stylelint-disable plugin/selector-bem-pattern
-  .mdc-list--dense & {
+  .-dense & {
     @include mdc-typography-baseline-top($mdc-list-dense-item-primary-text-baseline-height_);
     @include mdc-typography-baseline-bottom($mdc-list-item-secondary-text-baseline-height_);
   }
   // stylelint-enable plugin/selector-bem-pattern
 }
 
-.mdc-list-item__secondary-text {
+.mdc-list > .item > .text > .secondary {
   @include mdc-typography(body2);
   @include mdc-typography-overflow-ellipsis;
   @include mdc-typography-baseline-top($mdc-list-item-secondary-text-baseline-height_);
@@ -132,7 +132,7 @@ $mdc-list-dense-item-primary-text-baseline-height_: 24px;
   display: block;
 
   // stylelint-disable plugin/selector-bem-pattern
-  .mdc-list--dense & {
+  .-dense & {
     @include mdc-typography-baseline-top($mdc-list-item-secondary-text-baseline-height_);
 
     font-size: inherit;
@@ -141,47 +141,47 @@ $mdc-list-dense-item-primary-text-baseline-height_: 24px;
 }
 
 // stylelint-disable plugin/selector-bem-pattern
-.mdc-list--dense .mdc-list-item {
+.mdc-list.-dense > .item {
   height: 40px;
 }
 
-.mdc-list--dense .mdc-list-item__graphic {
+.mdc-list.-dense > .item > .graphic {
   @include mdc-list-graphic-size_(20px);
 }
 
-.mdc-list--avatar-list .mdc-list-item {
+.mdc-list.-avatarlist > .item {
   height: 56px;
 }
 
-.mdc-list--avatar-list .mdc-list-item__graphic {
+.mdc-list.-avatarlist > .item > .graphic {
   @include mdc-list-graphic-size_(40px);
 
   border-radius: 50%;
 }
 
-.mdc-list--two-line .mdc-list-item__text {
+.mdc-list.-twoline > .item > .text {
   align-self: flex-start;
 }
 
-.mdc-list--two-line .mdc-list-item {
+.mdc-list.-twoline > .item {
   height: 72px;
 }
 
-.mdc-list--two-line.mdc-list--dense .mdc-list-item {
+.mdc-list.-twoline.-dense > .item {
   height: 60px;
 }
 
-.mdc-list--avatar-list.mdc-list--dense .mdc-list-item {
+.mdc-list.-avatarlist.-dense > .item {
   height: 60px;
 }
 
-.mdc-list--avatar-list.mdc-list--dense .mdc-list-item__graphic {
+.mdc-list.-avatarlist.-dense > .item > .graphic {
   @include mdc-list-graphic-size_(36px);
 }
 
 // List items should support states by default, but it should be possible to opt out.
 // Direct child combinator is necessary for non-interactive modifier on parent to not match this selector.
-:not(.mdc-list--non-interactive) > :not(.mdc-list-item--disabled).mdc-list-item {
+.mdc-list:not(.-noninteractive) > :not(.-disabled).item {
   @include mdc-ripple-surface;
   @include mdc-ripple-radius-bounded;
   @include mdc-states;
@@ -192,7 +192,7 @@ $mdc-list-dense-item-primary-text-baseline-height_: 24px;
 
 // Override anchor tag styles for the use-case of a list being used for navigation
 // stylelint-disable selector-max-type,selector-no-qualifying-type
-a.mdc-list-item {
+.mdc-list > a.item {
   color: inherit;
   text-decoration: none;
 }
@@ -208,7 +208,7 @@ a.mdc-list-item {
   border-bottom-style: solid;
 }
 
-@at-root {
+.mdc-list-divider {
   $divider-color: if(
     mdc-theme-tone($mdc-theme-background) == "dark",
     $mdc-list-divider-color-on-dark-bg,
@@ -218,18 +218,18 @@ a.mdc-list-item {
   @include mdc-list-divider-color($divider-color);
 }
 
-.mdc-list-divider--padded {
+.mdc-list-divider.-padded {
   // Leave gaps on each side to match the padding on list items
   margin: 0 $mdc-list-side-padding;
 }
 
-.mdc-list-divider--inset {
+.mdc-list-divider.-inset {
   @include mdc-rtl-reflexive-box(margin, left, $mdc-list-text-offset, ".mdc-list-group");
 
   width: calc(100% - #{$mdc-list-text-offset});
 }
 
-.mdc-list-divider--inset.mdc-list-divider--padded {
+.mdc-list-divider.-inset.-padded {
   width: calc(100% - #{$mdc-list-text-offset} - #{$mdc-list-side-padding});
 }
 
@@ -244,7 +244,7 @@ a.mdc-list-item {
   }
 }
 
-.mdc-list-group__subheader {
+.mdc-list-group > .subheader {
   $mdc-list-subheader-virtual-height: 3rem;
   $mdc-list-subheader-leading: map-get(map-get($mdc-typography-styles, body1), line-height);
   $mdc-list-subheader-margin:
@@ -255,7 +255,7 @@ a.mdc-list-item {
   margin: $mdc-list-subheader-margin $mdc-list-side-padding;
 }
 
-@at-root {
+.mdc-list-group {
   @include mdc-list-group-subheader-ink-color(text-primary-on-background);
 }
 

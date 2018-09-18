@@ -24,8 +24,8 @@
 /** @enum {string} */
 const cssClasses = {
   ROOT: 'mdc-menu',
-  MENU_SELECTED_LIST_ITEM: 'mdc-menu-item--selected',
-  MENU_SELECTION_GROUP: 'mdc-menu__selection-group',
+  MENU_SELECTED_LIST_ITEM: '-selected',
+  MENU_SELECTION_GROUP: '.mdc-menu-selection-group',
 };
 
 /** @enum {string} */

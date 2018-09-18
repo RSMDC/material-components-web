@@ -71,29 +71,29 @@ $mdc-tab-with-icon-and-text-height: 72px;
     padding: 0 12px;
   }
 
-  &__icon {
+  > .content > .icon {
     @include mdc-tabs-icon-tab-content;
 
     width: 24px;
     height: 24px;
 
     // postcss-bem-linter: ignore
-    .mdc-tab-bar--icons-with-text & {
+    .-iconstext & {
       margin-top: 4px;
     }
   }
 
-  &__icon-text {
+  > .content > .icontext {
     @include mdc-tabs-icon-tab-content;
   }
 
   // postcss-bem-linter: ignore
-  &__icon + &__icon-text {
+  > .content > .icon + .icontext {
     padding-top: 6px;
   }
 }
 
-.mdc-tab--active {
+.mdc-tab.-active {
   @include mdc-tab-ink-color(text-primary-on-background);
 
   &::before {
@@ -101,7 +101,7 @@ $mdc-tab-with-icon-and-text-height: 72px;
   }
 }
 
-.mdc-tab__indicator {
+.mdc-tab > .indicator {
   @include mdc-tab-bar-indicator-mixin_;
 
   left: 2px;
@@ -110,20 +110,20 @@ $mdc-tab-with-icon-and-text-height: 72px;
 
 // stylelint-disable plugin/selector-bem-pattern, selector-max-specificity
 .mdc-tab-bar:not(.mdc-tab-bar-upgraded) {
-  .mdc-tab--active,
-  .mdc-tab:hover,
-  .mdc-tab:active {
-    .mdc-tab__indicator {
+  &.-active,
+  &:hover,
+  &:active {
+    >.indicator {
       visibility: visible;
     }
   }
 
-  .mdc-tab:not(.mdc-tab--active):hover .mdc-tab__indicator {
+  &:not(.-active):hover > .indicator {
     opacity: .38;
   }
 
-  .mdc-tab--active,
-  .mdc-tab:not(.mdc-tab--active):active .mdc-tab__indicator {
+  &.-active,
+  &:not(.-active):active > .indicator {
     opacity: .87;
   }
 }

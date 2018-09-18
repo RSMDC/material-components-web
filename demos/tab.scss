@@ -57,11 +57,11 @@
     @include mdc-tab-indicator-underline-top-corner-radius(5px);
   }
 
-  .mdc-tab__ripple {
+  .tabripple {
     @include mdc-states($material-color-pink-100);
   }
 
-  &.mdc-tab--active {
+  &.-active {
     @include mdc-tab-text-label-color($material-color-blue-900);
     @include mdc-tab-icon-color($material-color-orange-900);
   }

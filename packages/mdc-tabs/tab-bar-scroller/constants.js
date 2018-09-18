@@ -22,16 +22,16 @@
  */
 
 export const cssClasses = {
-  INDICATOR_FORWARD: 'mdc-tab-bar-scroller__indicator--forward',
-  INDICATOR_BACK: 'mdc-tab-bar-scroller__indicator--back',
-  INDICATOR_ENABLED: 'mdc-tab-bar-scroller__indicator--enabled',
+  INDICATOR_FORWARD: '-forward',
+  INDICATOR_BACK: '-back',
+  INDICATOR_ENABLED: '-enabled',
   TAB: 'mdc-tab',
 };
 
 export const strings = {
-  FRAME_SELECTOR: '.mdc-tab-bar-scroller__scroll-frame',
-  TABS_SELECTOR: '.mdc-tab-bar-scroller__scroll-frame__tabs',
+  FRAME_SELECTOR: '.scrollframe',
+  TABS_SELECTOR: '.tabs',
   TAB_SELECTOR: '.mdc-tab',
-  INDICATOR_FORWARD_SELECTOR: '.mdc-tab-bar-scroller__indicator--forward',
-  INDICATOR_BACK_SELECTOR: '.mdc-tab-bar-scroller__indicator--back',
+  INDICATOR_FORWARD_SELECTOR: '.-forward',
+  INDICATOR_BACK_SELECTOR: '.-back',
 };

@@ -23,11 +23,11 @@
 
 /** @enum {string} */
 const cssClasses = {
-  ANCHOR: 'mdc-menu-surface--anchor',
-  ANIMATING_CLOSED: 'mdc-menu-surface--animating-closed',
-  ANIMATING_OPEN: 'mdc-menu-surface--animating-open',
-  FIXED: 'mdc-menu-surface--fixed',
-  OPEN: 'mdc-menu-surface--open',
+  ANCHOR: 'mdc-menu-surface-anchor',
+  ANIMATING_CLOSED: '-animatingclosed',
+  ANIMATING_OPEN: '-animatingopen',
+  FIXED: '-fixed',
+  OPEN: '-open',
   ROOT: 'mdc-menu-surface',
 };
 
@@ -83,3 +83,4 @@ const Corner = {
 };
 
 export {cssClasses, strings, numbers, CornerBit, Corner};
+

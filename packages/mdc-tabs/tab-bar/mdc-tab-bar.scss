@@ -28,7 +28,7 @@
 
 // postcss-bem-linter: define tab-bar
 
-@at-root {
+.mdc-tab-bar {
   @include mdc-tab-bar-indicator-ink-color(text-primary-on-background);
 }
 
@@ -40,7 +40,7 @@
   text-transform: uppercase;
 }
 
-.mdc-tab-bar__indicator {
+.mdc-tab-bar > .indicator {
   @include mdc-tab-bar-indicator-mixin_;
 
   left: 0;
@@ -50,6 +50,6 @@
   will-change: transform;
 }
 
-.mdc-tab-bar--icons-with-text {
+.mdc-tab-bar.-iconstext {
   height: 72px;
 }

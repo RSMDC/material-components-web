@@ -23,19 +23,19 @@
 @import "@material/theme/mixins";
 
 @mixin mdc-notched-outline-idle-color($color) {
-  .mdc-notched-outline__idle {
+  .mdc-notched-outline-idle {
     @include mdc-theme-prop(border-color, $color);
   }
 }
 
 @mixin mdc-notched-outline-color($color) {
-  .mdc-notched-outline__path {
+  .mdc-notched-outline > svg > .path {
     @include mdc-theme-prop(stroke, $color);
   }
 }
 
 @mixin mdc-notched-outline-stroke-width($width) {
-  .mdc-notched-outline__path {
+  .mdc-notched-outline > svg > .path {
     stroke-width: $width;
   }
 }
@@ -45,7 +45,7 @@
 }
 
 @mixin mdc-notched-outline-idle-corner-radius($radius) {
-  .mdc-notched-outline__idle {
+  .mdc-notched-outline-idle {
     border-radius: $radius;
   }
 }

@@ -60,7 +60,7 @@
   }
 }
 
-.mdc-icon-toggle--disabled {
+.mdc-icon-toggle.-disabled {
   @include mdc-theme-prop(color, text-disabled-on-light);
 
   pointer-events: none;

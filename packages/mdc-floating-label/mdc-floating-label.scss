@@ -63,11 +63,11 @@
     }
   }
 
-  .mdc-floating-label--float-above {
+  .mdc-floating-label.-floatabove {
     cursor: auto;
   }
 
-  @at-root {
+  .mdc-floating-label {
     @include mdc-floating-label-float-position($mdc-floating-label-position-y);
     @include mdc-floating-label-shake-animation(standard);
   }

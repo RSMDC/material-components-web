@@ -23,22 +23,22 @@
 
 /** @enum {string} */
 const cssClasses = {
-  ACTIVE: 'mdc-slider--active',
-  DISABLED: 'mdc-slider--disabled',
-  DISCRETE: 'mdc-slider--discrete',
-  FOCUS: 'mdc-slider--focus',
-  IN_TRANSIT: 'mdc-slider--in-transit',
-  IS_DISCRETE: 'mdc-slider--discrete',
-  HAS_TRACK_MARKER: 'mdc-slider--display-markers',
+  ACTIVE: '-active',
+  DISABLED: '-disabled',
+  DISCRETE: '-discrete',
+  FOCUS: '-focus',
+  IN_TRANSIT: '-transit',
+  IS_DISCRETE: '-discrete',
+  HAS_TRACK_MARKER: '-displaymarkers',
 };
 
 /** @enum {string} */
 const strings = {
-  TRACK_SELECTOR: '.mdc-slider__track',
-  TRACK_MARKER_CONTAINER_SELECTOR: '.mdc-slider__track-marker-container',
-  LAST_TRACK_MARKER_SELECTOR: '.mdc-slider__track-marker:last-child',
-  THUMB_CONTAINER_SELECTOR: '.mdc-slider__thumb-container',
-  PIN_VALUE_MARKER_SELECTOR: '.mdc-slider__pin-value-marker',
+  TRACK_SELECTOR: '.track',
+  TRACK_MARKER_CONTAINER_SELECTOR: '.markercontainer',
+  LAST_TRACK_MARKER_SELECTOR: '.trackmarker:last-child',
+  THUMB_CONTAINER_SELECTOR: '.thumbcontainer',
+  PIN_VALUE_MARKER_SELECTOR: '.valuemarker',
   ARIA_VALUEMIN: 'aria-valuemin',
   ARIA_VALUEMAX: 'aria-valuemax',
   ARIA_VALUENOW: 'aria-valuenow',

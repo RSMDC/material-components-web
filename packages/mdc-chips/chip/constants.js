@@ -27,19 +27,19 @@ const strings = {
   INTERACTION_EVENT: 'MDCChip:interaction',
   TRAILING_ICON_INTERACTION_EVENT: 'MDCChip:trailingIconInteraction',
   REMOVAL_EVENT: 'MDCChip:removal',
-  CHECKMARK_SELECTOR: '.mdc-chip__checkmark',
-  LEADING_ICON_SELECTOR: '.mdc-chip__icon--leading',
-  TRAILING_ICON_SELECTOR: '.mdc-chip__icon--trailing',
+  CHECKMARK_SELECTOR: '.checkmark',
+  LEADING_ICON_SELECTOR: '.-leading',
+  TRAILING_ICON_SELECTOR: '.-trailing',
 };
 
 /** @enum {string} */
 const cssClasses = {
-  CHECKMARK: 'mdc-chip__checkmark',
-  CHIP_EXIT: 'mdc-chip--exit',
-  HIDDEN_LEADING_ICON: 'mdc-chip__icon--leading-hidden',
-  LEADING_ICON: 'mdc-chip__icon--leading',
-  TRAILING_ICON: 'mdc-chip__icon--trailing',
-  SELECTED: 'mdc-chip--selected',
+  CHECKMARK: 'checkmark',
+  CHIP_EXIT: '-exit',
+  HIDDEN_LEADING_ICON: '-leadhidden',
+  LEADING_ICON: '-leading',
+  TRAILING_ICON: '-trailing',
+  SELECTED: '-selected',
 };
 
 export {strings, cssClasses};

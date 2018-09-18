@@ -47,7 +47,7 @@
 }
 
 @mixin mdc-fab-icon-size($width, $height: $width) {
-  .mdc-fab__icon {
+  > .icon {
     width: $width;
     height: $height;
     font-size: $height;
@@ -66,7 +66,7 @@
   @include mdc-fab-extended-label-padding($label-padding);
 
   // Offsets the outer label padding by deducting it from icon padding.
-  .mdc-fab__icon {
+  > .icon {
     @include mdc-rtl-reflexive-property(
       margin,
       $icon-padding - $label-padding,
@@ -74,7 +74,7 @@
   }
 
   // For Extended FAB with text label followed by icon.
-  .mdc-fab__label + .mdc-fab__icon {
+  > .label + .icon {
     @include mdc-rtl-reflexive-property(
       margin,
       $icon-padding,
@@ -197,7 +197,7 @@ $mdc-fab-extended-height_: 48px;
     mdc-animation-exit-permanent(transform, 180ms);
   opacity: 0;
 
-  .mdc-fab__icon {
+  > .icon {
     transform: scale(0);
     transition: mdc-animation-exit-permanent(transform, 135ms);
   }

@@ -45,11 +45,11 @@
     </style>
   </head>
   <body class="mdc-typography">
-    <header class="mdc-toolbar mdc-toolbar--fixed">
-      <div class="mdc-toolbar__row">
-        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-          <a href="/" class="catalog-back mdc-toolbar__menu-icon"><i class="material-icons">&#xE5C4;</i></a>
-          <span class="mdc-toolbar__title catalog-title">Select</span>
+    <header class="mdc-toolbar mdc-toolbar -fixed">
+      <div class="row">
+        <section class="section -alignstart">
+          <a href="/" class="catalog-back menuicon"><i class="material-icons">&#xE5C4;</i></a>
+          <span class="title catalog-title">Select</span>
         </section>
       </div>
     </header>
@@ -58,7 +58,7 @@
       <div class="mdc-toolbar-fixed-adjust"></div>
       <section class="hero">
         <div id="hero-js-select" class="mdc-select">
-          <select class="mdc-select__native-control" id="my-select">
+          <select class="nativecontrol" id="my-select">
             <option value="grains" selected>
               Bread, Cereal, Rice, and Pasta
             </option>
@@ -78,16 +78,16 @@
               Fats, Oils, and Sweets
             </option>
           </select>
-          <label class="mdc-floating-label mdc-floating-label--float-above" for="my-select">Pick a Food Group</label>
+          <label class="mdc-floating-label -floatabove" for="my-select">Pick a Food Group</label>
           <div class="mdc-line-ripple"></div>
         </div>
       </section>
 
       <section class="example">
-        <h2 class="mdc-typography--headline6">Fully-Featured JS Component</h2>
+        <h2 class="typoheadline6">Fully-Featured JS Component</h2>
         <section id="demo-wrapper">
           <div id="js-select" class="mdc-select">
-            <select class="mdc-select__native-control" id="full-func-js-select">
+            <select class="nativecontrol" id="full-func-js-select">
               <option value="" disabled selected>
               </option>
               <option value="grains">
@@ -109,7 +109,7 @@
                 Fats, Oils, and Sweets
               </option>
             </select>
-            <label class="mdc-floating-label" for="full-func-js-select">Food Group</label>
+            <label class="mdc-floating-label selectlabel" for="full-func-js-select">Food Group</label>
             <div class="mdc-line-ripple"></div>
           </div>
         </section>
@@ -127,22 +127,22 @@
           <label for="disabled">Disabled</label>
         </div>
         <div class="button-container">
-          <button class="mdc-button mdc-button--raised" id="set-selected-index-zero-button">
+          <button class="mdc-button -raised" id="set-selected-index-zero-button">
             Set Selected Index (0)
           </button>
         </div>
         <div class="button-container">
-          <button class="mdc-button mdc-button--raised" id="set-value-meat-button">
+          <button class="mdc-button -raised" id="set-value-meat-button">
             Set Value to Meat
           </button>
         </div>
       </section>
 
       <section class="example">
-        <h2 class="mdc-typography--headline6">Outlined Select</h2>
+        <h2 class="typoheadline6">Outlined Select</h2>
         <section>
-          <div id="outline-js-select" class="mdc-select mdc-select--outlined">
-            <select class="mdc-select__native-control" id="outlined-select">
+          <div id="outline-js-select" class="mdc-select -outlined">
+            <select class="nativecontrol" id="outlined-select">
               <option value="" disabled selected>
               </option>
               <option value="grains">
@@ -167,10 +167,10 @@
             <label class="mdc-floating-label" for="outlined-select">Food Group</label>
              <div class="mdc-notched-outline">
                <svg>
-                 <path class="mdc-notched-outline__path"></path>
+                 <path class="path"></path>
                </svg>
              </div>
-             <div class="mdc-notched-outline__idle"></div>
+             <div class="mdc-notched-outline-idle"></div>
           </div>
         </section>
         <p>Currently selected: <span id="currently-selected-outline">(none)</span></p>
@@ -187,22 +187,22 @@
           <label for="disabled-outline">Disabled</label>
         </div>
         <div class="button-container">
-          <button class="mdc-button mdc-button--raised" id="set-selected-index-zero-button-outline">
+          <button class="mdc-button -raised" id="set-selected-index-zero-button-outline">
             Set Selected Index (0)
           </button>
         </div>
         <div class="button-container">
-          <button class="mdc-button mdc-button--raised" id="set-value-meat-button-outline">
+          <button class="mdc-button -raised" id="set-value-meat-button-outline">
             Set Value to Meat
           </button>
         </div>
       </section>
 
       <section class="example">
-        <h2 class="mdc-typography--headline6">Pre-selected option via HTML</h2>
+        <h2 class="typoheadline6">Pre-selected option via HTML</h2>
         <section>
           <div id="js-pre-selected" class="mdc-select">
-            <select class="mdc-select__native-control" id="select-preselected">
+            <select class="nativecontrol" id="select-preselected">
               <option value="fruit-roll-ups" selected>
                 Fruit Roll Ups
               </option>
@@ -216,15 +216,15 @@
                 Noodles
               </option>
             </select>
-            <label class="mdc-floating-label mdc-floating-label--float-above" for="select-preselected">Food Group</label>
+            <label class="mdc-floating-label selectlabel -floatabove" for="select-preselected">Food Group</label>
             <div class="mdc-line-ripple"></div>
           </div>
         </section>
       </section>
       <section class="example">
-        <h2 class="mdc-typography--headline6">MDC Select with optgroups</h2>
+        <h2 class="typoheadline6">MDC Select with optgroups</h2>
         <div id="optgroup-js-select" class="mdc-select">
-          <select class="mdc-select__native-control" id="select-optgroups">
+          <select class="nativecontrol" id="select-optgroups">
             <optgroup label="Meats">
               <option value="steak">Steak</option>
               <option value="hamburger">Hamburger</option>
@@ -234,7 +234,7 @@
               <option value="carrot">Carrot</option>
             </optgroup>
           </select>
-          <label class="mdc-floating-label" for="select-optgroups">Choose Food</label>
+          <label class="mdc-floating-label selectlabel " for="select-optgroups">Choose Food</label>
           <div class="mdc-line-ripple"></div>
         </div>
       </section>

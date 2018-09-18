@@ -37,44 +37,44 @@
   // class, which is loaded separately so the order of CSS definitions is not
   // guaranteed. Therefore, increase specifity by nesting this class to ensure
   // overrides apply.
-  .mdc-button__icon {
+  > .icon {
     @include mdc-button__icon_;
   }
 
   // stylelint-disable-next-line selector-no-qualifying-type
-  svg.mdc-button__icon {
+  > svg.icon {
     @include mdc-button__icon-svg_;
   }
 }
 
-.mdc-button--raised,
-.mdc-button--unelevated,
-.mdc-button--outlined {
-  .mdc-button__icon {
+.mdc-button.-raised,
+.mdc-button.-unelevated,
+.mdc-button.-outlined {
+  > .icon {
     // Icons inside contained buttons have different styles due to increased button padding
     @include mdc-button__icon-contained_;
   }
 }
 
-.mdc-button--raised,
-.mdc-button--unelevated {
+.mdc-button.-raised,
+.mdc-button.-unelevated {
   @include mdc-button--filled_;
   @include mdc-button-container-fill-color(primary);
   @include mdc-button-ink-color(on-primary);
   @include mdc-states(on-primary);
 }
 
-.mdc-button--raised {
+.mdc-button.-raised {
   @include mdc-button--raised_;
 }
 
-.mdc-button--outlined {
+.mdc-button.-outlined {
   @include mdc-button--outlined_;
   @include mdc-button-outline-width(2px);
   @include mdc-button-outline-color(primary);
 }
 
-.mdc-button--dense {
+.mdc-button.-dense {
   @include mdc-button--dense_;
 }
 // postcss-bem-linter: end

@@ -24,7 +24,7 @@
 /** @enum {string} */
 const cssClasses = {
   ROOT: 'mdc-icon-toggle',
-  DISABLED: 'mdc-icon-toggle--disabled',
+  DISABLED: '-disabled',
 };
 
 /** @enum {string} */

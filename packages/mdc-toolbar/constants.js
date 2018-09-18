@@ -22,19 +22,19 @@
  */
 
 export const cssClasses = {
-  FIXED: 'mdc-toolbar--fixed',
-  FIXED_LASTROW: 'mdc-toolbar--fixed-lastrow-only',
-  FIXED_AT_LAST_ROW: 'mdc-toolbar--fixed-at-last-row',
-  TOOLBAR_ROW_FLEXIBLE: 'mdc-toolbar--flexible',
-  FLEXIBLE_DEFAULT_BEHAVIOR: 'mdc-toolbar--flexible-default-behavior',
-  FLEXIBLE_MAX: 'mdc-toolbar--flexible-space-maximized',
-  FLEXIBLE_MIN: 'mdc-toolbar--flexible-space-minimized',
+  FIXED: '-fixed',
+  FIXED_LASTROW: '-lastrowonly',
+  FIXED_AT_LAST_ROW: '-fixedlastrow',
+  TOOLBAR_ROW_FLEXIBLE: '-flexible',
+  FLEXIBLE_DEFAULT_BEHAVIOR: '-default',
+  FLEXIBLE_MAX: '-spacemaximized',
+  FLEXIBLE_MIN: '-spaceminimized',
 };
 
 export const strings = {
-  TITLE_SELECTOR: '.mdc-toolbar__title',
-  ICON_SELECTOR: '.mdc-toolbar__icon',
-  FIRST_ROW_SELECTOR: '.mdc-toolbar__row:first-child',
+  TITLE_SELECTOR: '.title',
+  ICON_SELECTOR: '.icon',
+  FIRST_ROW_SELECTOR: '.row:first-child',
   CHANGE_EVENT: 'MDCToolbar:change',
 };
 

@@ -48,7 +48,7 @@
 
   @if $generate-keyframes {
     $uid: mdc-checkbox-container-keyframes-uid_();
-    $anim-selector: if(&, "&.mdc-checkbox--anim", ".mdc-checkbox--anim");
+    $anim-selector: if(&, "&.-anim", ".-anim");
 
     @include mdc-checkbox-container-keyframes_(
       $from-stroke-color: $unmarked-stroke-color,
@@ -60,14 +60,14 @@
     #{$anim-selector} {
       &-unchecked-checked,
       &-unchecked-indeterminate {
-        .mdc-checkbox__native-control:enabled ~ .mdc-checkbox__background {
+        .nativecontrol:enabled ~ .background {
           animation-name: mdc-checkbox-fade-in-background-#{$uid};
         }
       }
 
       &-checked-unchecked,
       &-indeterminate-unchecked {
-        .mdc-checkbox__native-control:enabled ~ .mdc-checkbox__background {
+        .nativecontrol:enabled ~ .background {
           animation-name: mdc-checkbox-fade-out-background-#{$uid};
         }
       }
@@ -76,18 +76,18 @@
 }
 
 @mixin mdc-checkbox-ink-color($color) {
-  .mdc-checkbox__checkmark {
+  .checkmark {
     @include mdc-theme-prop(color, $color);
   }
 
-  .mdc-checkbox__mixedmark {
+  .mixedmark {
     @include mdc-theme-prop(border-color, $color);
   }
 }
 
 @mixin mdc-checkbox-focus-indicator-color($color) {
   // The ::before element is used as a focus indicator for the checkbox
-  .mdc-checkbox__background::before {
+  .background::before {
     @include mdc-theme-prop(background-color, $color, $edgeOptOut: true);
   }
 }
@@ -153,14 +153,14 @@
   &-unchecked-indeterminate,
   &-checked-unchecked,
   &-indeterminate-unchecked {
-    .mdc-checkbox__background {
+    .background {
       animation-duration: $mdc-checkbox-transition-duration * 2;
       animation-timing-function: linear;
     }
   }
 
   &-unchecked-checked {
-    .mdc-checkbox__checkmark-path {
+    .path {
       // Instead of delaying the animation, we simply multiply its length by 2 and begin the
       // animation at 50% in order to prevent a flash of styles applied to a checked checkmark
       // as the background is fading in before the animation begins.
@@ -170,45 +170,45 @@
   }
 
   &-unchecked-indeterminate {
-    .mdc-checkbox__mixedmark {
+    .mixedmark {
       animation: $mdc-checkbox-transition-duration linear 0s mdc-checkbox-unchecked-indeterminate-mixedmark;
       transition: none;
     }
   }
 
   &-checked-unchecked {
-    .mdc-checkbox__checkmark-path {
+    .path {
       animation: $mdc-checkbox-transition-duration linear 0s mdc-checkbox-checked-unchecked-checkmark-path;
       transition: none;
     }
   }
 
   &-checked-indeterminate {
-    .mdc-checkbox__checkmark {
+    .checkmark {
       animation: $mdc-checkbox-transition-duration linear 0s mdc-checkbox-checked-indeterminate-checkmark;
       transition: none;
     }
 
-    .mdc-checkbox__mixedmark {
+    .mixedmark {
       animation: $mdc-checkbox-transition-duration linear 0s mdc-checkbox-checked-indeterminate-mixedmark;
       transition: none;
     }
   }
 
   &-indeterminate-checked {
-    .mdc-checkbox__checkmark {
+    .checkmark {
       animation: $mdc-checkbox-indeterminate-change-duration_ linear 0s mdc-checkbox-indeterminate-checked-checkmark;
       transition: none;
     }
 
-    .mdc-checkbox__mixedmark {
+    .mixedmark {
       animation: $mdc-checkbox-indeterminate-change-duration_ linear 0s mdc-checkbox-indeterminate-checked-mixedmark;
       transition: none;
     }
   }
 
   &-indeterminate-unchecked {
-    .mdc-checkbox__mixedmark {
+    .mixedmark {
       animation: $mdc-checkbox-indeterminate-change-duration_ * .6 linear 0s mdc-checkbox-indeterminate-unchecked-mixedmark;
       transition: none;
     }
@@ -221,28 +221,28 @@
 
 @mixin mdc-checkbox-unmarked-background-selector-enabled_ {
   // stylelint-disable-next-line selector-max-specificity
-  .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate) ~ .mdc-checkbox__background {
+  .nativecontrol:enabled:not(:checked):not(:indeterminate) ~ .background {
     @content;
   }
 }
 
 @mixin mdc-checkbox-unmarked-background-selector-disabled_ {
   // stylelint-disable-next-line selector-max-specificity
-  .mdc-checkbox__native-control:disabled:not(:checked):not(:indeterminate) ~ .mdc-checkbox__background {
+  .nativecontrol:disabled:not(:checked):not(:indeterminate) ~ .background {
     @content;
   }
 }
 
 @mixin mdc-checkbox-marked-background-selector-enabled_ {
-  .mdc-checkbox__native-control:enabled:checked ~ .mdc-checkbox__background,
-  .mdc-checkbox__native-control:enabled:indeterminate ~ .mdc-checkbox__background {
+  .nativecontrol:enabled:checked ~ .background,
+  .nativecontrol:enabled:indeterminate ~ .background {
     @content;
   }
 }
 
 @mixin mdc-checkbox-marked-background-selector-disabled_ {
-  .mdc-checkbox__native-control:disabled:checked ~ .mdc-checkbox__background,
-  .mdc-checkbox__native-control:disabled:indeterminate ~ .mdc-checkbox__background {
+  .nativecontrol:disabled:checked ~ .background,
+  .nativecontrol:disabled:indeterminate ~ .background {
     @content;
   }
 }
@@ -328,7 +328,7 @@
   transition: mdc-checkbox-transition-exit(opacity, 0ms, $mdc-checkbox-transition-duration * 2);
   opacity: 0;
 
-  .mdc-checkbox--upgraded & {
+  .-upgraded & {
     opacity: 1;
   }
 }

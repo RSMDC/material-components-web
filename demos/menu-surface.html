@@ -33,13 +33,13 @@
     <link rel="stylesheet" href="/assets/menu-surface.css">
   </head>
   <body class="mdc-typography">
-    <header class="mdc-toolbar mdc-toolbar--fixed demo-header-toolbar">
-      <div class="mdc-toolbar__row">
-        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-          <a href="/" class="catalog-back mdc-toolbar__menu-icon"><i class="material-icons">&#xE5C4;</i></a>
-          <span class="mdc-toolbar__title catalog-title">Menu Surface</span>
+    <header class="mdc-toolbar -fixed demo-header-toolbar">
+      <div class="row">
+        <section class="section -alignstart">
+          <a href="/" class="catalog-back menuicon"><i class="material-icons">&#xE5C4;</i></a>
+          <span class="title catalog-title">Menu Surface</span>
         </section>
-        <section class="mdc-toolbar__section mdc-toolbar__section--align-end mdc-toolbar__section--shrink-to-fit">
+        <section class="section -alignend -shrinkfit">
           <button id="overflow-icon" class="material-icons mdc-icon-button">more_vert</button>
         </section>
       </div>
@@ -48,32 +48,32 @@
     <main>
       <div class="mdc-toolbar-fixed-adjust"></div>
       <section class="hero">
-        <div class="mdc-menu-surface mdc-menu-surface--open">
+        <div class="mdc-menu-surface -open">
           <ul class="mdc-list" role="menu">
-            <li class="mdc-list-item" role="menuitem">
+            <li class="item" role="menuitem">
 
-              <span class="mdc-list-item__text">
+              <span class="text">
                 Back
               </span>
             </li>
-            <li class="mdc-list-item" role="menuitem">
-              <span class="mdc-list-item__text">
+            <li class="item" role="menuitem">
+              <span class="text">
                 Forward
               </span>
             </li>
-            <li class="mdc-list-item" role="menuitem">
-              <span class="mdc-list-item__text">
+            <li class="item" role="menuitem">
+              <span class="text">
                 Reload
               </span>
             </li>
             <li class="mdc-list-divider" role="separator"></li>
-            <li class="mdc-list-item" role="menuitem">
-              <span class="mdc-list-item__text">
+            <li class="item" role="menuitem">
+              <span class="text">
                 Help &amp; Feedback
               </span>
             </li>
-            <li class="mdc-list-item" role="menuitem">
-              <span class="mdc-list-item__text">
+            <li class="item" role="menuitem">
+              <span class="text">
                 Settings
               </span>
             </li>
@@ -82,8 +82,8 @@
       </section>
       <div class="demo-content">
         <div id="demo-wrapper">
-          <div class="mdc-menu-surface--anchor">
-            <button id="menu-button" class="mdc-button mdc-button--raised demo-button demo-button--normal">
+          <div class="mdc-menu-surface-anchor">
+            <button id="menu-button" class="mdc-button -raised demo-button demo-button--normal">
               <span>
                 Show<span class="demo-button__normal-text"> Menu Surface</span><span class="demo-button__long-text"> From Here Now!</span>
               </span>
@@ -91,36 +91,36 @@
 
             <div class="mdc-menu-surface" tabindex="-1" id="demo-menu">
               <ul class="mdc-image-list standard-image-list demo-menu-surface" role="menu">
-                <li role="menuitem" class="mdc-image-list__item" tabindex="0">
-                  <div class="mdc-image-list__image-aspect-container">
-                    <img class="mdc-image-list__image" src="images/photos/3x2/1.jpg">
+                <li role="menuitem" class="item" tabindex="0">
+                  <div class="aspectcontainer">
+                    <img class="image" src="images/photos/3x2/1.jpg">
                   </div>
-                  <div class="mdc-image-list__supporting">
-                    <span class="mdc-image-list__label">Text label</span>
-                  </div>
-                </li>
-                <li role="menuitem" class="mdc-image-list__item" tabindex="0">
-                  <div class="mdc-image-list__image-aspect-container">
-                    <img class="mdc-image-list__image" src="images/photos/3x2/2.jpg">
-                  </div>
-                  <div class="mdc-image-list__supporting">
-                    <span class="mdc-image-list__label">Text label</span>
+                  <div class="supporting">
+                    <span class="label">Text label</span>
                   </div>
                 </li>
-                <li role="menuitem" class="mdc-image-list__item" tabindex="0">
-                  <div class="mdc-image-list__image-aspect-container">
-                    <img class="mdc-image-list__image" src="images/photos/3x2/3.jpg">
+                <li role="menuitem" class="item" tabindex="0">
+                  <div class="aspectcontainer">
+                    <img class="image" src="images/photos/3x2/2.jpg">
                   </div>
-                  <div class="mdc-image-list__supporting">
-                    <span class="mdc-image-list__label">Text label</span>
+                  <div class="supporting">
+                    <span class="label">Text label</span>
                   </div>
                 </li>
-                <li role="menuitem" class="mdc-image-list__item" tabindex="0">
-                  <div class="mdc-image-list__image-aspect-container">
-                    <img class="mdc-image-list__image" src="images/photos/3x2/4.jpg">
+                <li role="menuitem" class="item" tabindex="0">
+                  <div class="aspectcontainer">
+                    <img class="image" src="images/photos/3x2/3.jpg">
                   </div>
-                  <div class="mdc-image-list__supporting">
-                    <span class="mdc-image-list__label">Text label</span>
+                  <div class="supporting">
+                    <span class="label">Text label</span>
+                  </div>
+                </li>
+                <li role="menuitem" class="item" tabindex="0">
+                  <div class="aspectcontainer">
+                    <img class="image" src="images/photos/3x2/4.jpg">
+                  </div>
+                  <div class="supporting">
+                    <span class="label">Text label</span>
                   </div>
                 </li>
               </ul>
@@ -201,39 +201,38 @@
         </div>
       </div>
 
-
       <div class="mdc-menu-surface" tabindex="-1" id="demo-context-menu">
         <ul class="mdc-image-list standard-image-list demo-menu-surface" role="menu">
-          <li role="menuitem" class="mdc-image-list__item" tabindex="0">
-            <div class="mdc-image-list__image-aspect-container">
-              <img class="mdc-image-list__image" src="images/photos/3x2/1.jpg">
+          <li role="menuitem" class="item" tabindex="0">
+            <div class="aspectcontainer">
+              <img class="image" src="images/photos/3x2/1.jpg">
             </div>
-            <div class="mdc-image-list__supporting">
-              <span class="mdc-image-list__label">Text label</span>
-            </div>
-          </li>
-          <li role="menuitem" class="mdc-image-list__item" tabindex="0">
-            <div class="mdc-image-list__image-aspect-container">
-              <img class="mdc-image-list__image" src="images/photos/3x2/2.jpg">
-            </div>
-            <div class="mdc-image-list__supporting">
-              <span class="mdc-image-list__label">Text label</span>
+            <div class="supporting">
+              <span class="label">Text label</span>
             </div>
           </li>
-          <li role="menuitem" class="mdc-image-list__item" tabindex="0">
-            <div class="mdc-image-list__image-aspect-container">
-              <img class="mdc-image-list__image" src="images/photos/3x2/3.jpg">
+          <li role="menuitem" class="item" tabindex="0">
+            <div class="aspectcontainer">
+              <img class="image" src="images/photos/3x2/2.jpg">
             </div>
-            <div class="mdc-image-list__supporting">
-              <span class="mdc-image-list__label">Text label</span>
+            <div class="supporting">
+              <span class="label">Text label</span>
             </div>
           </li>
-          <li role="menuitem" class="mdc-image-list__item" tabindex="0">
-            <div class="mdc-image-list__image-aspect-container">
-              <img class="mdc-image-list__image" src="images/photos/3x2/4.jpg">
+          <li role="menuitem" class="item" tabindex="0">
+            <div class="aspectcontainer">
+              <img class="image" src="images/photos/3x2/3.jpg">
             </div>
-            <div class="mdc-image-list__supporting">
-              <span class="mdc-image-list__label">Text label</span>
+            <div class="supporting">
+              <span class="label">Text label</span>
+            </div>
+          </li>
+          <li role="menuitem" class="item" tabindex="0">
+            <div class="aspectcontainer">
+              <img class="image" src="images/photos/3x2/4.jpg">
+            </div>
+            <div class="supporting">
+              <span class="label">Text label</span>
             </div>
           </li>
         </ul>
@@ -249,6 +248,7 @@
 
         var contextMenuEl = document.getElementById('demo-context-menu');
         var contextMenu = mdc.menuSurface.MDCMenuSurface.attachTo(contextMenuEl);
+        console.log(contextMenuEl)
         contextMenu.hoistMenuToBody();
 
         menuButtonEl.addEventListener('click', function() {
@@ -300,7 +300,7 @@
         });
 
         var radios = document.querySelectorAll('input[name="position"]');
-        var anchor = document.querySelector('.mdc-menu-surface--anchor');
+        var anchor = document.querySelector('.mdc-menu-surface-anchor');
         // Initialize to top left.
         anchor.style.setProperty('top', '0');
         anchor.style.setProperty('left', '0');

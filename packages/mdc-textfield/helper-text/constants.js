@@ -29,8 +29,8 @@ const strings = {
 
 /** @enum {string} */
 const cssClasses = {
-  HELPER_TEXT_PERSISTENT: 'mdc-text-field-helper-text--persistent',
-  HELPER_TEXT_VALIDATION_MSG: 'mdc-text-field-helper-text--validation-msg',
+  HELPER_TEXT_PERSISTENT: '-persistent',
+  HELPER_TEXT_VALIDATION_MSG: '-validation',
 };
 
 export {strings, cssClasses};

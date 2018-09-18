@@ -64,7 +64,7 @@
   }
 
   // postcss-bem-linter: ignore
-  .mdc-list-item {
+  .mdc-list > .item {
     @include mdc-typography(subtitle2);
 
     height: calc(48px - 2 * #{$mdc-drawer-list-item-spacing});
@@ -74,17 +74,17 @@
   }
 
   // postcss-bem-linter: ignore
-  .mdc-list-item:nth-child(1) {
+  .mdc-list > .item:nth-child(1) {
     margin-top: 2px;
   }
 
   // postcss-bem-linter: ignore
-  .mdc-list-item:nth-last-child(1) {
+  .mdc-list > .item:nth-last-child(1) {
     margin-bottom: 0;
   }
 
   // postcss-bem-linter: ignore
-  .mdc-list-group__subheader {
+  .mdc-list > .subheader {
     @include mdc-typography(body2);
     @include mdc-typography-baseline-top(24px);
 
@@ -99,17 +99,17 @@
 
   // Prevents list item children from being included in the click target.
   // postcss-bem-linter: ignore
-  .mdc-list-item__text,
-  .mdc-list-item__graphic {
+  .mdc-list > .item > .text,
+  .mdc-list > .item > .graphic {
     pointer-events: none;
   }
 }
 
-.mdc-drawer--open {
+.mdc-drawer.-open {
   transition: mdc-animation-standard(transform, $mdc-drawer-animation-enter);
 }
 
-.mdc-drawer--animate {
+.mdc-drawer.-animate {
   transform: translateX(-100%);
 
   @include mdc-rtl {
@@ -117,7 +117,7 @@
   }
 }
 
-.mdc-drawer--opening {
+.mdc-drawer.-opening {
   transform: translateX(0);
   transition-duration: $mdc-drawer-animation-enter;
 
@@ -127,7 +127,7 @@
   }
 }
 
-.mdc-drawer--closing {
+.mdc-drawer.-closing {
   transform: translateX(-100%);
   transition-duration: $mdc-drawer-animation-exit;
 
@@ -136,27 +136,27 @@
   }
 }
 
-.mdc-drawer__header {
+.mdc-drawer > .header {
   flex-shrink: 0;
   box-sizing: border-box;
   min-height: 64px; // same as $mdc-top-app-bar-row-height
   padding: 0 $mdc-drawer-surface-padding 4px;
 }
 
-.mdc-drawer__title {
+.mdc-drawer > .header > .title {
   @include mdc-typography(headline6);
   @include mdc-typography-baseline-top(36px);
   @include mdc-typography-baseline-bottom(20px);
 }
 
-.mdc-drawer__subtitle {
+.mdc-drawer > .header > .subtitle {
   @include mdc-typography(body2);
   @include mdc-typography-baseline-top(20px);
 
   margin-bottom: 0;
 }
 
-.mdc-drawer__content {
+.mdc-drawer > .content {
   height: 100%;
   overflow-y: auto;
 }

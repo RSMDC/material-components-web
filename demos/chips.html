@@ -33,13 +33,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body class="mdc-typography">
-    <header class="mdc-toolbar mdc-toolbar--fixed">
-      <div class="mdc-toolbar__row">
-        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+    <header class="mdc-toolbar -fixed">
+      <div class="row">
+        <section class="section -alignstart">
           <span class="catalog-back">
-            <a href="/" class="mdc-toolbar__menu-icon"><i class="material-icons">&#xE5C4;</i></a>
+            <a href="/" class="menuicon"><i class="material-icons">&#xE5C4;</i></a>
           </span>
-          <span class="mdc-toolbar__title catalog-title">Chips</span>
+          <span class="title catalog-title">Chips</span>
         </section>
       </div>
     </header>
@@ -48,77 +48,78 @@
       <section class="hero">
         <div class="mdc-chip-set">
           <div class="demo-chip mdc-chip" tabindex="0">
-            <div class="mdc-chip__text">Chip One</div>
+            <div class="text">Chip One</div>
           </div>
           <div class="demo-chip mdc-chip" tabindex="0">
-            <div class="mdc-chip__text">Chip Two</div>
+            <div class="text">Chip Two</div>
           </div>
           <div class="demo-chip mdc-chip" tabindex="0">
-            <div class="mdc-chip__text">Chip Three</div>
+            <div class="text">Chip Three</div>
           </div>
           <div class="demo-chip mdc-chip" tabindex="0">
-            <div class="mdc-chip__text">Chip Four</div>
+            <div class="text">Chip Four</div>
           </div>
         </div>
       </section>
 
       <section class="example">
         <div id="input-chip-icon-clones">
-            <i class="input-leading-icon material-icons mdc-chip__icon mdc-chip__icon--leading">face</i>
-            <i class="input-trailing-icon material-icons mdc-chip__icon mdc-chip__icon--trailing" tabindex="0" role="button">cancel</i>
+            <i class="input-leading-icon material-icons mdc-chip-icon -leading">face</i>
+            <i class="input-trailing-icon material-icons mdc-chip-icon -trailing" tabindex="0" role="button">cancel</i>
         </div>
         <h2>Input Chips</h2>
         <input id="input-chip-set-input" placeholder="Chip text">
-        <button id="input-chip-set-button" class="mdc-button mdc-button--dense">
+        <button id="input-chip-set-button" class="mdc-button -dense">
           Add Input Chip
         </button>
-        <button id="input-chip-set-delete-button" class="mdc-button mdc-button--dense">
+        <button id="input-chip-set-delete-button" class="mdc-button -dense">
           Delete Last Chip
         </button>
-        <div id="input-chip-set" class="mdc-chip-set mdc-chip-set--input">
+        <div id="input-chip-set" class="mdc-chip-set -input">
           <div class="demo-chip mdc-chip" tabindex="0">
-            <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">face</i>
-            <div class="mdc-chip__text">Jane Smith</div>
-            <i class="material-icons mdc-chip__icon mdc-chip__icon--trailing" tabindex="0" role="button">cancel</i>
+            <i class="material-icons icon -leading">face</i>
+            <div class="text">Jane Smith</div>
+            <i class="material-icons icon -trailing" tabindex="0" role="button">cancel</i>
           </div>
           <div class="demo-chip mdc-chip" tabindex="0">
-            <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">face</i>
-            <div class="mdc-chip__text">John Doe</div>
-            <i class="material-icons mdc-chip__icon mdc-chip__icon--trailing" tabindex="0" role="button">cancel</i>
+            <i class="material-icons icon -leading">face</i>
+            <div class="text">John Doe</div>
+            <i class="material-icons icon -trailing" tabindex="0" role="button">cancel</i>
           </div>
         </div>
 
         <div class="mdc-form-field">
           <div class="mdc-checkbox">
-            <input type="checkbox" class="mdc-checkbox__native-control" id="toggle-trailing-icon" aria-labelledby="toggle-disabled-label">
-            <div class="mdc-checkbox__background">
-              <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59">
+            <input type="checkbox" class="nativecontrol" id="toggle-trailing-icon" aria-labelledby="toggle-disabled-label">
+            <div class="background">
+              <svg class="checkmark" viewBox="0 0 24 24">
+                <path class="path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59">
               </svg>
-              <div class="mdc-checkbox__mixedmark"></div>
+              <div class="mixedmark"></div>
             </div>
           </div>
           <label for="toggle-trailing-icon" id="toggle-trailing-icon-label">Require confirmation before removing chip</label>
         </div>
       </section>
 
+
       <section class="example">
         <h2>Choice Chips</h2>
-        <div class="mdc-chip-set mdc-chip-set--choice">
+        <div class="mdc-chip-set -choice">
           <div class="demo-chip mdc-chip" tabindex="0">
-            <div class="mdc-chip__text">Extra Small</div>
+            <div class="text">Extra Small</div>
           </div>
           <div class="demo-chip mdc-chip" tabindex="0">
-            <div class="mdc-chip__text">Small</div>
+            <div class="text">Small</div>
           </div>
-          <div class="demo-chip mdc-chip mdc-chip--selected" tabindex="0">
-            <div class="mdc-chip__text">Medium</div>
-          </div>
-          <div class="demo-chip mdc-chip" tabindex="0">
-            <div class="mdc-chip__text">Large</div>
+          <div class="demo-chip mdc-chip -selected" tabindex="0">
+            <div class="text">Medium</div>
           </div>
           <div class="demo-chip mdc-chip" tabindex="0">
-            <div class="mdc-chip__text">Extra Large</div>
+            <div class="text">Large</div>
+          </div>
+          <div class="demo-chip mdc-chip" tabindex="0">
+            <div class="text">Extra Large</div>
           </div>
         </div>
       </section>
@@ -126,78 +127,78 @@
       <section class="example">
         <h2>Filter Chips</h2>
         <h4>No leading icon</h4>
-        <div class="mdc-chip-set mdc-chip-set--filter">
-          <div class="demo-chip mdc-chip mdc-chip--selected" tabindex="0">
-            <div class="mdc-chip__checkmark" >
-              <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
-                <path class="mdc-chip__checkmark-path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+        <div class="mdc-chip-set -filter">
+          <div class="demo-chip mdc-chip -selected" tabindex="0">
+            <div class="checkmark" >
+              <svg class="svg" viewBox="-2 -3 30 30">
+                <path class="path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
               </svg>
             </div>
-            <div class="mdc-chip__text">Tops</div>
+            <div class="text">Tops</div>
           </div>
-          <div class="demo-chip mdc-chip mdc-chip--selected" tabindex="0">
-            <div class="mdc-chip__checkmark" >
-              <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
-                <path class="mdc-chip__checkmark-path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+          <div class="demo-chip mdc-chip -selected" tabindex="0">
+            <div class="checkmark" >
+              <svg class="svg" viewBox="-2 -3 30 30">
+                <path class="path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
               </svg>
             </div>
-            <div class="mdc-chip__text">Bottoms</div>
-          </div>
-          <div class="demo-chip mdc-chip" tabindex="0">
-            <div class="mdc-chip__checkmark" >
-              <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
-                <path class="mdc-chip__checkmark-path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-              </svg>
-            </div>
-            <div class="mdc-chip__text">Shoes</div>
+            <div class="text">Bottoms</div>
           </div>
           <div class="demo-chip mdc-chip" tabindex="0">
-            <div class="mdc-chip__checkmark" >
-              <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
-                <path class="mdc-chip__checkmark-path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+            <div class="checkmark" >
+              <svg class="svg" viewBox="-2 -3 30 30">
+                <path class="path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
               </svg>
             </div>
-            <div class="mdc-chip__text">Accessories</div>
+            <div class="text">Shoes</div>
+          </div>
+          <div class="demo-chip mdc-chip" tabindex="0">
+            <div class="checkmark" >
+              <svg class="svg" viewBox="-2 -3 30 30">
+                <path class="path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+              </svg>
+            </div>
+            <div class="text">Accessories</div>
           </div>
         </div>
         <br>
         <h4>With leading icon</h4>
-        <div class="mdc-chip-set mdc-chip-set--filter">
-          <div class="demo-chip mdc-chip mdc-chip--selected" tabindex="0">
-            <i class="material-icons mdc-chip__icon mdc-chip__icon--leading mdc-chip__icon--leading-hidden">face</i>
-            <div class="mdc-chip__checkmark" >
-              <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
-                <path class="mdc-chip__checkmark-path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+        <div class="mdc-chip-set -filter">
+          <div class="demo-chip mdc-chip -selected" tabindex="0">
+            <i class="material-icons icon -leading -leadhidden">face</i>
+            <div class="checkmark" >
+              <svg class="svg" viewBox="-2 -3 30 30">
+                <path class="path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
               </svg>
             </div>
-            <div class="mdc-chip__text">Alice</div>
+            <div class="text">Alice</div>
           </div>
           <div class="demo-chip mdc-chip" tabindex="0">
-            <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">face</i>
-            <div class="mdc-chip__checkmark" >
-              <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
-                <path class="mdc-chip__checkmark-path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+            <i class="material-icons icon -leading">face</i>
+            <div class="checkmark" >
+              <svg class="svg" viewBox="-2 -3 30 30">
+                <path class="path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
               </svg>
             </div>
-            <div class="mdc-chip__text">Bob</div>
+            <div class="text">Bob</div>
           </div>
           <div class="demo-chip mdc-chip" tabindex="0">
-            <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">face</i>
-            <div class="mdc-chip__checkmark" >
-              <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
-                <path class="mdc-chip__checkmark-path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+            <i class="material-icons icon -leading">face</i>
+            <div class="checkmark" >
+              <svg class="svg" viewBox="-2 -3 30 30">
+                <path class="path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
               </svg>
             </div>
-            <div class="mdc-chip__text">Charlie</div>
+            <div class="text">Charlie</div>
           </div>
           <div class="demo-chip mdc-chip" tabindex="0">
-            <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">face</i>
-            <div class="mdc-chip__checkmark" >
-              <svg class="mdc-chip__checkmark-svg" viewBox="-2 -3 30 30">
-                <path class="mdc-chip__checkmark-path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+            <i class="material-icons icon -leading">face</i>
+            <div class="checkmark" >
+              <svg class="svg" viewBox="-2 -3 30 30">
+                <path class="path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
               </svg>
             </div>
-            <div class="mdc-chip__text">David</div>
+            <div class="text">David</div>
           </div>
         </div>
       </section>
@@ -206,20 +207,20 @@
         <h2>Action Chips</h2>
         <div class="mdc-chip-set">
           <div class="demo-chip mdc-chip" tabindex="0">
-            <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">wb_sunny</i>
-            <div class="mdc-chip__text">Turn on lights</div>
+            <i class="material-icons icon -leading">wb_sunny</i>
+            <div class="text">Turn on lights</div>
           </div>
           <div class="demo-chip mdc-chip" tabindex="0">
-            <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">bookmark</i>
-            <div class="mdc-chip__text">Bookmark</div>
+            <i class="material-icons icon -leading">bookmark</i>
+            <div class="text">Bookmark</div>
           </div>
           <div class="demo-chip mdc-chip" tabindex="0">
-            <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">alarm</i>
-            <div class="mdc-chip__text">Set alarm</div>
+            <i class="material-icons icon -leading">alarm</i>
+            <div class="text">Set alarm</div>
           </div>
           <div class="demo-chip mdc-chip" tabindex="0">
-            <i class="material-icons mdc-chip__icon mdc-chip__icon--leading">directions</i>
-            <div class="mdc-chip__text">Get directions</div>
+            <i class="material-icons icon -leading">directions</i>
+            <div class="text">Get directions</div>
           </div>
         </div>
       </section>
@@ -228,30 +229,30 @@
         <h2>Custom theme</h2>
         <div class="mdc-chip-set">
           <div class="custom-chip-primary demo-chip mdc-chip" tabindex="0">
-            <div class="mdc-chip__text">Add to Calendar</div>
+            <div class="text">Add to Calendar</div>
           </div>
           <div class="custom-chip-primary demo-chip mdc-chip" tabindex="0">
-            <div class="mdc-chip__text">Bookmark</div>
+            <div class="text">Bookmark</div>
           </div>
           <div class="custom-chip-primary demo-chip mdc-chip" tabindex="0">
-            <div class="mdc-chip__text">Set Alarm</div>
+            <div class="text">Set Alarm</div>
           </div>
           <div class="custom-chip-primary demo-chip mdc-chip" tabindex="0">
-            <div class="mdc-chip__text">Get Directions</div>
+            <div class="text">Get Directions</div>
           </div>
         </div>
         <div class="mdc-chip-set">
           <div class="custom-chip-secondary demo-chip mdc-chip" tabindex="0">
-            <div class="mdc-chip__text">Add to Calendar</div>
+            <div class="text">Add to Calendar</div>
           </div>
           <div class="custom-chip-secondary demo-chip mdc-chip" tabindex="0">
-            <div class="mdc-chip__text">Bookmark</div>
+            <div class="text">Bookmark</div>
           </div>
           <div class="custom-chip-secondary demo-chip mdc-chip" tabindex="0">
-            <div class="mdc-chip__text">Set Alarm</div>
+            <div class="text">Set Alarm</div>
           </div>
           <div class="custom-chip-secondary demo-chip mdc-chip" tabindex="0">
-            <div class="mdc-chip__text">Get Directions</div>
+            <div class="text">Get Directions</div>
           </div>
         </div>
       </section>
@@ -295,7 +296,7 @@
 
         function createChipEl(text, leadingIcon, trailingIcon) {
           const chipTextEl = document.createElement('div');
-          chipTextEl.classList.add('mdc-chip__text');
+          chipTextEl.classList.add('text');
           chipTextEl.appendChild(document.createTextNode(text));
 
           const chipEl = document.createElement('div');

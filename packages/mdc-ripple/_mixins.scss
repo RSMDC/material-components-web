@@ -153,7 +153,7 @@
 @mixin mdc-states-activated($color, $has-nested-focusable-element: false) {
   $activated-opacity: mdc-states-opacity($color, activated);
 
-  &--activated {
+  &.-activated {
     // Stylelint seems to think that '&' qualifies as a type selector here?
     // stylelint-disable-next-line selector-max-type
     &::before {
@@ -169,7 +169,7 @@
 @mixin mdc-states-selected($color, $has-nested-focusable-element: false) {
   $selected-opacity: mdc-states-opacity($color, selected);
 
-  &--selected {
+  &.-selected {
     // stylelint-disable-next-line selector-max-type
     &::before {
       opacity: $selected-opacity;

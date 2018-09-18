@@ -53,7 +53,7 @@
     outline: none;
   }
 
-  &--animating-open {
+  &.-animatingopen {
     display: inline-block;
     transform: scale(.8);
     transition:
@@ -62,25 +62,25 @@
     opacity: 0;
   }
 
-  &--open {
+  &.-open {
     display: inline-block;
     transform: scale(1);
     opacity: 1;
   }
 
-  &--animating-closed {
+  &.-animatingclosed {
     display: inline-block;
     transition: opacity $mdc-menu-surface-fade-out-duration linear;
     opacity: 0;
   }
 }
 
-.mdc-menu-surface--anchor {
+.mdc-menu-surface-anchor {
   position: relative;
   overflow: visible;
 }
 
-.mdc-menu-surface--fixed {
+.mdc-menu-surface.-fixed {
   position: fixed;
 }
 // postcss-bem-linter: end

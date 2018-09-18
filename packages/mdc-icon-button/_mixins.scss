@@ -32,8 +32,8 @@
   font-size: max($width, $height);
 
   // stylelint-disable-next-line selector-max-type
-  svg,
-  img {
+  > svg,
+  > img {
     width: $width;
     height: $height;
   }

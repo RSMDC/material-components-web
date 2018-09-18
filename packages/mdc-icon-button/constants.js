@@ -24,7 +24,7 @@
 /** @enum {string} */
 const cssClasses = {
   ROOT: 'mdc-icon-button',
-  ICON_BUTTON_ON: 'mdc-icon-button--on',
+  ICON_BUTTON_ON: '-on',
 };
 
 /** @enum {string} */

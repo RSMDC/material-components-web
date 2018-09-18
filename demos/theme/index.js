@@ -26,7 +26,7 @@ import * as dom from '../dom.js';
 import * as pony from '../ponyfill.js';
 
 const classes = {
-  MDC_LIST_ITEM: 'mdc-list-item',
+  MDC_LIST_ITEM: 'item',
   THEME_MENU_ITEM_SELECTED: 'demo-theme-menu__list-item--selected',
   COMPONENT_SECTION: 'demo-component-section',
   COMPONENT_SECTION_FLASH: 'demo-component-section--flash',

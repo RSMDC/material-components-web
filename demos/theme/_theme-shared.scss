@@ -77,14 +77,14 @@ figure {
 // Toolbar
 //
 
-.demo-toolbar-progress-row {
+.mdc-toolbar > .demo-toolbar-progress-row {
   min-height: auto;
   overflow: hidden;
   position: absolute;
   bottom: 0;
 }
 
-.demo-toolbar-progress-bar {
+.mdc-toolbar > .demo-toolbar-progress-row > .demo-toolbar-progress-bar {
   transform: translateY(100%);
   transition: mdc-animation-exit-temporary(transform, 150ms);
 

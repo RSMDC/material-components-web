@@ -51,7 +51,7 @@
   will-change: opacity, transform, border-color, color;
 
   // Container for radio circles and ripple.
-  &__background {
+  > .background {
     display: inline-block;
     position: absolute;
     left: ($mdc-radio-touch-area - $mdc-radio-ui-size) / 2;
@@ -74,7 +74,7 @@
     }
   }
 
-  &__outer-circle {
+  > .background > .outer {
     position: absolute;
     top: 0;
     left: 0;
@@ -87,7 +87,7 @@
     border-radius: 50%;
   }
 
-  &__inner-circle {
+  > .background > .inner {
     position: absolute;
     top: 0;
     left: 0;
@@ -101,7 +101,7 @@
     border-radius: 50%;
   }
 
-  &__native-control {
+  > .nativecontrol {
     position: absolute;
     top: 0;
     left: 0;
@@ -116,59 +116,59 @@
 
   // stylelint-disable plugin/selector-bem-pattern
   &.mdc-ripple-upgraded--background-focused {
-    .mdc-radio__background::before {
+    > .background::before {
       content: none;
     }
   }
   // stylelint-enable plugin/selector-bem-pattern
 }
 
-.mdc-radio__native-control:checked,
-.mdc-radio__native-control:disabled {
-  + .mdc-radio__background {
+.mdc-radio > .nativecontrol:checked,
+.mdc-radio > .nativecontrol:disabled {
+  + .background {
     transition: mdc-radio-enter(opacity), mdc-radio-enter(transform);
 
-    .mdc-radio__outer-circle {
+    > .outer {
       transition: mdc-radio-enter(border-color);
     }
 
-    .mdc-radio__inner-circle {
+    > .inner {
       transition: mdc-radio-enter(transform), mdc-radio-enter(border-color);
     }
   }
 }
 
-.mdc-radio--disabled {
+.mdc-radio.-disabled {
   cursor: default;
   pointer-events: none;
 }
 
-.mdc-radio__native-control:checked {
-  + .mdc-radio__background {
-    .mdc-radio__inner-circle {
+.mdc-radio > .nativecontrol:checked {
+  + .background {
+    > .inner {
       transform: scale(.5);
       transition: mdc-radio-enter(transform), mdc-radio-enter(border-color);
     }
   }
 }
 
-.mdc-radio__native-control:disabled,
-[aria-disabled="true"] .mdc-radio__native-control {
-  + .mdc-radio__background {
+.mdc-radio > .nativecontrol:disabled,
+.mdc-radio[aria-disabled="true"] > .nativecontrol {
+  + .background {
     cursor: default;
 
-    .mdc-radio__outer-circle {
+    > .outer {
       border-color: $mdc-radio-circle-color;
     }
 
-    .mdc-radio__inner-circle {
+    > .inner {
       border-color: $mdc-radio-circle-color;
     }
   }
 }
 
-.mdc-radio__native-control:focus {
-  + .mdc-radio__background::before {
+.mdc-radio > .nativecontrol:focus {
+  + .background::before {
     transform: scale(2, 2);
     transition: mdc-radio-enter(opacity), mdc-radio-enter(transform);
     opacity: map-get($mdc-ripple-dark-ink-opacities, focus);

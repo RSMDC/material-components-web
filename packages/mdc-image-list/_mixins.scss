@@ -21,17 +21,17 @@
 @import "./variables";
 
 @mixin mdc-image-list-aspect($width-height-ratio) {
-  .mdc-image-list__image-aspect-container {
+  > .item > .aspectcontainer {
     padding-bottom: calc(100% / #{$width-height-ratio});
   }
 }
 
 @mixin mdc-image-list-corner-radius($radius) {
-  .mdc-image-list__image {
+  > .item > .image {
     border-radius: $radius;
   }
 
-  .mdc-image-list__supporting {
+  > .item > .supporting {
     border-radius: 0 0 $radius $radius;
   }
 }
@@ -41,7 +41,7 @@
 @mixin mdc-image-list-standard-columns($column-count, $gutter-size: $mdc-image-list-standard-gutter-size) {
   // This uses margin rather than padding to facilitate properly positioning the supporting content element when
   // --with-text-protection is used.
-  .mdc-image-list__item {
+  > .item {
     // Subtract extra fraction from each item's width to ensure correct wrapping in IE and Edge which round differently
     width: calc(100% / #{$column-count} - #{$gutter-size + 1 / $column-count});
     margin: $gutter-size / 2;
@@ -54,7 +54,7 @@
   column-count: $column-count;
   column-gap: $gutter-size;
 
-  .mdc-image-list__item {
+  > .item {
     margin-bottom: $gutter-size;
   }
 }

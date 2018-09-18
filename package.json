@@ -1,7 +1,17 @@
 {
+  "name": "rsmdc",
+  "version": "0.39.1-beta.0",
   "private": true,
-  "description": "Material Components Web",
+  "description": "Material Components Web for RSCSS",
   "license": "MIT",
+  "main": "index.js",
+  "authoer": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RSMDC/material-components-web.git"
+  },
+  "keywords": [],
+  "author": "",
   "scripts": {
     "build": "npm run clean && mkdirp build && webpack --progress --colors",
     "build:demos": "npm run clean && mkdirp build && webpack --config=demos/webpack.config.js --progress --colors",

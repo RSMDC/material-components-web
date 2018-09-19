@@ -128,13 +128,13 @@ And open http://localhost:8080 in a browser. You should see a blue “Hello Worl
 Now that you have webpack configured to compile Sass into CSS, let's include the Sass files for the Material Design button. First install the Node dependency:
 
 ```
-npm install --save-dev @material/button
+npm install --save-dev @rsmdc/button
 ```
 
-We need to tell our `app.scss` to import the Sass files for `@material/button`. We can also use Sass mixins to customize the button. Replace your “hello world” version of `app.scss` with this code:
+We need to tell our `app.scss` to import the Sass files for `@rsmdc/button`. We can also use Sass mixins to customize the button. Replace your “hello world” version of `app.scss` with this code:
 
 ```scss
-@import "@material/button/mdc-button";
+@import "@rsmdc/button/mdc-button";
 
 .foo-button {
   @include mdc-button-ink-color(teal);
@@ -142,7 +142,7 @@ We need to tell our `app.scss` to import the Sass files for `@material/button`. 
 }
 ```
 
-We also need to configure sass-loader to understand the `@material` imports used by MDC Web. Update your `webpack.config.js` by changing `{ loader: 'sass-loader' }` to:
+We also need to configure sass-loader to understand the `@rsmdc` imports used by MDC Web. Update your `webpack.config.js` by changing `{ loader: 'sass-loader' }` to:
 
 ```js
 {
@@ -194,7 +194,7 @@ Then add `postcss-loader`, using `autoprefixer` as a plugin:
 },
 ```
 
-`@material/button` has [documentation](../packages/mdc-button/README.md) about the required HTML for a button. Update your `index.html` to include the MDC Button markup, and add the `foo-button` class to the element:
+`@rsmdc/button` has [documentation](../packages/mdc-button/README.md) about the required HTML for a button. Update your `index.html` to include the MDC Button markup, and add the `foo-button` class to the element:
 
 ```html
 <body>
@@ -310,13 +310,13 @@ Now run `npm start` again and open http://localhost:8080. You should see a “he
 Now that you have webpack configured to compile ES2015 into JavaScript, let's include the ES2015 files from the Material Design ripple. First install the Node dependency:
 
 ```
-npm install --save-dev @material/ripple
+npm install --save-dev @rsmdc/ripple
 ```
 
-We need to tell our `app.js` to import the ES2015 file for `@material/ripple`. We also need to initialize an `MDCRipple` with a DOM element. Replace your “hello world” version of `app.js` with this code:
+We need to tell our `app.js` to import the ES2015 file for `@rsmdc/ripple`. We also need to initialize an `MDCRipple` with a DOM element. Replace your “hello world” version of `app.js` with this code:
 
 ```js
-import {MDCRipple} from '@material/ripple';
+import {MDCRipple} from '@rsmdc/ripple';
 const ripple = new MDCRipple(document.querySelector('.foo-button'));
 ```
 
@@ -328,7 +328,7 @@ Now run `npm start` again and open http://localhost:8080. You should see a Mater
 
 It is possible to end up with nested `node_modules` folders if you have dependencies on conflicting versions of
 individual MDC Web packages. This may lead to errors when attempting to compile Sass with the `includePaths`
-configuration shown above, since Sass is only scanning for `@material` packages under the top-level `node_modules`
+configuration shown above, since Sass is only scanning for `@rsmdc` packages under the top-level `node_modules`
 directory.
 
 Alternatively, you can implement an importer as follows, which makes use of node's module resolution algorithm to find
@@ -357,7 +357,7 @@ function tryResolveScss(url, sourceFilename) {
 }
 
 function materialImporter(url, prev) {
-  if (url.startsWith('@material')) {
+  if (url.startsWith('@rsmdc')) {
     const resolved = tryResolveScss(url, prev);
     return {file: resolved || url};
   }

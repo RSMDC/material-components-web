@@ -21,8 +21,8 @@
  * THE SOFTWARE.
  */
 
-import {MDCComponent} from '@material/base/index';
-import {MDCRipple} from '@material/ripple/index';
+import {MDCComponent} from '@rsmdc/base/index';
+import {MDCRipple} from '@rsmdc/ripple/index';
 
 import MDCToolbarFoundation from './foundation';
 

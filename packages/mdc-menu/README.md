@@ -33,7 +33,7 @@ or other control.
 ## Installation
 
 ```
-npm install @material/menu
+npm install @rsmdc/menu
 ```
 
 ## Basic Usage
@@ -56,15 +56,15 @@ npm install @material/menu
 ### Styles
 
 ```scss
-@import "@material/list/mdc-list";
-@import "@material/menu-surface/mdc-menu-surface";
-@import "@material/menu/mdc-menu";
+@import "@rsmdc/list/mdc-list";
+@import "@rsmdc/menu-surface/mdc-menu-surface";
+@import "@rsmdc/menu/mdc-menu";
 ```
 
 ### JavaScript Instantiation
 
 ```js
-import {MDCMenu} from '@material/menu';
+import {MDCMenu} from '@rsmdc/menu';
 
 const menu = new MDCMenu(document.querySelector('.mdc-menu'));
 menu.show();

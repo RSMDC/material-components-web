@@ -30,13 +30,13 @@ Icons describe the type of input a text field requires. They can also be interac
 ### Styles
 
 ```scss
-@import "@material/textfield/icon/mdc-text-field-icon";
+@import "@rsmdc/textfield/icon/mdc-text-field-icon";
 ```
 
 ### JavaScript Instantiation
 
 ```js
-import {MDCTextFieldIcon} from '@material/textfield/icon';
+import {MDCTextFieldIcon} from '@rsmdc/textfield/icon';
 
 const icon = new MDCTextFieldIcon(document.querySelector('.mdc-text-field-icon'));
 ```

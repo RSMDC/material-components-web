@@ -20,9 +20,9 @@
 // THE SOFTWARE.
 //
 
-@import "@material/ripple/common";
-@import "@material/ripple/mixins";
-@import "@material/theme/mixins";
+@import "@rsmdc/ripple/common";
+@import "@rsmdc/ripple/mixins";
+@import "@rsmdc/theme/mixins";
 @import "./variables";
 
 @mixin mdc-icon-button-size($width, $height: $width, $padding: max($width, $height)/2) {

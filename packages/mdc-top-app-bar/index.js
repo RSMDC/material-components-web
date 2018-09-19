@@ -22,8 +22,8 @@
  */
 
 import MDCTopAppBarAdapter from './adapter';
-import MDCComponent from '@material/base/component';
-import {MDCRipple} from '@material/ripple/index';
+import MDCComponent from '@rsmdc/base/component';
+import {MDCRipple} from '@rsmdc/ripple/index';
 import {cssClasses, strings} from './constants';
 import MDCTopAppBarBaseFoundation from './foundation';
 import MDCFixedTopAppBarFoundation from './fixed/foundation';

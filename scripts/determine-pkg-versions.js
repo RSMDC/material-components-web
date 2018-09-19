@@ -95,7 +95,7 @@ const commitMatches = childProcess
     };
   })
   .filter((info) => Boolean(info) && affectsPackage(info.scope));
-const componentPkgs = updatedPkgs.filter(({name}) => name.indexOf('@material') === 0);
+const componentPkgs = updatedPkgs.filter(({name}) => name.indexOf('@rsmdc') === 0);
 const mdcPkg = updatedPkgs.find(({name}) => name === 'material-components-web');
 const newPkgVersions = collectNewPkgVersions(componentPkgs, commitMatches);
 const newMDCVersion = Object.assign(collectMDCVersion(mdcPkg, newPkgVersions), {

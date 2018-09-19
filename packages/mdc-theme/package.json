@@ -1,5 +1,5 @@
 {
-  "name": "@material/theme",
+  "name": "@rsmdc/theme",
   "description": "The Material Components for the web theming system",
   "version": "0.39.1",
   "license": "MIT",

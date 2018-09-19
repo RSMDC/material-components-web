@@ -1,5 +1,5 @@
 {
-  "name": "@material/rtl",
+  "name": "@rsmdc/rtl",
   "description": "Material Components for the web RTL Scss helpers",
   "version": "0.39.1",
   "license": "MIT",

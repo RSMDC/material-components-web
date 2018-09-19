@@ -7,7 +7,7 @@
 
 ### Installation Problems
 
-Some installation problems we can help with. For example, @material SASS paths
+Some installation problems we can help with. For example, @rsmdc SASS paths
 in the SASS compiler is expertise we have, and we can help them with this
 question. But it is best if the answer to this question is a link to
 documentation.

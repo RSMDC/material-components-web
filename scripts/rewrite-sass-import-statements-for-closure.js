@@ -25,7 +25,7 @@
  * @fileoverview Rewrites import statements such that:
  *
  * ```js
- * import [<SPECIFIERS> from] '@material/$PKG[/files...]';
+ * import [<SPECIFIERS> from] '@rsmdc/$PKG[/files...]';
  * ```
  * becomes
  * ```js
@@ -78,9 +78,9 @@ function transform(srcFile, rootDir) {
 
 function rewriteImportDeclaration(importSource, srcFile, rootDir) {
   const pathParts = importSource.split('/');
-  const isMDCImport = pathParts[0] === '@material';
+  const isMDCImport = pathParts[0] === '@rsmdc';
   if (isMDCImport) {
-    const modName = pathParts[1]; // @material/<modName>
+    const modName = pathParts[1]; // @rsmdc/<modName>
     const atMaterialReplacementPath = `${rootDir}/${modName}`;
     const rewrittenImportSource = [atMaterialReplacementPath].concat(pathParts.slice(2)).join('/');
     importSource = rewrittenImportSource;
@@ -89,7 +89,7 @@ function rewriteImportDeclaration(importSource, srcFile, rootDir) {
   let resolvedImportSource = importSource;
   const needsClosureModuleRootResolution = path.isAbsolute(importSource);
   if (needsClosureModuleRootResolution) {
-    const pathToImport = importSource.replace('@material', rootDir);
+    const pathToImport = importSource.replace('@rsmdc', rootDir);
     resolvedImportSource = path.relative(path.dirname(srcFile), pathToImport);
   }
   return resolvedImportSource;

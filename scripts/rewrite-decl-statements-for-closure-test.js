@@ -33,7 +33,7 @@
  * This script rewrites import statements such that:
  *
  * ```js
- * import [<SPECIFIERS> from] '@material/$PKG[/files...]';
+ * import [<SPECIFIERS> from] '@rsmdc/$PKG[/files...]';
  * ```
  * becomes
  * ```js
@@ -232,9 +232,9 @@ function transform(srcFile, rootDir) {
 function rewriteDeclarationSource(node, srcFile, rootDir) {
   let source = node.source.value;
   const pathParts = source.split('/');
-  const isMDCImport = pathParts[0] === '@material';
+  const isMDCImport = pathParts[0] === '@rsmdc';
   if (isMDCImport) {
-    const modName = pathParts[1]; // @material/<modName>
+    const modName = pathParts[1]; // @rsmdc/<modName>
     const atMaterialReplacementPath = `${rootDir}/mdc-${modName}`;
     const rewrittenSource = [atMaterialReplacementPath].concat(pathParts.slice(2)).join('/');
     source = rewrittenSource;
@@ -249,7 +249,7 @@ function patchNodeForDeclarationSource(source, srcFile, rootDir, node) {
   const wouldLoadAsFileOrDir = ['./', '/', '../'].some((s) => source.indexOf(s) === 0);
   const isThirdPartyModule = !wouldLoadAsFileOrDir;
   if (isThirdPartyModule) {
-    assert(source.indexOf('@material') < 0, '@material/* import sources should have already been rewritten');
+    assert(source.indexOf('@rsmdc') < 0, '@rsmdc/* import sources should have already been rewritten');
     patchDefaultImportIfNeeded(node);
     resolvedSource = `mdc.thirdparty.${camelCase(source)}`;
     return resolvedSource;

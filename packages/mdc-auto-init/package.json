@@ -1,5 +1,5 @@
 {
-  "name": "@material/auto-init",
+  "name": "@rsmdc/auto-init",
   "description": "Declarative, easy-to-use auto-initialization for Material Components for the web",
   "version": "0.39.0",
   "main": "index.js",

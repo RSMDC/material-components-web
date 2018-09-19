@@ -31,12 +31,12 @@ in everything, or just the packages you want.
 
 ### npm
 
-MDC Web is available on [npm](https://www.npmjs.com/), with packages living under the `@material` namespace.
+MDC Web is available on [npm](https://www.npmjs.com/), with packages living under the `@rsmdc` namespace.
 
 In order to install e.g. the button component, you can run:
 
 ```
-npm install @material/button
+npm install @rsmdc/button
 ```
 
 Some packages serve as dependencies for others, so don’t be surprised if you end up with multiple packages in your
@@ -73,8 +73,8 @@ Check the [unpkg CDN main page](https://unpkg.com/) for more information on how 
 You can also request individual packages' JS and CSS, e.g.:
 
 ```
-https://unpkg.com/@material/textfield@latest/dist/mdc.textfield.min.js
-https://unpkg.com/@material/textfield@latest/dist/mdc.textfield.min.css
+https://unpkg.com/@rsmdc/textfield@latest/dist/mdc.textfield.min.js
+https://unpkg.com/@rsmdc/textfield@latest/dist/mdc.textfield.min.css
 ```
 
 > **Note:** We heavily recommend installing MDC Web packages locally in order to take full advantage of their
@@ -117,7 +117,7 @@ initialized, similarly to MDL.
 
 ### Auto-initialization
 
-Auto-initialization is handled by the `@material/auto-init` package, so start by ensuring that you’re depending on it
+Auto-initialization is handled by the `@rsmdc/auto-init` package, so start by ensuring that you’re depending on it
 (check the [Depending on MDC Web section](#depending-on-mdc-web)).
 
 For every component that you want to automatically initialize, set the `data-mdc-auto-init` attribute on the root
@@ -142,7 +142,7 @@ mdc.autoInit();
 If you're using ES2015:
 
 ```js
-import autoInit from '@material/auto-init';
+import autoInit from '@rsmdc/auto-init';
 
 autoInit();
 ```
@@ -154,7 +154,7 @@ same name as the value you passed to `data-mdc-auto-init`. So, for the example a
 document.querySelector('.mdc-text-field').MDCTextField.disabled = true;
 ```
 
-See the [`@material/auto-init` README](../packages/mdc-auto-init/README.md) for more details.
+See the [`@rsmdc/auto-init` README](../packages/mdc-auto-init/README.md) for more details.
 
 ### Manual lifecycle management
 
@@ -172,7 +172,7 @@ you need to; unlike with auto-initialization, there is no way to retrieve it lat
 Start by importing the component:
 
 ```js
-import {MDCTextField} from '@material/textfield';
+import {MDCTextField} from '@rsmdc/textfield';
 ```
 
 Then instantiate it by calling the constructor on the root node:
@@ -221,10 +221,10 @@ MDC Web components expose Sass mixins and functions to help customize properties
 You can access the Sass sources for a component in the similarly named `scss` file at its package root:
 
 ```scss
-@import "@material/button/mdc-button";
+@import "@rsmdc/button/mdc-button";
 ```
 
-In the case of `@material/button`, for example, there are several mixins that allow you to customize specific button
+In the case of `@rsmdc/button`, for example, there are several mixins that allow you to customize specific button
 properties, as well as a convenience mixin to specify a fill color and automatically determine an accessible ink color:
 
 ```scss
@@ -238,7 +238,7 @@ properties, as well as a convenience mixin to specify a fill color and automatic
 Theming in MDL is primarily handled either by overriding the theme variables in Sass, or by depending on a pre-generated
 CSS bundle with the colors baked in, via [the customizer](https://getmdl.io/customize/index.html).
 
-MDC Web similarly includes several centralized theme variables in the `@material/theme` package, along with helper
+MDC Web similarly includes several centralized theme variables in the `@rsmdc/theme` package, along with helper
 mixins and functions. Furthermore, MDC Web supports fine-grained theme customization via Sass mixins in each respective
 component package. As with MDL, you can override the theme variables in Sass, but there’s no longer a customizer or a
 CDN with different combinations. There is CSS custom property support, however.
@@ -246,19 +246,19 @@ CDN with different combinations. There is CSS custom property support, however.
 In the future, additional tools will be available to assist in theme customization.
 
 The process of customizing central theme variables is described in the following sections, but check the
-[`@material/theme` README](../packages/mdc-theme/README.md) as well as the Sass APIs in each package for more details.
+[`@rsmdc/theme` README](../packages/mdc-theme/README.md) as well as the Sass APIs in each package for more details.
 
 ### Sass variables
 
 In order to change the theme colors for your entire application, simply define the desired theme color variables before
-importing `@material/theme` or any MDC Web components that rely on it:
+importing `@rsmdc/theme` or any MDC Web components that rely on it:
 
 ```scss
 $mdc-theme-primary: #9c27b0;
 $mdc-theme-secondary: #ffab40;
 $mdc-theme-background: #fff;
 
-@import "@material/theme/mdc-theme";
+@import "@rsmdc/theme/mdc-theme";
 ```
 
 The correct text colors will automatically be calculated based on the provided theme colors.
@@ -266,7 +266,7 @@ The correct text colors will automatically be calculated based on the provided t
 ### CSS custom properties
 
 If you are only targeting browsers which support CSS custom properties, you can use the custom properties provided by
-`@material/theme`:
+`@rsmdc/theme`:
 
 ```css
 :root {
@@ -278,7 +278,7 @@ If you are only targeting browsers which support CSS custom properties, you can 
 
 Unfortunately, due to the current limitations of CSS color handling, it’s not currently possible to automatically
 calculate the correct text colors to use, based on the chosen theme colors. These will all need to be set manually.
-Please check the [`@material/theme` README](../packages/mdc-theme/README.md) for more details.
+Please check the [`@rsmdc/theme` README](../packages/mdc-theme/README.md) for more details.
 
 ## Browser support
 
@@ -295,34 +295,34 @@ The following table summarizes the current situation (TBI = to be investigated):
 
 | MDL component | MDC Web component | Notes |
 | ------------- | ----------------- | ----- |
-| `mdl-animation` | [`@material/animation`](../packages/mdc-animation/README.md) | Very similar. |
+| `mdl-animation` | [`@rsmdc/animation`](../packages/mdc-animation/README.md) | Very similar. |
 | `mdl-badge` | None | Not currently planned for MDC Web. |
-| `mdl-button` | Split into [`@material/button`](../packages/mdc-button/README.md) and [`@material/fab`](../packages/mdc-fab/README.md) | No equivalent to MDL's Icon Button in MDC Web at the moment, [TBI](https://github.com/material-components/material-components-web/issues/12). |
-| `mdl-card` | [`@material/card`](../packages/mdc-card/README.md) | Very different DOM. More options in MDC Web. |
-| `mdl-checkbox` | [`@material/checkbox`](../packages/mdc-checkbox/README.md) | Very different DOM. Recommended use with [`@material/form-field`](../packages/mdc-form-field/README.md). |
-| `mdl-chip` | [`@material/chips`](../packages/mdc-chips/README.md) | Different DOM and variants. |
+| `mdl-button` | Split into [`@rsmdc/button`](../packages/mdc-button/README.md) and [`@rsmdc/fab`](../packages/mdc-fab/README.md) | No equivalent to MDL's Icon Button in MDC Web at the moment, [TBI](https://github.com/material-components/material-components-web/issues/12). |
+| `mdl-card` | [`@rsmdc/card`](../packages/mdc-card/README.md) | Very different DOM. More options in MDC Web. |
+| `mdl-checkbox` | [`@rsmdc/checkbox`](../packages/mdc-checkbox/README.md) | Very different DOM. Recommended use with [`@rsmdc/form-field`](../packages/mdc-form-field/README.md). |
+| `mdl-chip` | [`@rsmdc/chips`](../packages/mdc-chips/README.md) | Different DOM and variants. |
 | `mdl-data-table` | TBI | [#57](https://github.com/material-components/material-components-web/issues/57) - In the interim, consider using MDC List with flexbox. |
-| `mdl-dialog` | [`@material/dialog`](../packages/mdc-dialog/README.md) | Sufficiently different from MDL. MDL uses the `dialog` element which has limited cross-browser support. `mdc-dialog` relies on elements with more cross-browser support. |
+| `mdl-dialog` | [`@rsmdc/dialog`](../packages/mdc-dialog/README.md) | Sufficiently different from MDL. MDL uses the `dialog` element which has limited cross-browser support. `mdc-dialog` relies on elements with more cross-browser support. |
 | `mdl-footer` | None | Not currently planned for MDC Web. |
-| `mdl-grid` | [`@material/layout-grid`](../packages/mdc-layout-grid/README.md) | Very similar. No offsets in MDC Web. |
-| `mdl-icon-toggle` | [`@material/icon-button`](../packages/mdc-icon-button/README.md) | Very different DOM. |
-| `mdl-layout` | Split into [`@material/drawer`](../packages/mdc-drawer/README.md), [`@material/top-app-bar`](../packages/mdc-top-app-bar/README.md), [`@material/layout-grid`](../packages/mdc-layout-grid/README.md), and [`@material/tabs`](../packages/mdc-tabs/README.md) | Different DOM and variants. |
-| `mdl-list` | [`@material/list`](../packages/mdc-list/README.md) | Very different DOM. |
-| `mdl-menu` | [`@material/menu`](../packages/mdc-menu/README.md) | Very different DOM. |
-| `mdl-palette` | [`@material/theme`](../packages/mdc-theme/README.md) | All theming is handled via [`@material/theme`](../packages/mdc-theme/README.md). |
-| `mdl-progress` | [`@material/linear-progress`](../packages/mdc-linear-progress/README.md) | Very different DOM. |
-| `mdl-radio` | [`@material/radio`](../packages/mdc-radio/README.md) | Very different DOM. Recommended use with [`@material/form-field`](../packages/mdc-form-field/README.md). |
+| `mdl-grid` | [`@rsmdc/layout-grid`](../packages/mdc-layout-grid/README.md) | Very similar. No offsets in MDC Web. |
+| `mdl-icon-toggle` | [`@rsmdc/icon-button`](../packages/mdc-icon-button/README.md) | Very different DOM. |
+| `mdl-layout` | Split into [`@rsmdc/drawer`](../packages/mdc-drawer/README.md), [`@rsmdc/top-app-bar`](../packages/mdc-top-app-bar/README.md), [`@rsmdc/layout-grid`](../packages/mdc-layout-grid/README.md), and [`@rsmdc/tabs`](../packages/mdc-tabs/README.md) | Different DOM and variants. |
+| `mdl-list` | [`@rsmdc/list`](../packages/mdc-list/README.md) | Very different DOM. |
+| `mdl-menu` | [`@rsmdc/menu`](../packages/mdc-menu/README.md) | Very different DOM. |
+| `mdl-palette` | [`@rsmdc/theme`](../packages/mdc-theme/README.md) | All theming is handled via [`@rsmdc/theme`](../packages/mdc-theme/README.md). |
+| `mdl-progress` | [`@rsmdc/linear-progress`](../packages/mdc-linear-progress/README.md) | Very different DOM. |
+| `mdl-radio` | [`@rsmdc/radio`](../packages/mdc-radio/README.md) | Very different DOM. Recommended use with [`@rsmdc/form-field`](../packages/mdc-form-field/README.md). |
 | `mdl-resets` | None. | Not currently planned for MDC Web. |
-| `mdl-ripple` | [`@material/ripple`](../packages/mdc-ripple/README.md) | Very different usage; much improved in MDC Web. |
-| `mdl-shadow` | [`@material/elevation`](../packages/mdc-elevation/README.md) | Similar usage. |
-| `mdl-slider` | [`@material/slider`](../packages/mdc-slider/README.md) | Very different DOM. |
-| `mdl-snackbar` | [`@material/snackbar`](../packages/mdc-snackbar/README.md) | Very different DOM. |
+| `mdl-ripple` | [`@rsmdc/ripple`](../packages/mdc-ripple/README.md) | Very different usage; much improved in MDC Web. |
+| `mdl-shadow` | [`@rsmdc/elevation`](../packages/mdc-elevation/README.md) | Similar usage. |
+| `mdl-slider` | [`@rsmdc/slider`](../packages/mdc-slider/README.md) | Very different DOM. |
+| `mdl-snackbar` | [`@rsmdc/snackbar`](../packages/mdc-snackbar/README.md) | Very different DOM. |
 | `mdl-spinner` | TBI | [#30](https://github.com/material-components/material-components-web/issues/30) |
-| `mdl-switch` | [`@material/switch`](../packages/mdc-switch/README.md) | Very different DOM. |
-| `mdl-tabs` | [`@material/tabs`](../packages/mdc-tabs/README.md) | Very different DOM. |
-| `mdl-text-field` | [`@material/textfield`](../packages/mdc-textfield/README.md) | Very different DOM and variants. |
+| `mdl-switch` | [`@rsmdc/switch`](../packages/mdc-switch/README.md) | Very different DOM. |
+| `mdl-tabs` | [`@rsmdc/tabs`](../packages/mdc-tabs/README.md) | Very different DOM. |
+| `mdl-text-field` | [`@rsmdc/textfield`](../packages/mdc-textfield/README.md) | Very different DOM and variants. |
 | `mdl-tooltip` | TBI | [#24](https://github.com/material-components/material-components-web/issues/24) |
-| `mdl-typography` | [`@material/typography`](../packages/mdc-typography/README.md) | Somewhat different usage; different/updated typography styles. |
+| `mdl-typography` | [`@rsmdc/typography`](../packages/mdc-typography/README.md) | Somewhat different usage; different/updated typography styles. |
 
 MDC Web also includes several new components/packages which have no MDL equivalents. See the list of
 [Material Components for the web](https://material.io/components/web/catalog/) for more information.

@@ -20,12 +20,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-import {MDCComponent} from '@material/base/index';
+import {MDCComponent} from '@rsmdc/base/index';
 import MDCDismissibleDrawerFoundation from './dismissible/foundation';
 import MDCModalDrawerFoundation from './modal/foundation';
 import MDCDrawerAdapter from './adapter';
-import {MDCList} from '@material/list/index';
-import MDCListFoundation from '@material/list/foundation';
+import {MDCList} from '@rsmdc/list/index';
+import MDCListFoundation from '@rsmdc/list/foundation';
 import {strings} from './constants';
 import * as util from './util';
 import createFocusTrap from 'focus-trap';

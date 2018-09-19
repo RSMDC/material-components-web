@@ -21,11 +21,11 @@
  * THE SOFTWARE.
  */
 
-import {MDCComponent} from '@material/base/index';
-import {MDCFloatingLabel} from '@material/floating-label/index';
-import {MDCLineRipple} from '@material/line-ripple/index';
-import {MDCRipple, MDCRippleFoundation} from '@material/ripple/index';
-import {MDCNotchedOutline} from '@material/notched-outline/index';
+import {MDCComponent} from '@rsmdc/base/index';
+import {MDCFloatingLabel} from '@rsmdc/floating-label/index';
+import {MDCLineRipple} from '@rsmdc/line-ripple/index';
+import {MDCRipple, MDCRippleFoundation} from '@rsmdc/ripple/index';
+import {MDCNotchedOutline} from '@rsmdc/notched-outline/index';
 
 import MDCSelectFoundation from './foundation';
 import MDCSelectAdapter from './adapter';

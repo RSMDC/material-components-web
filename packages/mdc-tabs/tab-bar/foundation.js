@@ -21,8 +21,8 @@
  * THE SOFTWARE.
  */
 
-import MDCFoundation from '@material/base/foundation';
-import {getCorrectPropertyName} from '@material/animation/index';
+import MDCFoundation from '@rsmdc/base/foundation';
+import {getCorrectPropertyName} from '@rsmdc/animation/index';
 
 import {cssClasses, strings} from './constants';
 

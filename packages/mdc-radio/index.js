@@ -21,12 +21,12 @@
  * THE SOFTWARE.
  */
 
-import MDCComponent from '@material/base/component';
+import MDCComponent from '@rsmdc/base/component';
 /* eslint-disable no-unused-vars */
-import {MDCSelectionControlState, MDCSelectionControl} from '@material/selection-control/index';
+import {MDCSelectionControlState, MDCSelectionControl} from '@rsmdc/selection-control/index';
 /* eslint-enable no-unused-vars */
 import MDCRadioFoundation from './foundation';
-import {MDCRipple, MDCRippleFoundation} from '@material/ripple/index';
+import {MDCRipple, MDCRippleFoundation} from '@rsmdc/ripple/index';
 
 /**
  * @extends MDCComponent<!MDCRadioFoundation>

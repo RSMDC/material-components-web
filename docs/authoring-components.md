@@ -528,7 +528,7 @@ For example, if you are building a checkbox component, `keywords` would include 
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/material-components/material-components-web.git"
+    "url": "git+https://github.com/rsmdc/rsmdc.git"
   },
   "keywords": [
     "material components",

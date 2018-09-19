@@ -30,7 +30,7 @@ In the 'Styles' subsection, include any imports and mixin invocations necessary 
 ### Styles
 
 ```scss
-@import "@rsmdc/button/mdc-button";
+@import "@material/button/mdc-button";
 
 // Include necessary mixin invocations here
 ```
@@ -41,7 +41,7 @@ In the 'JavaScript Instantiation' subsection, include a note about importing a J
 ### JavaScript Instantiation
 
 ```js
-import {MDCButton} from '@rsmdc/button';
+import {MDCButton} from '@material/button';
 
 const button = new MDCButton(document.querySelector('.mdc-button'));
 ```

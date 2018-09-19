@@ -25,7 +25,7 @@ The MDC Navigation Drawer is used to organize access to destinations and other f
 ## Installation
 
 ```
-npm install @rsmdc/drawer
+npm install @material/drawer
 ```
 
 ## Basic Usage
@@ -56,8 +56,8 @@ npm install @rsmdc/drawer
 ### Styles
 
 ```scss
-@import "@rsmdc/drawer/mdc-drawer";
-@import "@rsmdc/list/mdc-list";
+@import "@material/drawer/mdc-drawer";
+@import "@material/list/mdc-list";
 ```
 
 ### JavaScript Instantiation
@@ -65,7 +65,7 @@ npm install @rsmdc/drawer
 For permanently visible drawer, the list must be instantiated for appropriate keyboard interaction:
 
 ```js
-import {MDCList} from "@rsmdc/list";
+import {MDCList} from "@material/list";
 const list = MDCList.attachTo(document.querySelector('.mdc-list'));
 list.wrapFocus = true;
 ```
@@ -73,7 +73,7 @@ list.wrapFocus = true;
 Other variants use the `MDCDrawer` component, which will instantiate `MDCList` automatically:
 
 ```js
-import {MDCDrawer} from "@rsmdc/drawer";
+import {MDCDrawer} from "@material/drawer";
 const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
 ```
 
@@ -257,7 +257,7 @@ body {
 The JavaScript to toggle the drawer when the navigation button is clicked looks like this:
 
 ```js
-import {MDCTopAppBar} from "@rsmdc/top-app-bar";
+import {MDCTopAppBar} from "@material/top-app-bar";
 const topAppBar = MDCTopAppBar.attachTo(document.getElementById('app-bar'));
 topAppBar.setScrollTarget(document.getElementById('main-content'));
 topAppBar.listen('MDCTopAppBar:nav', () => {

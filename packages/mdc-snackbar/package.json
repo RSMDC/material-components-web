@@ -1,5 +1,5 @@
 {
-  "name": "@rsmdc/snackbar",
+  "name": "@material/snackbar",
   "description": "The Material Components for the web snackbar component",
   "version": "0.39.1",
   "license": "MIT",
@@ -14,10 +14,10 @@
     "url": "git+https://github.com/rsmdc/rsmdc.git"
   },
   "dependencies": {
-    "@rsmdc/animation": "^0.39.0",
-    "@rsmdc/base": "^0.39.0",
-    "@rsmdc/rtl": "^0.39.1",
-    "@rsmdc/theme": "^0.39.1",
-    "@rsmdc/typography": "^0.39.0"
+    "@material/animation": "^0.39.0",
+    "@material/base": "^0.39.0",
+    "@material/rtl": "^0.39.1",
+    "@material/theme": "^0.39.1",
+    "@material/typography": "^0.39.0"
   }
 }

@@ -20,10 +20,10 @@
 // THE SOFTWARE.
 //
 
-@import "@rsmdc/animation/functions";
-@import "@rsmdc/rtl/mixins";
-@import "@rsmdc/theme/mixins";
-@import "@rsmdc/typography/mixins";
+@import "@material/animation/functions";
+@import "@material/rtl/mixins";
+@import "@material/theme/mixins";
+@import "@material/typography/mixins";
 @import "./variables";
 
 // postcss-bem-linter: define snackbar

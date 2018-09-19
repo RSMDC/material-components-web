@@ -32,7 +32,7 @@ Buttons allow users to take actions, and make choices, with a single tap.
 ## Installation
 
 ```
-npm install @rsmdc/button
+npm install @material/button
 ```
 
 ## Basic Usage
@@ -50,7 +50,7 @@ npm install @rsmdc/button
 ### Styles
 
 ```scss
-@import "@rsmdc/button/mdc-button";
+@import "@material/button/mdc-button";
 ```
 
 ### JavaScript Instantiation
@@ -58,7 +58,7 @@ npm install @rsmdc/button
 The button will work without JavaScript, but you can enhance it to have a ripple effect by instantiating `MDCRipple` on the root element. See [MDC Ripple](../mdc-ripple) for details.
 
 ```js
-import {MDCRipple} from '@rsmdc/ripple';
+import {MDCRipple} from '@material/ripple';
 
 const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
 ```

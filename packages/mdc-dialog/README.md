@@ -36,7 +36,7 @@ a dialog should be.
 ## Installation
 
 ```
-npm install @rsmdc/dialog
+npm install @material/dialog
 ```
 
 ## Dialog usage
@@ -164,7 +164,7 @@ They only need to match the values set for their corresponding aria attributes.
 ### Styles
 
 ```scss
-@import "@rsmdc/dialog/mdc-dialog";
+@import "@material/dialog/mdc-dialog";
 ```
 
 ### Dialog Action Color ###
@@ -192,13 +192,13 @@ correct dialog behaviors into idiomatic components.
 ##### ES2015
 
 ```javascript
-import {MDCDialog, MDCDialogFoundation, util} from '@rsmdc/dialog';
+import {MDCDialog, MDCDialogFoundation, util} from '@material/dialog';
 ```
 
 ##### CommonJS
 
 ```javascript
-const mdcDialog = require('@rsmdc/dialog');
+const mdcDialog = require('@material/dialog');
 const MDCDialog = mdcDialog.MDCDialog;
 const MDCDialogFoundation = mdcDialog.MDCDialogFoundation;
 const util = mdcDialog.util;
@@ -207,7 +207,7 @@ const util = mdcDialog.util;
 ##### AMD
 
 ```javascript
-require(['path/to/@rsmdc/dialog'], mdcDialog => {
+require(['path/to/@material/dialog'], mdcDialog => {
   const MDCDialog = mdcDrawer.MDCDialog;
   const MDCDialogFoundation = mdcDialog.MDCDialogFoundation;
   const util = mdcDialog.util;
@@ -237,7 +237,7 @@ mdc.dialog.MDCDialog.attachTo(document.querySelector('#my-mdc-dialog'));
 Dialogs can easily be initialized using their default constructors as well, similar to `attachTo`.
 
 ```javascript
-import {MDCDialog} from '@rsmdc/dialog';
+import {MDCDialog} from '@material/dialog';
 
 const dialog = new MDCDialog(document.querySelector('#my-mdc-dialog'));
 ```

@@ -1,5 +1,5 @@
 {
-  "name": "@rsmdc/selection-control",
+  "name": "@material/selection-control",
   "description": "The set of base classes for Material selection controls",
   "version": "0.39.1",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "url": "git+https://github.com/rsmdc/rsmdc.git"
   },
   "dependencies": {
-    "@rsmdc/ripple": "^0.39.1"
+    "@material/ripple": "^0.39.1"
   },
   "publishConfig": {
     "access": "public"

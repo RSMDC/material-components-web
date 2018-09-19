@@ -25,7 +25,7 @@ The notched outline is a border around all sides of either a Text Field or Selec
 ## Installation
 
 ```
-npm install @rsmdc/notched-outline
+npm install @material/notched-outline
 ```
 
 ## Basic Usage
@@ -46,13 +46,13 @@ npm install @rsmdc/notched-outline
 ### Styles
 
 ```scss
-@import "@rsmdc/notched-outline/mdc-notched-outline";
+@import "@material/notched-outline/mdc-notched-outline";
 ```
 
 ### JavaScript Instantiation
 
 ```js
-import {MDCNotchedOutline} from '@rsmdc/notched-outline';
+import {MDCNotchedOutline} from '@material/notched-outline';
 
 const notchedOutline = new MDCNotchedOutline(document.querySelector('.mdc-notched-outline'));
 ```

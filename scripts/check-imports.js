@@ -123,7 +123,7 @@ function assertModuleImportSpecifiedAsPkgDep(source, pkgRoot, srcFile, node) {
   const pkgJson = require(path.resolve(pkgRoot, 'package.json'));
   const dependencies = Object.keys(pkgJson.dependencies);
   // NOTE: We test on a partial path here to acommodate imports that resolve to sub-folders/sub-files
-  // of deps. E.g. require('@rsmdc/foo/bar') where the dep is '@rsmdc/foo'
+  // of deps. E.g. require('@material/foo/bar') where the dep is '@material/foo'
   const sourceSpecifiedAsDep = dependencies.some((dep) => source.indexOf(dep) === 0);
   if (!sourceSpecifiedAsDep) {
     error(

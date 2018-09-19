@@ -381,7 +381,7 @@ accessible your component is.
 
 Components should be RTL-aware. That is, there should be some sort of strategy a component uses to
 detect whether or not it is in an RTL context, and make proper adjustments accordingly. We use
-our [@rsmdc/rtl](../packages/mdc-rtl) library to assist us with this.
+our [@material/rtl](../packages/mdc-rtl) library to assist us with this.
 
 ### Support for theming
 
@@ -389,7 +389,7 @@ A component should be able to be altered according to a **theme**. A theme can b
 you wish. It may be by using _primary_ and _secondary_ colors, or you may choose to expose scss
 variables or CSS Custom properties specific to your component. Whichever way you choose, ensure that
 _clients can easily alter common aesthetic elements of your component to make it fit with their
-overall design_. We use [@rsmdc/theme](../packages/mdc-theme) for this purpose.
+overall design_. We use [@material/theme](../packages/mdc-theme) for this purpose.
 
 ## General Best Practices
 
@@ -522,7 +522,7 @@ For example, if you are building a checkbox component, `keywords` would include 
 
 ```json
 {
-  "name": "@rsmdc/example",
+  "name": "@material/example",
   "version": "0.0.0",
   "description": "The Material Components for the web example component",
   "license": "MIT",
@@ -758,7 +758,7 @@ Concretely:
   to `package.json` of `material-components-web`.
 - Ensure that the correct **commit subject** for the package is added to the
   `config.validate-commit-msg.scope.allowed` array within the top-level `package.json` at the root
-  of the repo. The commit subject is the _name the component, without the `mdc-`/`@rsmdc/`_.
+  of the repo. The commit subject is the _name the component, without the `mdc-`/`@material/`_.
   E.g., for `mdc-icon-button`, the correct subject is `icon-button`.
 - Ensure that the package name is added to the `closureWhitelist` array within the top-level
   `package.json`.

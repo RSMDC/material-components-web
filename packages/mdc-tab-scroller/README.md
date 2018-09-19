@@ -25,7 +25,7 @@ A Tab Scroller allows for smooth native and animated scrolling of tabs.
 ## Installation
 
 ```
-npm install @rsmdc/tab-scroller
+npm install @material/tab-scroller
 ```
 
 ## Basic Usage
@@ -43,13 +43,13 @@ npm install @rsmdc/tab-scroller
 ### Styles
 
 ```scss
-@import "@rsmdc/tab/mdc-tab-scroller";
+@import "@material/tab/mdc-tab-scroller";
 ```
 
 ### JavaScript Instantiation
 
 ```js
-import {MDCTabScroller} from '@rsmdc/tab-scroller';
+import {MDCTabScroller} from '@material/tab-scroller';
 
 const tabScroller = new MDCTabScroller(document.querySelector('.mdc-tab-scroller'));
 ```

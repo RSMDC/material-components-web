@@ -33,7 +33,7 @@ Material design’s responsive UI is based on a column-variate grid layout. It h
 ## Installation
 
 ```
-npm install @rsmdc/layout-grid
+npm install @material/layout-grid
 ```
 
 ## Usage

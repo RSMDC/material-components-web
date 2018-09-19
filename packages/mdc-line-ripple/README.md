@@ -24,7 +24,7 @@ The line ripple is used to highlight user-specified input above it. When a line 
 ## Installation
 
 ```
-npm install @rsmdc/line-ripple
+npm install @material/line-ripple
 ```
 
 ## Basic Usage
@@ -38,13 +38,13 @@ npm install @rsmdc/line-ripple
 ### Styles
 
 ```scss
-@import "@rsmdc/line-ripple/mdc-line-ripple";
+@import "@material/line-ripple/mdc-line-ripple";
 ```
 
 ### JavaScript Instantiation
 
 ```js
-import {MDCLineRipple} from '@rsmdc/line-ripple';
+import {MDCLineRipple} from '@material/line-ripple';
 
 const lineRipple = new MDCLineRipple(document.querySelector('.mdc-line-ripple'));
 ```

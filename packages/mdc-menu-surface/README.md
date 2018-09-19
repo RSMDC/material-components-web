@@ -34,7 +34,7 @@ themselves when opening.
 ## Installation
 
 ```
-npm install @rsmdc/menu-surface
+npm install @material/menu-surface
 ```
 
 ## Usage
@@ -50,13 +50,13 @@ npm install @rsmdc/menu-surface
 ### Styles
 
 ```css
-@import "@rsmdc/menu-surface/mdc-menu-surface";
+@import "@material/menu-surface/mdc-menu-surface";
 ```
 
 ### JavaScript Instantiation
 
 ```js
-import {MDCMenuSurface} from '@rsmdc/menu-surface';
+import {MDCMenuSurface} from '@material/menu-surface';
 
 const menuSurface = new MDCMenuSurface(document.querySelector('.mdc-menu-surface'));
 ```

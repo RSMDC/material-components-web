@@ -22,7 +22,7 @@ Material in motion is responsive and natural. Use these easing curves and durati
 ## Installation
 
 ```
-npm install @rsmdc/animation
+npm install @material/animation
 ```
 
 ## Usage
@@ -32,7 +32,7 @@ npm install @rsmdc/animation
 We provide timing functions which you can use with the `animation` or `transition` CSS properties
 
 ```scss
-@import "@rsmdc/animation/variables";
+@import "@material/animation/variables";
 
 .my-element--animating {
   animation: foo-keyframe 175ms $mdc-animation-standard-curve-timing-function;
@@ -49,7 +49,7 @@ Variable | Description
 The following functions create transitions given `$name` and the `$duration`. You can also specify `$delay`, but the default is 0ms. `$name` can either refer to the keyframe, or to CSS property used in `transition`.
 
 ```scss
-@import "@rsmdc/animation/functions";
+@import "@material/animation/functions";
 
 .my-element {
   transition: mdc-animation-exit-permanent(/* $name: */ opacity, /* $duration: */ 175ms, /* $delay: */ 150ms);
@@ -65,7 +65,7 @@ The following functions create transitions given `$name` and the `$duration`. Yo
 
 
 ```scss
-@import "@rsmdc/animation/functions";
+@import "@material/animation/functions";
 
 @keyframes fade-in {
   from {
@@ -95,7 +95,7 @@ Function | Description
 These functions handle prefixing across various browsers
 
 ```js
-import {getCorrectEventName} from '@rsmdc/animation';
+import {getCorrectEventName} from '@material/animation';
 
 const eventToListenFor = getCorrectEventName(window, 'animationstart');
 ```

@@ -31,7 +31,7 @@ Icon buttons allow users to take actions, and make choices, with a single tap.
 ## Installation
 
 ```
-npm install @rsmdc/icon-button
+npm install @material/icon-button
 ```
 
 ## Usage
@@ -49,7 +49,7 @@ npm install @rsmdc/icon-button
 ### Styles
 
 ```scss
-@import "@rsmdc/icon-button/mdc-icon-button";
+@import "@material/icon-button/mdc-icon-button";
 ```
 
 ### JavaScript Instantiation
@@ -58,7 +58,7 @@ The icon button will work without JavaScript, but you can enhance it to have a r
 See [MDC Ripple](../mdc-ripple) for details.
 
 ```js
-import {MDCRipple} from '@rsmdc/ripple';
+import {MDCRipple} from '@material/ripple';
 
 const iconButtonRipple = new MDCRipple(document.querySelector('.mdc-icon-button'));
 iconButtonRipple.unbounded = true;

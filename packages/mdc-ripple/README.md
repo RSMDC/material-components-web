@@ -27,7 +27,7 @@ MDC Ripple also works without JavaScript, where it gracefully degrades to a simp
 ## Installation
 
 ```
-npm install @rsmdc/ripple
+npm install @material/ripple
 ```
 
 ## Usage

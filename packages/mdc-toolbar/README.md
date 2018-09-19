@@ -35,7 +35,7 @@ height added to their first rows.
 ## Installation
 
 ```
-npm install @rsmdc/toolbar
+npm install @material/toolbar
 ```
 
 ## Usage
@@ -352,13 +352,13 @@ Mixin | Description
 #### ES2015
 
 ```javascript
-import {MDCToolbar, MDCToolbarFoundation} from '@rsmdc/toolbar';
+import {MDCToolbar, MDCToolbarFoundation} from '@material/toolbar';
 ```
 
 #### CommonJS
 
 ```javascript
-const mdcToolbar = require('@rsmdc/toolbar');
+const mdcToolbar = require('@material/toolbar');
 const MDCToolbar = mdcToolbar.MDCToolbar;
 const MDCToolbarFoundation = mdcToolbar.MDCToolbarFoundation;
 ```
@@ -366,7 +366,7 @@ const MDCToolbarFoundation = mdcToolbar.MDCToolbarFoundation;
 #### AMD
 
 ```javascript
-require(['/path/to/@rsmdc/toolbar'], mdcToolbar => {
+require(['/path/to/@material/toolbar'], mdcToolbar => {
   const MDCToolbar = mdcToolbar.MDCToolbar;
   const MDCToolbarFoundation = mdcToolbar.MDCToolbarFoundation;
 });
@@ -391,7 +391,7 @@ mdc.toolbar.MDCToolbar.attachTo(document.querySelector('.mdc-toolbar'));
 ### Manual Instantiation
 
 ```javascript
-import {MDCToolbar} from '@rsmdc/toolbar';
+import {MDCToolbar} from '@material/toolbar';
 
 const toolbar = new MDCToolbar(document.querySelector('.mdc-toolbar'));
 ```

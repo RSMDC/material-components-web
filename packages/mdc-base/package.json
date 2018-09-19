@@ -1,5 +1,5 @@
 {
-  "name": "@rsmdc/base",
+  "name": "@material/base",
   "description": "The set of base classes for Material Components for the web",
   "version": "0.39.0",
   "license": "MIT",

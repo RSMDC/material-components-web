@@ -24,7 +24,7 @@ Text fields allow users to input, edit, and select text.
 ## Installation
 
 ```
-npm install @rsmdc/textfield
+npm install @material/textfield
 ```
 
 ## Basic Usage
@@ -45,13 +45,13 @@ npm install @rsmdc/textfield
 ### Styles
 
 ```scss
-@import "@rsmdc/textfield/mdc-text-field";
+@import "@material/textfield/mdc-text-field";
 ```
 
 ### JavaScript Instantiation
 
 ```js
-import {MDCTextField} from '@rsmdc/textfield';
+import {MDCTextField} from '@material/textfield';
 
 const textField = new MDCTextField(document.querySelector('.mdc-text-field'));
 ```

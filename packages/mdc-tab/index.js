@@ -21,11 +21,11 @@
  * THE SOFTWARE.
  */
 
-import MDCComponent from '@rsmdc/base/component';
+import MDCComponent from '@material/base/component';
 
 /* eslint-disable no-unused-vars */
-import {MDCRipple, MDCRippleFoundation, RippleCapableSurface} from '@rsmdc/ripple/index';
-import {MDCTabIndicator, MDCTabIndicatorFoundation} from '@rsmdc/tab-indicator/index';
+import {MDCRipple, MDCRippleFoundation, RippleCapableSurface} from '@material/ripple/index';
+import {MDCTabIndicator, MDCTabIndicatorFoundation} from '@material/tab-indicator/index';
 import {MDCTabAdapter, MDCTabDimensions} from './adapter';
 /* eslint-enable no-unused-vars */
 

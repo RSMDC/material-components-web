@@ -13,7 +13,7 @@ Most components ship with Component / Foundation classes which are used to provi
 ## ES2015
 
 ```javascript
-import {MDCFoo, MDCFooFoundation} from '@rsmdc/foo';
+import {MDCFoo, MDCFooFoundation} from '@material/foo';
 ```
 
 ## CommonJS
@@ -49,7 +49,7 @@ mdc.foo.MDCFoo.attachTo(document.querySelector('.mdc-foo'));
 ## Manual Instantiation
 
 ```javascript
-import {MDCFoo} from '@rsmdc/foo';
+import {MDCFoo} from '@material/foo';
 
 const foo = new MDCFoo(document.querySelector('.mdc-foo'));
 ```

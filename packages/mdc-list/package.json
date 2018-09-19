@@ -1,5 +1,5 @@
 {
-  "name": "@rsmdc/list",
+  "name": "@material/list",
   "description": "The Material Components for the web list component",
   "version": "0.39.1",
   "license": "MIT",
@@ -13,10 +13,10 @@
     "url": "git+https://github.com/rsmdc/rsmdc.git"
   },
   "dependencies": {
-    "@rsmdc/base": "^0.39.0",
-    "@rsmdc/ripple": "^0.39.1",
-    "@rsmdc/rtl": "^0.39.1",
-    "@rsmdc/theme": "^0.39.1",
-    "@rsmdc/typography": "^0.39.0"
+    "@material/base": "^0.39.0",
+    "@material/ripple": "^0.39.1",
+    "@material/rtl": "^0.39.1",
+    "@material/theme": "^0.39.1",
+    "@material/typography": "^0.39.0"
   }
 }

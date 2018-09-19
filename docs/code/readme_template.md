@@ -61,7 +61,7 @@ path: /catalog/<COMPONENT_ID>/
 ## Installation
 
 ```
-npm install @rsmdc/<MODULE_NAME>
+npm install @material/<MODULE_NAME>
 ```
 
 ## Basic Usage

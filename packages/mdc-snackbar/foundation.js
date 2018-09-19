@@ -21,7 +21,7 @@
  * THE SOFTWARE.
  */
 
-import {MDCFoundation} from '@rsmdc/base/index';
+import {MDCFoundation} from '@material/base/index';
 import {cssClasses, strings, numbers} from './constants';
 
 export default class MDCSnackbarFoundation extends MDCFoundation {

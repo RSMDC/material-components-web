@@ -21,9 +21,9 @@
  * THE SOFTWARE.
  */
 
-import MDCComponent from '@rsmdc/base/component';
+import MDCComponent from '@material/base/component';
 import MDCIconToggleFoundation from './foundation';
-import {MDCRipple, MDCRippleFoundation} from '@rsmdc/ripple/index';
+import {MDCRipple, MDCRippleFoundation} from '@material/ripple/index';
 
 /**
  * @extends {MDCComponent<!MDCIconToggleFoundation>}

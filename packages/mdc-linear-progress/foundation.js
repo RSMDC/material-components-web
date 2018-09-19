@@ -21,8 +21,8 @@
  * THE SOFTWARE.
  */
 
-import {MDCFoundation} from '@rsmdc/base/index';
-import {transformStyleProperties} from '@rsmdc/animation/index';
+import {MDCFoundation} from '@material/base/index';
+import {transformStyleProperties} from '@material/animation/index';
 
 import {cssClasses, strings} from './constants';
 

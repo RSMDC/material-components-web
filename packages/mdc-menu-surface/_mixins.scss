@@ -20,7 +20,7 @@
 // THE SOFTWARE.
 //
 
-@import "@rsmdc/theme/mixins";
+@import "@material/theme/mixins";
 
 @mixin mdc-menu-surface-ink-color($color) {
   @include mdc-theme-prop(color, $color);

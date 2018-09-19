@@ -31,7 +31,7 @@ Switches toggle the state of a single setting on or off. They are the preferred 
 ## Installation
 
 ```
-npm install @rsmdc/switch
+npm install @material/switch
 ```
 
 ## Basic Usage
@@ -53,7 +53,7 @@ npm install @rsmdc/switch
 ### Styles
 
 ```scss
-@import "@rsmdc/switch/mdc-switch";
+@import "@material/switch/mdc-switch";
 ```
 
 ### JavaScript Instantiation
@@ -61,7 +61,7 @@ npm install @rsmdc/switch
 The Switch requires JavaScript to function, so it is necessary to instantiate MDCSwitch with the HTML.
 
 ```js
-import {MDCSwitch} from '@rsmdc/switch';
+import {MDCSwitch} from '@material/switch';
 
 const switchControl = new MDCSwitch(document.querySelector('.mdc-switch'));
 ```

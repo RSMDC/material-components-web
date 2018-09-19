@@ -21,13 +21,13 @@
  * THE SOFTWARE.
  */
 
-import MDCFoundation from '@rsmdc/base/foundation';
+import MDCFoundation from '@material/base/foundation';
 
 import {strings, numbers} from './constants';
 import MDCTabBarAdapter from './adapter';
 
 /* eslint-disable no-unused-vars */
-import {MDCTabDimensions} from '@rsmdc/tab/adapter';
+import {MDCTabDimensions} from '@material/tab/adapter';
 /* eslint-enable no-unused-vars */
 
 /**

@@ -1,5 +1,5 @@
 {
-  "name": "@rsmdc/layout-grid",
+  "name": "@material/layout-grid",
   "version": "0.39.0",
   "description": "The Material Components for the web layout grid component",
   "license": "MIT",

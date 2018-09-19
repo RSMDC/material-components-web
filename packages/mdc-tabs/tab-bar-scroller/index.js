@@ -21,8 +21,8 @@
  * THE SOFTWARE.
  */
 
-import {getCorrectPropertyName} from '@rsmdc/animation/index';
-import MDCComponent from '@rsmdc/base/component';
+import {getCorrectPropertyName} from '@material/animation/index';
+import MDCComponent from '@material/base/component';
 
 import {MDCTabBar} from '../tab-bar/index';
 import MDCTabBarScrollerFoundation from './foundation';

@@ -21,13 +21,13 @@
  * THE SOFTWARE.
  */
 
-import MDCComponent from '@rsmdc/base/component';
+import MDCComponent from '@material/base/component';
 /* eslint-disable no-unused-vars */
-import {MDCSelectionControlState, MDCSelectionControl} from '@rsmdc/selection-control/index';
+import {MDCSelectionControlState, MDCSelectionControl} from '@material/selection-control/index';
 /* eslint-enable no-unused-vars */
 import MDCSwitchFoundation from './foundation';
-import {MDCRipple, MDCRippleFoundation} from '@rsmdc/ripple/index';
-import {getMatchesProperty} from '@rsmdc/ripple/util';
+import {MDCRipple, MDCRippleFoundation} from '@material/ripple/index';
+import {getMatchesProperty} from '@material/ripple/util';
 
 /**
  * @extends MDCComponent<!MDCSwitchFoundation>

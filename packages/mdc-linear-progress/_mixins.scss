@@ -18,8 +18,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-@import "@rsmdc/theme/mixins";
-@import "@rsmdc/theme/variables"; // for mdc-theme-prop-value
+@import "@material/theme/mixins";
+@import "@material/theme/variables"; // for mdc-theme-prop-value
 
 @mixin mdc-linear-progress-bar-color($color) {
   > .bar > .inner {

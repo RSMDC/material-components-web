@@ -41,7 +41,7 @@ MDC Typography is a foundational module that applies these styles to MDC Web com
 ## Installation
 
 ```
-npm install @rsmdc/typography
+npm install @material/typography
 ```
 
 ## Basic Usage
@@ -62,7 +62,7 @@ We recommend you load Roboto from Google Fonts:
 ### Styles
 
 ```css
-@import "@rsmdc/typography/mdc-typography";
+@import "@material/typography/mdc-typography";
 ```
 
 ## Style Customization
@@ -134,7 +134,7 @@ $mdc-typography-styles-button: (
   text-transform: none,
 );
 
-@import "@rsmdc/button/mdc-button";
+@import "@material/button/mdc-button";
 ```
 
 Example: Overriding the global `font-family` property. 

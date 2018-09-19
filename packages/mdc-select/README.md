@@ -38,7 +38,7 @@ browser's native `<select>` element. It is fully accessible, and fully RTL-aware
 ## Installation
 
 ```
-npm install @rsmdc/select
+npm install @material/select
 ```
 
 ## Basic Usage
@@ -67,7 +67,7 @@ npm install @rsmdc/select
 ### Styles
 
 ```scss
-@import "@rsmdc/select/mdc-select";
+@import "@material/select/mdc-select";
 ```
 
 ### JavaScript Instantiation

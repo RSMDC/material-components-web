@@ -1,4 +1,4 @@
-@import "@rsmdc/theme/mixins";
+@import "@material/theme/mixins";
 
 @mixin mdc-tab-ink-color($color) {
   @include mdc-tab-label-ink-color($color);

@@ -21,9 +21,9 @@
  * THE SOFTWARE.
  */
 
-import {MDCComponent} from '@rsmdc/base/index';
+import {MDCComponent} from '@material/base/index';
 import MDCSnackbarFoundation from './foundation';
-import {getCorrectEventName} from '@rsmdc/animation/index';
+import {getCorrectEventName} from '@material/animation/index';
 
 export {MDCSnackbarFoundation};
 

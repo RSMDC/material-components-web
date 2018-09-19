@@ -20,8 +20,8 @@
 
 @import "./mixins";
 @import "./variables";
-@import "@rsmdc/theme/mixins";
-@import "@rsmdc/typography/mixins";
+@import "@material/theme/mixins";
+@import "@material/typography/mixins";
 
 .mdc-image-list {
   display: flex;

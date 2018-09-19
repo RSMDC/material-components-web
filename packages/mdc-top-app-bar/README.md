@@ -33,7 +33,7 @@ MDC Top App Bar acts as a container for items such as application title, navigat
 ## Installation
 
 ```
-npm install @rsmdc/top-app-bar
+npm install @material/top-app-bar
 ```
 
 ## Basic Usage
@@ -54,13 +54,13 @@ npm install @rsmdc/top-app-bar
 ### Styles
 
 ```scss
-@import "@rsmdc/top-app-bar/mdc-top-app-bar";
+@import "@material/top-app-bar/mdc-top-app-bar";
 ```
 
 ### JavaScript Instantiation
 
 ```js
-import {MDCTopAppBar} from '@rsmdc/top-app-bar/index';
+import {MDCTopAppBar} from '@material/top-app-bar/index';
 
 // Instantiation
 const topAppBarElement = document.querySelector('.mdc-top-app-bar');

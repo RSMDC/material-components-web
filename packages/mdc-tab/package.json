@@ -1,5 +1,5 @@
 {
-  "name": "@material/tab",
+  "name": "@rsmdc/tab",
   "description": "The Material Components for the web tab component",
   "version": "0.39.1",
   "license": "MIT",
@@ -14,12 +14,12 @@
     "url": "https://github.com/material-components/material-components-web.git"
   },
   "dependencies": {
-    "@material/base": "^0.39.0",
-    "@material/ripple": "^0.39.1",
-    "@material/rtl": "^0.39.1",
-    "@material/tab-indicator": "^0.39.1",
-    "@material/theme": "^0.39.1",
-    "@material/typography": "^0.39.0"
+    "@rsmdc/base": "^0.39.0",
+    "@rsmdc/ripple": "^0.39.1",
+    "@rsmdc/rtl": "^0.39.1",
+    "@rsmdc/tab-indicator": "^0.39.1",
+    "@rsmdc/theme": "^0.39.1",
+    "@rsmdc/typography": "^0.39.0"
   },
   "publishConfig": {
     "access": "public"

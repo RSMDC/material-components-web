@@ -1,5 +1,5 @@
 {
-  "name": "@material/shape",
+  "name": "@rsmdc/shape",
   "description": "Shape utilities for Material Components for the web",
   "version": "0.39.0",
   "license": "MIT",

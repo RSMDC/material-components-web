@@ -18,14 +18,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-@import "@material/animation/functions";
-@import "@material/elevation/mixins";
-@import "@material/elevation/variables";
-@import "@material/ripple/mixins";
-@import "@material/ripple/variables";
-@import "@material/theme/functions";
-@import "@material/theme/mixins";
-@import "@material/rtl/mixins";
+@import "@rsmdc/animation/functions";
+@import "@rsmdc/elevation/mixins";
+@import "@rsmdc/elevation/variables";
+@import "@rsmdc/ripple/mixins";
+@import "@rsmdc/ripple/variables";
+@import "@rsmdc/theme/functions";
+@import "@rsmdc/theme/mixins";
+@import "@rsmdc/rtl/mixins";
 @import "./variables";
 
 @mixin mdc-fab-accessible($container-color) {

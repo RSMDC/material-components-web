@@ -24,7 +24,7 @@ Floating labels display the type of input a field requires. Every Text Field and
 ## Installation
 
 ```
-npm install @material/floating-label
+npm install @rsmdc/floating-label
 ```
 
 ## Basic Usage
@@ -38,13 +38,13 @@ npm install @material/floating-label
 ### Styles
 
 ```scss
-@import "@material/floating-label/mdc-floating-label";
+@import "@rsmdc/floating-label/mdc-floating-label";
 ```
 
 ### JavaScript Instantiation
 
 ```js
-import {MDCFloatingLabel} from '@material/floating-label';
+import {MDCFloatingLabel} from '@rsmdc/floating-label';
 
 const floatingLabel = new MDCFloatingLabel(document.querySelector('.mdc-floating-label'));
 ```

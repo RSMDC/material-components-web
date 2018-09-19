@@ -1,5 +1,5 @@
 {
-  "name": "@material/floating-label",
+  "name": "@rsmdc/floating-label",
   "description": "The Material Components for the web floating-label component",
   "version": "0.39.1",
   "license": "MIT",
@@ -18,9 +18,9 @@
     "access": "public"
   },
   "dependencies": {
-    "@material/base": "^0.39.0",
-    "@material/rtl": "^0.39.1",
-    "@material/theme": "^0.39.1",
-    "@material/typography": "^0.39.0"
+    "@rsmdc/base": "^0.39.0",
+    "@rsmdc/rtl": "^0.39.1",
+    "@rsmdc/theme": "^0.39.1",
+    "@rsmdc/typography": "^0.39.0"
   }
 }

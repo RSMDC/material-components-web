@@ -108,9 +108,9 @@ tests against that package and its dependencies.
 
 ```js
 // BAD
-import {MDCFoundation} from '@material/base';
+import {MDCFoundation} from '@rsmdc/base';
 // GOOD
-import MDCFoundation from '@material/base/foundation';
+import MDCFoundation from '@rsmdc/base/foundation';
 ```
 
 This is an unfortunate side-effect of how [closure's module naming mechanism works](https://github.com/google/closure-compiler/issues/2257).
@@ -201,7 +201,7 @@ Foundations must extend `MDCFoundation` parameterized by their respective adapte
 ```js
 // foundation.js
 
-import MDCFoundation from '@material/base/foundation';
+import MDCFoundation from '@rsmdc/base/foundation';
 import MDCComponentAdapter from './adapter';
 
 /**
@@ -227,7 +227,7 @@ Components must extend `MDCComponent` parameterized by their respective foundati
 ```js
 // index.js
 
-import MDCComponent from '@material/base/component';
+import MDCComponent from '@rsmdc/base/component';
 import MDCComponentFoundation from './foundation';
 
 /**
@@ -425,7 +425,7 @@ export default MDCExampleAdapter;
 #### foundation.js
 
 ```js
-import MDCFoundation from '@material/base/foundation';
+import MDCFoundation from '@rsmdc/base/foundation';
 import MDCExampleAdapter from './adapter';
 import {cssClasses, strings, numbers} from './constants';
 
@@ -522,7 +522,7 @@ export default MDCExampleFoundation;
 #### index.js
 
 ```js
-import MDCComponent from '@material/base/component';
+import MDCComponent from '@rsmdc/base/component';
 import MDCExampleFoundation from './foundation';
 import {strings} from './constants';
 

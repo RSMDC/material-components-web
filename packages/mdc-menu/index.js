@@ -21,12 +21,12 @@
  * THE SOFTWARE.
  */
 
-import MDCComponent from '@material/base/component';
+import MDCComponent from '@rsmdc/base/component';
 import {MDCMenuFoundation} from './foundation';
 import {strings, cssClasses} from './constants';
-import {MDCMenuSurface, Corner} from '@material/menu-surface/index';
-import {MDCMenuSurfaceFoundation, AnchorMargin} from '@material/menu-surface/foundation';
-import {MDCList} from '@material/list/index';
+import {MDCMenuSurface, Corner} from '@rsmdc/menu-surface/index';
+import {MDCMenuSurfaceFoundation, AnchorMargin} from '@rsmdc/menu-surface/foundation';
+import {MDCList} from '@rsmdc/list/index';
 
 /**
  * @extends MDCComponent<!MDCMenuFoundation>

@@ -46,13 +46,13 @@ MDC Web strives to seamlessly incorporate into a wider range of usage contexts, 
 To include the Sass files for the Material Design button, install the Node dependency:
 
 ```
-npm install @material/button
+npm install @rsmdc/button
 ```
 
-Then import the Sass files for `@material/button` into your application. You can also use Sass mixins to customize the button:
+Then import the Sass files for `@rsmdc/button` into your application. You can also use Sass mixins to customize the button:
 
 ```scss
-@import "@material/button/mdc-button";
+@import "@rsmdc/button/mdc-button";
 
 .foo-button {
   @include mdc-button-ink-color(teal);
@@ -71,7 +71,7 @@ You also need to configure sass-loader to understand the `@material` imports use
 }
 ```
 
-`@material/button` has [documentation](packages/mdc-button/README.md) about the required HTML for a button. Update your application's HTML to include the MDC Button markup, and add the `foo-button` class to the element:
+`@rsmdc/button` has [documentation](packages/mdc-button/README.md) about the required HTML for a button. Update your application's HTML to include the MDC Button markup, and add the `foo-button` class to the element:
 
 ```html
 <button class="foo-button mdc-button">
@@ -90,13 +90,13 @@ This will produce a customized Material Design button!
 To include the ES2015 files for the Material Design ripple, install the dependency:
 
 ```
-npm install @material/ripple
+npm install @rsmdc/ripple
 ```
 
-Then import the ES2015 file for @material/ripple into your application, and initialize an MDCRipple with a DOM element:
+Then import the ES2015 file for @rsmdc/ripple into your application, and initialize an MDCRipple with a DOM element:
 
 ```js
-import {MDCRipple} from '@material/ripple';
+import {MDCRipple} from '@rsmdc/ripple';
 const ripple = new MDCRipple(document.querySelector('.foo-button'));
 ```
 

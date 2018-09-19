@@ -21,8 +21,8 @@
  * THE SOFTWARE.
  */
 
-import MDCComponent from '@material/base/component';
-import {MDCRipple, MDCRippleFoundation} from '@material/ripple/index';
+import MDCComponent from '@rsmdc/base/component';
+import {MDCRipple, MDCRippleFoundation} from '@rsmdc/ripple/index';
 
 import MDCChipAdapter from './adapter';
 import {MDCChipFoundation} from './foundation';

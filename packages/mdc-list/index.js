@@ -21,7 +21,7 @@
  * THE SOFTWARE.
  */
 
-import MDCComponent from '@material/base/component';
+import MDCComponent from '@rsmdc/base/component';
 import MDCListFoundation from './foundation';
 import MDCListAdapter from './adapter';
 import {cssClasses, strings} from './constants';

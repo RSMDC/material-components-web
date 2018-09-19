@@ -33,7 +33,7 @@ applying angled corners to unelevated surfaces.
 ## Installation
 
 ```
-npm install @material/shape
+npm install @rsmdc/shape
 ```
 
 ## Basic Usage
@@ -61,8 +61,8 @@ unelevated component.
 ### Styles
 
 ```scss
-@import "@material/shape/mdc-shape"; // The base shape styles need to be imported once in the page or application
-@import "@material/shape/mixins";
+@import "@rsmdc/shape/mdc-shape"; // The base shape styles need to be imported once in the page or application
+@import "@rsmdc/shape/mixins";
 
 .my-shape-container {
   @include mdc-shape-angled-corner(#fff, 10px);

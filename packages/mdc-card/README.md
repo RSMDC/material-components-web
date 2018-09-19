@@ -34,7 +34,7 @@ developers as a set of CSS classes.
 ## Installation
 
 ```
-npm install @material/card
+npm install @rsmdc/card
 ```
 
 ## Usage
@@ -165,7 +165,7 @@ elements:
 
 ### Styles
 ```css
-@import "@material/card/mdc-card";
+@import "@rsmdc/card/mdc-card";
 ```
 
 ### CSS Classes

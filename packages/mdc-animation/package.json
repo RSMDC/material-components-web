@@ -1,5 +1,5 @@
 {
-  "name": "@material/animation",
+  "name": "@rsmdc/animation",
   "description": "Animation Variables and Mixins used by Material Components for the web",
   "version": "0.39.0",
   "license": "MIT",

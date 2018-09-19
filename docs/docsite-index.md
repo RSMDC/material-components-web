@@ -56,7 +56,7 @@ However, it is highly recommended to install Material Components for the web via
     Install dependencies for the components you wish to use:
 
     ```
-    npm install @material/button @material/ripple
+    npm install @rsmdc/button @rsmdc/ripple
     ```
 
 2.  {: .step-list-item } ### Import the stylesheet and include styles
@@ -64,7 +64,7 @@ However, it is highly recommended to install Material Components for the web via
     Import the Sass files into your application, and use Sass mixins to customize components:
 
     ```scss
-    @import "@material/button/mdc-button";
+    @import "@rsmdc/button/mdc-button";
 
     .foo-button {
       @include mdc-button-ink-color(teal);
@@ -85,7 +85,7 @@ However, it is highly recommended to install Material Components for the web via
 
 3.  {: .step-list-item } ### Add components
 
-    Each component (e.g. [`@material/button`](../packages/mdc-button/README.md)) includes documentation about its required HTML structure. Update your application's HTML to include the MDC Button markup, and add the `foo-button` class to the element:
+    Each component (e.g. [`@rsmdc/button`](../packages/mdc-button/README.md)) includes documentation about its required HTML structure. Update your application's HTML to include the MDC Button markup, and add the `foo-button` class to the element:
 
     ```html
     <button class="foo-button mdc-button">
@@ -99,10 +99,10 @@ However, it is highly recommended to install Material Components for the web via
 
 4.  {: .step-list-item } ### Add scripts and instantiate components
 
-    Next, import the ES2015 file for `@material/ripple` into your application, and initialize an `MDCRipple` with a DOM element:
+    Next, import the ES2015 file for `@rsmdc/ripple` into your application, and initialize an `MDCRipple` with a DOM element:
 
     ```js
-    import {MDCRipple} from '@material/ripple';
+    import {MDCRipple} from '@rsmdc/ripple';
     const ripple = new MDCRipple(document.querySelector('.foo-button'));
     ```
 

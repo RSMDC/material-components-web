@@ -22,7 +22,7 @@
  */
 
 
-import MDCFoundation from '@material/base/foundation';
+import MDCFoundation from '@rsmdc/base/foundation';
 
 import {cssClasses, strings} from './constants';
 

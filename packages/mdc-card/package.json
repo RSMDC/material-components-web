@@ -1,5 +1,5 @@
 {
-  "name": "@material/card",
+  "name": "@rsmdc/card",
   "version": "0.39.1",
   "description": "The Material Components for the web card component",
   "license": "MIT",
@@ -13,9 +13,9 @@
     "url": "https://github.com/material-components/material-components-web.git"
   },
   "dependencies": {
-    "@material/elevation": "^0.39.1",
-    "@material/ripple": "^0.39.1",
-    "@material/rtl": "^0.39.1",
-    "@material/theme": "^0.39.1"
+    "@rsmdc/elevation": "^0.39.1",
+    "@rsmdc/ripple": "^0.39.1",
+    "@rsmdc/rtl": "^0.39.1",
+    "@rsmdc/theme": "^0.39.1"
   }
 }

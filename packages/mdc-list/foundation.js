@@ -21,7 +21,7 @@
  * THE SOFTWARE.
  */
 
-import MDCFoundation from '@material/base/foundation';
+import MDCFoundation from '@rsmdc/base/foundation';
 import MDCListAdapter from './adapter';
 import {strings, cssClasses} from './constants';
 

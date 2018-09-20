@@ -32,7 +32,7 @@ const cpFile = require('cp-file');
 const toSlugCase = require('to-slug-case');
 const {sync: globSync} = require('glob');
 
-const PKG_RE = /(?:material\-components\-web)|(?:mdc\.[a-zA-Z\-]+)/;
+const PKG_RE = /(?:rsmdc)|(?:mdc\.[a-zA-Z\-]+)/;
 
 const isValidCwd = (
   path.basename(process.cwd()) === 'fight' &&

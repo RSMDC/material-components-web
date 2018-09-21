@@ -59,14 +59,14 @@
     #{$anim-selector} {
       &-unchecked-checked,
       &-unchecked-indeterminate {
-        .nativecontrol:enabled ~ .background {
+        > .nativecontrol:enabled ~ .background {
           animation-name: mdc-checkbox-fade-in-background-#{$uid};
         }
       }
 
       &-checked-unchecked,
       &-indeterminate-unchecked {
-        .nativecontrol:enabled ~ .background {
+        > .nativecontrol:enabled ~ .background {
           animation-name: mdc-checkbox-fade-out-background-#{$uid};
         }
       }
@@ -75,18 +75,18 @@
 }
 
 @mixin mdc-checkbox-ink-color($color) {
-  .checkmark {
+  > .background > .checkmark {
     @include mdc-theme-prop(color, $color);
   }
 
-  .mixedmark {
+  > .background > .mixedmark {
     @include mdc-theme-prop(border-color, $color);
   }
 }
 
 @mixin mdc-checkbox-focus-indicator-color($color) {
   // The ::before element is used as a focus indicator for the checkbox
-  .background::before {
+  > .background::before {
     @include mdc-theme-prop(background-color, $color, $edgeOptOut: true);
   }
 }
@@ -152,14 +152,14 @@
   &-unchecked-indeterminate,
   &-checked-unchecked,
   &-indeterminate-unchecked {
-    .background {
+    > .background {
       animation-duration: $mdc-checkbox-transition-duration * 2;
       animation-timing-function: linear;
     }
   }
 
   &-unchecked-checked {
-    .path {
+    > .background > .checkmark > .path {
       // Instead of delaying the animation, we simply multiply its length by 2 and begin the
       // animation at 50% in order to prevent a flash of styles applied to a checked checkmark
       // as the background is fading in before the animation begins.
@@ -169,45 +169,45 @@
   }
 
   &-unchecked-indeterminate {
-    .mixedmark {
+    > .background > .mixedmark {
       animation: $mdc-checkbox-transition-duration linear 0s mdc-checkbox-unchecked-indeterminate-mixedmark;
       transition: none;
     }
   }
 
   &-checked-unchecked {
-    .path {
+    > .background > .checkmark > .path {
       animation: $mdc-checkbox-transition-duration linear 0s mdc-checkbox-checked-unchecked-checkmark-path;
       transition: none;
     }
   }
 
   &-checked-indeterminate {
-    .checkmark {
+    > .background > .checkmark {
       animation: $mdc-checkbox-transition-duration linear 0s mdc-checkbox-checked-indeterminate-checkmark;
       transition: none;
     }
 
-    .mixedmark {
+    > .background > .mixedmark {
       animation: $mdc-checkbox-transition-duration linear 0s mdc-checkbox-checked-indeterminate-mixedmark;
       transition: none;
     }
   }
 
   &-indeterminate-checked {
-    .checkmark {
+    > .background > .checkmark  {
       animation: $mdc-checkbox-indeterminate-change-duration_ linear 0s mdc-checkbox-indeterminate-checked-checkmark;
       transition: none;
     }
 
-    .mixedmark {
+    > .background > .mixedmark {
       animation: $mdc-checkbox-indeterminate-change-duration_ linear 0s mdc-checkbox-indeterminate-checked-mixedmark;
       transition: none;
     }
   }
 
   &-indeterminate-unchecked {
-    .mixedmark {
+    > .background > .mixedmark {
       animation: $mdc-checkbox-indeterminate-change-duration_ * .6 linear 0s mdc-checkbox-indeterminate-unchecked-mixedmark;
       transition: none;
     }
@@ -220,28 +220,28 @@
 
 @mixin mdc-checkbox-unmarked-background-selector-enabled_ {
   // stylelint-disable-next-line selector-max-specificity
-  .nativecontrol:enabled:not(:checked):not(:indeterminate) ~ .background {
+  > .nativecontrol:enabled:not(:checked):not(:indeterminate) ~ .background {
     @content;
   }
 }
 
 @mixin mdc-checkbox-unmarked-background-selector-disabled_ {
   // stylelint-disable-next-line selector-max-specificity
-  .nativecontrol:disabled:not(:checked):not(:indeterminate) ~ .background {
+  > .nativecontrol:disabled:not(:checked):not(:indeterminate) ~ .background {
     @content;
   }
 }
 
 @mixin mdc-checkbox-marked-background-selector-enabled_ {
-  .nativecontrol:enabled:checked ~ .background,
-  .nativecontrol:enabled:indeterminate ~ .background {
+  > .nativecontrol:enabled:checked ~ .background,
+  > .nativecontrol:enabled:indeterminate ~ .background {
     @content;
   }
 }
 
 @mixin mdc-checkbox-marked-background-selector-disabled_ {
-  .nativecontrol:disabled:checked ~ .background,
-  .nativecontrol:disabled:indeterminate ~ .background {
+  > .nativecontrol:disabled:checked ~ .background,
+  > .nativecontrol:disabled:indeterminate ~ .background {
     @content;
   }
 }

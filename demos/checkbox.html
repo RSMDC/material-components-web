@@ -68,15 +68,6 @@
           <input type="checkbox"
                  id="hero-checkbox"
                  class="nativecontrol"/>
-          <div class="background">
-            <svg class="checkmark"
-                 viewBox="0 0 24 24">
-              <path class="path"
-                    fill="none"
-                    d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-            </svg>
-            <div class="mixedmark"></div>
-          </div>
         </div>
         <label for="hero-checkbox" id="hero-checkbox-label">Checkbox</label>
       </section>
@@ -89,15 +80,6 @@
               <input type="checkbox"
                      id="basic-checkbox"
                      class="nativecontrol"/>
-              <div class="background">
-                <svg class="checkmark"
-                     viewBox="0 0 24 24">
-                  <path class="path"
-                        fill="none"
-                        d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                </svg>
-                <div class="mixedmark"></div>
-              </div>
             </div>
             <label for="basic-checkbox">Default checkbox</label>
           </div>
@@ -117,15 +99,6 @@
                      id="basic-disabled-checkbox"
                      class="nativecontrol"
                      disabled />
-              <div class="background">
-                <svg class="checkmark"
-                     viewBox="0 0 24 24">
-                  <path class="path"
-                        fill="none"
-                        d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                </svg>
-                <div class="mixedmark"></div>
-              </div>
             </div>
             <label for="basic-disabled-checkbox">Disabled checkbox</label>
           </div>
@@ -135,15 +108,6 @@
                 <input type="checkbox"
                        id="basic-indeterminate-checkbox"
                        class="nativecontrol"/>
-                <div class="background">
-                  <svg class="checkmark"
-                       viewBox="0 0 24 24">
-                    <path class="path"
-                          fill="none"
-                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                  </svg>
-                  <div class="mixedmark"></div>
-                </div>
               </div>
               <label for="basic-indeterminate-checkbox">Indeterminate checkbox</label>
             </div>
@@ -157,15 +121,6 @@
                 <input type="checkbox"
                        id="basic-custom-checkbox-all"
                        class="nativecontrol" />
-                <div class="background">
-                  <svg class="checkmark"
-                       viewBox="0 0 24 24">
-                    <path class="path"
-                          fill="none"
-                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                  </svg>
-                  <div class="mixedmark"></div>
-                </div>
               </div>
               <label for="basic-custom-checkbox-all">Custom colored checkbox (stroke, fill, ripple, and focus)</label>
             </div>
@@ -176,15 +131,6 @@
                 <input type="checkbox"
                        id="basic-custom-checkbox-stroke-and-fill"
                        class="nativecontrol" />
-                <div class="background">
-                  <svg class="checkmark"
-                       viewBox="0 0 24 24">
-                    <path class="path"
-                          fill="none"
-                          d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                  </svg>
-                  <div class="mixedmark"></div>
-                </div>
               </div>
               <label for="basic-custom-checkbox-stroke-and-fill">Custom colored checkbox (stroke and fill only)</label>
             </div>
@@ -200,15 +146,6 @@
               <input type="checkbox"
                      id="native-js-checkbox"
                      class="nativecontrol"/>
-              <div class="background">
-                <svg class="checkmark"
-                     viewBox="0 0 24 24">
-                  <path class="path"
-                        fill="none"
-                        d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                </svg>
-                <div class="mixedmark"></div>
-              </div>
             </div>
             <label for="native-js-checkbox">Default checkbox</label>
           </div>
@@ -224,15 +161,6 @@
                      id="native-js-checkbox-indeterminate"
                      class="nativecontrol"
                      checked/>
-              <div class="background">
-                <svg class="checkmark"
-                     viewBox="0 0 24 24">
-                  <path class="path"
-                        fill="none"
-                        d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                </svg>
-                <div class="mixedmark"></div>
-              </div>
             </div>
             <label for="native-js-checkbox-indeterminate">Indeterminate checkbox</label>
           </div>
@@ -250,15 +178,6 @@
               <input type="checkbox"
                      id="native-js-checkbox-custom-all"
                      class="nativecontrol" />
-              <div class="background">
-                <svg class="checkmark"
-                     viewBox="0 0 24 24">
-                  <path class="path"
-                        fill="none"
-                        d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                </svg>
-                <div class="mixedmark"></div>
-              </div>
             </div>
             <label for="native-js-checkbox-custom-all">Custom colored checkbox (stroke, fill, ripple, and focus)</label>
           </div>
@@ -273,15 +192,6 @@
               <input type="checkbox"
                      id="native-js-checkbox-custom-stroke-and-fill"
                      class="nativecontrol" />
-              <div class="background">
-                <svg class="checkmark"
-                     viewBox="0 0 24 24">
-                  <path class="path"
-                        fill="none"
-                        d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                </svg>
-                <div class="mixedmark"></div>
-              </div>
             </div>
             <label for="native-js-checkbox-custom-stroke-and-fill">Custom colored checkbox (stroke and fill only)</label>
           </div>
@@ -296,6 +206,29 @@
     <script src="/assets/material-components-web.js" async></script>
     <script>
       demoReady(function() {
+        [].forEach.call(document.querySelectorAll('.mdc-checkbox'), checkbox => {
+          if ( checkbox.getElementsByClassName('background').length > 0 ) { return }
+          const background = document.createElement('div')
+          background.classList.add('background')
+
+          const checkmark = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+          checkmark.classList.add('checkmark')
+          checkmark.setAttribute('viewBox', '0 0 24 24')
+
+          const path = document.createElementNS('http://www.w3.org/2000/svg', 'path')
+          path.classList.add('path')
+          path.setAttribute('fill', 'none')
+          path.setAttribute('d', 'M1.73,12.91 8.1,19.28 22.79,4.59')
+
+          const mixedmark = document.createElement('div')
+          mixedmark.classList.add('mixedmark')
+          
+          checkbox.appendChild(background)
+          background.appendChild(checkmark)
+          checkmark.appendChild(path)
+          background.appendChild(mixedmark)
+        });
+
         [].forEach.call(document.querySelectorAll('.mdc-checkbox[data-js]'), function(checkbox) {
           var formField = checkbox.parentElement;
           var formFieldInstance = new mdc.formField.MDCFormField(formField);

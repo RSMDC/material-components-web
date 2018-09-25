@@ -44,16 +44,16 @@ We recommend using MDC Checkbox with [MDC Form Field](../mdc-form-field) for enh
 <div class="mdc-form-field">
   <div class="mdc-checkbox">
     <input type="checkbox"
-           class="mdc-checkbox__native-control"
+           class="nativecontrol"
            id="checkbox-1"/>
-    <div class="mdc-checkbox__background">
-      <svg class="mdc-checkbox__checkmark"
+    <div class="background">
+      <svg class="checkmark"
            viewBox="0 0 24 24">
-        <path class="mdc-checkbox__checkmark-path"
+        <path class="path"
               fill="none"
               d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
       </svg>
-      <div class="mdc-checkbox__mixedmark"></div>
+      <div class="mixedmark"></div>
     </div>
   </div>
   <label for="checkbox-1">Checkbox 1</label>
@@ -91,19 +91,19 @@ formField.input = checkbox;
 Note that `mdc-checkbox--disabled` is necessary on the root element of CSS-only checkboxes to prevent hover states from activating. Checkboxes that use the JavaScript component do not need this class; a `disabled` attribute on the `<input>` element is sufficient.
 
 ```html
-<div class="mdc-checkbox mdc-checkbox--disabled">
+<div class="mdc-checkbox -disabled">
   <input type="checkbox"
          id="basic-disabled-checkbox"
-         class="mdc-checkbox__native-control"
+         class="nativecontrol"
          disabled />
-  <div class="mdc-checkbox__background">
-    <svg class="mdc-checkbox__checkmark"
+  <div class="background">
+    <svg class="checkmark"
          viewBox="0 0 24 24">
-      <path class="mdc-checkbox__checkmark-path"
+      <path class="path"
             fill="none"
             d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
     </svg>
-    <div class="mdc-checkbox__mixedmark"></div>
+    <div class="mixedmark"></div>
   </div>
 </div>
 <label for="basic-disabled-checkbox" id="basic-disabled-checkbox-label">This is my disabled checkbox</label>
@@ -137,7 +137,7 @@ If you plan to use CSS-only checkboxes, set `$generate-keyframes` to `false` to 
 #### Caveat: Edge and CSS Variables
 
 In browsers that fully support CSS variables, MDC Checkbox references CSS variables wherever theme properties are used.
-However, due to Edge's buggy CSS variable support, the `background-color` for `.mdc-checkbox__background::before` will not honor CSS variables in Edge.
+However, due to Edge's buggy CSS variable support, the `background-color` for `.background::before` will not honor CSS variables in Edge.
 This means you will need to override this style manually for Edge if you alter the CSS variable for the primary color.
 
 ## `MDCCheckbox` Properties and Methods

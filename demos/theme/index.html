@@ -104,7 +104,7 @@
           </div>
           <div class="bar -secondary">
             <span class="inner"></span>
-          </div>
+          </div>   
         </div>
       </div>
     </header>
@@ -115,7 +115,7 @@
         <h6 class="subtitle">Subtitle here</h6>
       </div>
       <div class="content">
-        <nav class="mdc-list mdc-list-group">
+        <nav class="list mdc-list-group">
           <a class="item -activated" href="#" tabindex="0">
             <i class="material-icons graphic" aria-hidden="true">inbox</i>
             <span class="label">Inbox</span>
@@ -133,7 +133,7 @@
             <span class="label">Drafts</span>
           </a>
 
-          <hr class="mdc-list-divider">
+          <hr class="divider">
           <h6 class="subheader">Labels</h6>
           <a class="item" href="#">
             <i class="material-icons graphic" aria-hidden="true">bookmark</i>
@@ -148,7 +148,7 @@
             <span class="label">Work</span>
           </a>
 
-          <hr class="mdc-list-divider">
+          <hr class="divider">
           <a class="item" href="#">
             <i class="material-icons graphic" aria-hidden="true">settings</i>
             <span class="label">Settings</span>
@@ -345,12 +345,12 @@
                 <button class="mdc-button action -button">Read</button>
                 <button class="mdc-button action -button">Bookmark</button>
               </div>
-              <div class="action-icons">
+              <div class="icons">
                 <button class="mdc-icon-button action -icon"
                    aria-pressed="false"
                    aria-label="Add to favorites"
                    title="Add to favorites" data-demo-toggle>
-                  <i class="material-icons icon -onicon">favorite</i>
+                  <i class="material-icons icon -on">favorite</i>
                   <i class="material-icons icon">favorite_border</i>
                 </button>
                 <button class="mdc-icon-button material-icons action -icon"
@@ -378,15 +378,6 @@
               <input type="checkbox"
                      id="enabled-checkbox"
                      class="nativecontrol"/>
-              <div class="background">
-                <svg class="checkmark"
-                     viewBox="0 0 24 24">
-                  <path class="path"
-                        fill="none"
-                        d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                </svg>
-                <div class="mixedmark"></div>
-              </div>
             </div>
             <label for="enabled-checkbox" id="enabled-checkbox-label">Enabled</label>
           </div>
@@ -396,15 +387,6 @@
               <input type="checkbox"
                      id="indeterminate-checkbox"
                      class="nativecontrol"/>
-              <div class="background">
-                <svg class="checkmark"
-                     viewBox="0 0 24 24">
-                  <path class="path"
-                        fill="none"
-                        d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                </svg>
-                <div class="mixedmark"></div>
-              </div>
             </div>
             <label for="indeterminate-checkbox" id="indeterminate-checkbox-label">Indeterminate</label>
           </div>
@@ -415,15 +397,6 @@
                      id="disabled-checkbox"
                      class="nativecontrol"
                      disabled />
-              <div class="background">
-                <svg class="checkmark"
-                     viewBox="0 0 24 24">
-                  <path class="path"
-                        fill="none"
-                        d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                </svg>
-                <div class="mixedmark"></div>
-              </div>
             </div>
             <label for="disabled-checkbox" id="disabled-checkbox-label">Disabled</label>
           </div>
@@ -447,7 +420,7 @@
         <aside class="mdc-dialog -open demo-dialog">
           <div class="surface">
             <header class="header">
-              <h3 id="mdc-dialog-default-label" class="header__title">
+              <h3 id="mdc-dialog-default-label" class="title">
                 Fire photon torpedoes?
               </h3>
             </header>
@@ -455,8 +428,8 @@
               Shields at 60% and falling, captain.
             </section>
             <footer class="footer">
-              <button type="button" class="mdc-button button button -cancel">Belay that order</button>
-              <button type="button" class="mdc-button button button -accept">Make it so!</button>
+              <button type="button" class="mdc-button button -cancel">Belay that order</button>
+              <button type="button" class="mdc-button button -accept">Make it so!</button>
             </footer>
           </div>
         </aside>
@@ -511,24 +484,24 @@
         </h3>
 
         <div class="demo-icon-toggle-row">
-          <div class="mdc-elevation- -z2 demo-icon-toggle-tile">
+          <div class="-elevation2 demo-icon-toggle-tile">
             <h4 class="typosubtitle1">Enabled</h4>
 
             <button class="mdc-icon-button"
                aria-label="Add to favorites"
                aria-pressed="false" data-demo-toggle>
-              <i class="material-icons icon -onicon">favorite</i>
+              <i class="material-icons icon -on">favorite</i>
               <i class="material-icons icon">favorite_border</i></button>
           </div>
 
-          <div class="mdc-elevation- -z2 demo-icon-toggle-tile">
+          <div class="-elevation2 demo-icon-toggle-tile">
             <h4 class="typosubtitle1">Disabled</h4>
 
             <button class="mdc-icon-button"
                aria-label="Add to favorites"
                aria-pressed="false"
                disabled data-demo-toggle>
-              <i class="material-icons icon -onicon">favorite</i>
+              <i class="material-icons icon -on">favorite</i>
               <i class="material-icons icon">favorite_border</i>
             </button>
           </div>
@@ -551,8 +524,8 @@
               <span class="inner"></span>
             </div>
             <div class="bar -secondary">
-              <span class="bar-inner"></span>
-            </div>
+              <span class="inner"></span>
+            </div>       
           </div>
         </figure>
 
@@ -566,7 +539,7 @@
             </div>
             <div class="bar -secondary">
               <span class="inner"></span>
-            </div>
+            </div>       
           </div>
         </figure>
       </section>
@@ -582,20 +555,12 @@
           <div class="mdc-form-field demo-radio-form-field">
             <div class="mdc-radio demo-radio">
               <input class="nativecontrol" type="radio" id="demo-radio-1" checked name="demo-radio-group-1">
-              <div class="background">
-                <div class="outer"></div>
-                <div class="inner"></div>
-              </div>
             </div>
             <label id="demo-radio-1-label" for="demo-radio-1">Enabled 1</label>
           </div>
           <div class="mdc-form-field demo-radio-form-field">
             <div class="mdc-radio demo-radio">
               <input class="nativecontrol" type="radio" id="demo-radio-2" name="demo-radio-group-1">
-              <div class="background">
-                <div class="outer"></div>
-                <div class="inner"></div>
-              </div>
             </div>
             <label id="demo-radio-2-label" for="demo-radio-2">Enabled 2</label>
           </div>
@@ -605,20 +570,12 @@
           <div class="mdc-form-field demo-radio-form-field">
             <div class="mdc-radio -disabled demo-radio">
               <input class="nativecontrol" type="radio" id="demo-radio-7" disabled checked name="demo-radio-group-4">
-              <div class="background">
-                <div class="outer"></div>
-                <div class="inner"></div>
-              </div>
             </div>
             <label id="demo-radio-7-label" for="demo-radio-7">Disabled 1</label>
           </div>
           <div class="mdc-form-field demo-radio-form-field">
             <div class="mdc-radio -disabled demo-radio">
               <input class="nativecontrol" type="radio" id="demo-radio-8" disabled name="demo-radio-group-4">
-              <div class="background">
-                <div class="outer"></div>
-                <div class="inner"></div>
-              </div>
             </div>
             <label id="demo-radio-8-label" for="demo-radio-8">Disabled 2</label>
           </div>
@@ -632,7 +589,7 @@
           <a href="#select" class="demo-component-section__permalink" title="Permalink to the theme demo for the select component">#</a>
         </h3>
 
-        <div class="mdc-select">
+        <div class="mdc-select -ripple">
           <select class="nativecontrol" id="basic-select">
             <option value="grains" selected>
               Bread, Cereal, Rice, and Pasta
@@ -653,8 +610,7 @@
               Fats, Oils, and Sweets
             </option>
           </select>
-          <label class="mdc-floating-label -floatabove" for="basic-select">Pick a Food Group</label>
-          <div class="mdc-line-ripple"></div>
+          <label class="label -floatabove" for="basic-select">Pick a Food Group</label>
         </div>
       </section>
 
@@ -738,7 +694,7 @@
               <i class="material-icons icon" aria-hidden="true">person_pin</i>
               <span class="icontext">Nearby</span>
             </a>
-            <span class="indicator"></span>
+            <!-- <span class="indicator"></span> -->
           </nav>
         </figure>
 
@@ -758,7 +714,7 @@
               <i class="material-icons icon" aria-hidden="true">person_pin</i>
               <span class="icontext">Nearby</span>
             </a>
-            <span class="indicator"></span>
+            <!-- <span class="indicator"></span> -->
           </nav>
         </figure>
         <figure class="demo-figure--tab-bar">
@@ -777,7 +733,7 @@
               <i class="material-icons icon" aria-hidden="true">person_pin</i>
               <span class="icontext">Nearby</span>
             </a>
-            <span class="indicator"></span>
+            <!-- <span class="indicator"></span> -->
           </nav>
         </figure>
       </section>
@@ -790,14 +746,13 @@
         </h3>
 
         <figure class="demo-text-field-wrapper">
-          <div class="mdc-text-field demo-text-field">
+          <div class="mdc-text-field demo-text-field -ripple">
             <input type="text" class="input"
                    id="demo-text-field-default"
                    aria-controls="demo-text-field-default-helper-text"
                    aria-describedby="demo-text-field-default-helper-text"
                    autocomplete="email">
-            <label for="demo-text-field-default" class="mdc-floating-label">Name (optional)</label>
-            <div class="mdc-line-ripple"></div>
+            <label for="demo-text-field-default" class="label">Name (optional)</label>
           </div>
           <p class="mdc-text-field-helper-text" id="demo-text-field-default-helper-text"
              aria-hidden="true">
@@ -805,15 +760,14 @@
           </p>
         </figure>
         <figure class="demo-text-field-wrapper">
-          <div class="mdc-text-field demo-text-field">
+          <div class="mdc-text-field demo-text-field -ripple">
             <input type="email" class="input"
                    id="demo-text-field-required"
                    aria-controls="demo-text-field-required-helper-text"
                    aria-describedby="demo-text-field-required-helper-text"
                    autocomplete="email"
                    required>
-            <label for="demo-text-field-required" class="mdc-floating-label">Email (required)</label>
-            <div class="mdc-line-ripple"></div>
+            <label for="demo-text-field-required" class="label">Email (required)</label>
           </div>
           <p class="mdc-text-field-helper-text -validation" id="demo-text-field-required-helper-text">
             A valid email address is required
@@ -825,13 +779,7 @@
                    id="demo-text-field"
                    aria-controls="demo-text-field-helper-text"
                    aria-describedby="demo-text-field-helper-text">
-            <label for="demo-text-field" class="mdc-floating-label">Outlined Text Field</label>
-            <div class="mdc-notched-outline">
-              <svg>
-                <path class="path"/>
-              </svg>
-            </div>
-            <div class="mdc-notched-outline-idle"></div>
+            <label for="demo-text-field" class="label">Outlined Text Field</label>
           </div>
           <p class="mdc-text-field-helper-text" id="demo-text-field-helper-text"
              aria-hidden="true">
@@ -845,6 +793,107 @@
     <script src="/assets/theme/index.js" async></script>
     <script>
       demoReady(function() {
+        //mdc-checkbox
+        [].forEach.call(document.querySelectorAll('.mdc-checkbox'), checkbox => {
+          if ( checkbox.getElementsByClassName('background').length > 0 ) { return }
+          const background = document.createElement('div')
+          background.classList.add('background')
+
+          const checkmark = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+          checkmark.classList.add('checkmark')
+          checkmark.setAttribute('viewBox', '0 0 24 24')
+
+          const path = document.createElementNS('http://www.w3.org/2000/svg', 'path')
+          path.classList.add('path')
+          path.setAttribute('fill', 'none')
+          path.setAttribute('d', 'M1.73,12.91 8.1,19.28 22.79,4.59')
+
+          const mixedmark = document.createElement('div')
+          mixedmark.classList.add('mixedmark')
+          
+          checkbox.appendChild(background)
+          background.appendChild(checkmark)
+          checkmark.appendChild(path)
+          background.appendChild(mixedmark)
+        });
+
+        //mdc-radio
+        [].forEach.call(document.querySelectorAll('.mdc-radio'), radio => {
+          if ( radio.getElementsByClassName('background').length > 0 ) { return }
+          const background = document.createElement('div')
+          background.classList.add('background')
+
+          const outer = document.createElement('div')
+          outer.classList.add('outer')
+
+          const inner = document.createElement('div')
+          inner.classList.add('inner')
+          
+          radio.appendChild(background)
+          background.appendChild(outer)
+          background.appendChild(inner)
+        });
+
+        //mdc-linear-progress
+        // [].forEach.call(document.querySelectorAll('.mdc-linear-progress'), linear => {
+        //   if ( linear.hasChildNodes() ) { return }
+        //   const dots = document.createElement('div')
+        //   dots.classList.add('dots')
+
+        //   const buffer = document.createElement('div')
+        //   buffer.classList.add('buffer')
+
+        //   const primary = document.createElement('div')
+        //   primary.classList.add('bar', '-primary')
+
+        //   const secondary = document.createElement('div')
+        //   secondary.classList.add('bar', '-secondary')
+
+        //   const primaryInner = document.createElement('span')
+        //   primaryInner.classList.add('inner')
+
+        //   const secondaryInner = document.createElement('span')
+        //   secondaryInner.classList.add('inner')
+          
+        //   linear.appendChild(dots)
+        //   linear.appendChild(buffer)
+        //   linear.appendChild(primary)
+        //   primary.appendChild(primaryInner)
+        //   linear.appendChild(secondary)
+        //   secondary.appendChild(secondaryInner)
+        // });
+
+
+        //mdc-line-ripple
+        [].forEach.call(document.querySelectorAll('.-ripple'), ripple => {
+          const mdcRipple = document.createElement('div')
+          mdcRipple.classList.add('mdc-line-ripple')
+          ripple.appendChild(mdcRipple)
+        });
+
+        //mdc-notched-outline
+        [].forEach.call(document.querySelectorAll('.-outlined'), outlined => {
+          const textfield = outlined.className.includes('mdc-text-field')
+          const select = outlined.className.includes('mdc-select')
+          if ( outlined.getElementsByClassName('mdc-notched-outline').length > 0 ) { return }
+          if ( textfield || select ) {
+            const notched = document.createElement('div')
+            notched.classList.add('mdc-notched-outline')
+
+            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path')
+            path.classList.add('path')
+
+            const idle = document.createElement('div')
+            idle.classList.add('mdc-notched-outline-idle')
+
+            outlined.appendChild(notched)
+            notched.appendChild(svg)
+            svg.appendChild(path)
+            outlined.appendChild(idle)
+          }
+        });
+
         /*
          * Button
          */
@@ -981,6 +1030,9 @@
         [].forEach.call(document.querySelectorAll('.mdc-text-field'), function(textField) {
           mdc.textField.MDCTextField.attachTo(textField);
         });
+
+
+
       });
     </script>
   </body>

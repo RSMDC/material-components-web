@@ -65,117 +65,45 @@
     <main class="mdc-toolbar-fixed-adjust">
 
       <section class="hero">
-        <div role="progressbar" class="mdc-linear-progress -indeterminate">
-          <div class="dots"></div>
-          <div class="buffer"></div>
-          <div class="bar -primary">
-            <span class="inner"></span>
-          </div>
-          <div class="bar -secondary">
-            <span class="inner"></span>
-          </div>
-        </div>
+        <div role="progressbar" class="mdc-linear-progress -indeterminate"></div>
       </section>
 
       <section>
         <fieldset>
-          <legend class="mdc-typography--headline6">Linear Progress Indicators</legend>
+          <legend class="typoheadline6">Linear Progress Indicators</legend>
 
           <figure class="linear-progress-demo">
-            <div role="progressbar" class="mdc-linear-progress">
-              <div class="dots"></div>
-              <div class="buffer"></div>
-              <div class="bar -primary">
-                <span class="inner"></span>
-              </div>
-              <div class="bar -secondary">
-                <span class="inner"></span>
-              </div>
-            </div>
+            <div role="progressbar" class="mdc-linear-progress"></div>
             <figcaption>Determinate</figcaption>
           </figure>
 
           <figure class="linear-progress-demo">
-            <div role="progressbar" class="mdc-linear-progress -indeterminate">
-              <div class="dots"></div>
-              <div class="buffer"></div>
-              <div class="bar -primary">
-                <span class="inner"></span>
-              </div>
-              <div class="bar -secondary">
-                <span class="inner"></span>
-              </div>
-            </div>
+            <div role="progressbar" class="mdc-linear-progress -indeterminate"></div>
             <figcaption>Indeterminate</figcaption>
           </figure>
 
           <figure class="linear-progress-demo">
-            <div role="progressbar" class="mdc-linear-progress" data-buffer="true">
-              <div class="dots"></div>
-              <div class="buffer"></div>
-              <div class="bar -primary">
-                <span class="inner"></span>
-              </div>
-              <div class="bar -secondary">
-                <span class="inner"></span>
-              </div>
-            </div>
+            <div role="progressbar" class="mdc-linear-progress" data-buffer="true"></div>
             <figcaption>Buffer</figcaption>
           </figure>
 
           <figure class="linear-progress-demo">
-            <div role="progressbar" class="mdc-linear-progress -reversed">
-              <div class="dots"></div>
-              <div class="buffer"></div>
-              <div class="bar -primary">
-                <span class="inner"></span>
-              </div>
-              <div class="bar -secondary">
-                <span class="inner"></span>
-              </div>
-            </div>
+            <div role="progressbar" class="mdc-linear-progress -reversed"></div>
             <figcaption>Reversed</figcaption>
           </figure>
 
           <figure class="linear-progress-demo">
-            <div role="progressbar" class="mdc-linear-progress -indeterminate -reversed">
-              <div class="dots"></div>
-              <div class="buffer"></div>
-              <div class="bar -primary">
-                <span class="inner"></span>
-              </div>
-              <div class="bar -secondary">
-                <span class="inner"></span>
-              </div>
-            </div>
+            <div role="progressbar" class="mdc-linear-progress -indeterminate -reversed"></div>
             <figcaption>Indeterminate Reversed</figcaption>
           </figure>
 
           <figure class="linear-progress-demo">
-            <div role="progressbar" class="mdc-linear-progress -reversed" data-buffer="true">
-              <div class="dots"></div>
-              <div class="buffer"></div>
-              <div class="bar -primary">
-                <span class="inner"></span>
-              </div>
-              <div class="bar -secondary">
-                <span class="inner"></span>
-              </div>
-            </div>
+            <div role="progressbar" class="mdc-linear-progress -reversed" data-buffer="true"></div>
             <figcaption>Buffer Reversed</figcaption>
           </figure>
 
           <figure class="linear-progress-demo">
-            <div role="progressbar" class="mdc-linear-progress demo-linear-progress--custom" data-buffer="true">
-              <div class="dots"></div>
-              <div class="buffer"></div>
-              <div class="bar -primary">
-                <span class="inner"></span>
-              </div>
-              <div class="bar -secondary">
-                <span class="inner"></span>
-              </div>
-            </div>
+            <div role="progressbar" class="mdc-linear-progress demo-linear-progress--custom" data-buffer="true"></div>
             <figcaption>Custom Colors with Buffer</figcaption>
           </figure>
 
@@ -186,6 +114,34 @@
     <script src="/assets/material-components-web.js" async></script>
     <script>
       demoReady(function() {
+        [].forEach.call(document.querySelectorAll('.mdc-linear-progress'), linear => {
+          if ( linear.hasChildNodes() ) { return }
+          const dots = document.createElement('div')
+          dots.classList.add('dots')
+
+          const buffer = document.createElement('div')
+          buffer.classList.add('buffer')
+
+          const primary = document.createElement('div')
+          primary.classList.add('bar', '-primary')
+
+          const secondary = document.createElement('div')
+          secondary.classList.add('bar', '-secondary')
+
+          const primaryInner = document.createElement('span')
+          primaryInner.classList.add('inner')
+
+          const secondaryInner = document.createElement('span')
+          secondaryInner.classList.add('inner')
+          
+          linear.appendChild(dots)
+          linear.appendChild(buffer)
+          linear.appendChild(primary)
+          primary.appendChild(primaryInner)
+          linear.appendChild(secondary)
+          secondary.appendChild(secondaryInner)
+        });
+
         var determinates = document.querySelectorAll('.mdc-linear-progress');
         for (var i = 0, determinate; determinate = determinates[i]; i++) {
           var linearProgress = mdc.linearProgress.MDCLinearProgress.attachTo(determinate);

@@ -129,35 +129,19 @@
         <h4>No leading icon</h4>
         <div class="mdc-chip-set -filter">
           <div class="demo-chip mdc-chip -selected" tabindex="0">
-            <div class="checkmark" >
-              <svg class="svg" viewBox="-2 -3 30 30">
-                <path class="path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-              </svg>
-            </div>
+            <div class="checkmark" ></div>
             <div class="text">Tops</div>
           </div>
           <div class="demo-chip mdc-chip -selected" tabindex="0">
-            <div class="checkmark" >
-              <svg class="svg" viewBox="-2 -3 30 30">
-                <path class="path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-              </svg>
-            </div>
+            <div class="checkmark" ></div>
             <div class="text">Bottoms</div>
           </div>
           <div class="demo-chip mdc-chip" tabindex="0">
-            <div class="checkmark" >
-              <svg class="svg" viewBox="-2 -3 30 30">
-                <path class="path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-              </svg>
-            </div>
+            <div class="checkmark" ></div>
             <div class="text">Shoes</div>
           </div>
           <div class="demo-chip mdc-chip" tabindex="0">
-            <div class="checkmark" >
-              <svg class="svg" viewBox="-2 -3 30 30">
-                <path class="path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-              </svg>
-            </div>
+            <div class="checkmark" ></div>
             <div class="text">Accessories</div>
           </div>
         </div>
@@ -166,38 +150,22 @@
         <div class="mdc-chip-set -filter">
           <div class="demo-chip mdc-chip -selected" tabindex="0">
             <i class="material-icons icon -leading -leadhidden">face</i>
-            <div class="checkmark" >
-              <svg class="svg" viewBox="-2 -3 30 30">
-                <path class="path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-              </svg>
-            </div>
+            <div class="checkmark" ></div>
             <div class="text">Alice</div>
           </div>
           <div class="demo-chip mdc-chip" tabindex="0">
             <i class="material-icons icon -leading">face</i>
-            <div class="checkmark" >
-              <svg class="svg" viewBox="-2 -3 30 30">
-                <path class="path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-              </svg>
-            </div>
+            <div class="checkmark" ></div>
             <div class="text">Bob</div>
           </div>
           <div class="demo-chip mdc-chip" tabindex="0">
             <i class="material-icons icon -leading">face</i>
-            <div class="checkmark" >
-              <svg class="svg" viewBox="-2 -3 30 30">
-                <path class="path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-              </svg>
-            </div>
+            <div class="checkmark" ></div>
             <div class="text">Charlie</div>
           </div>
           <div class="demo-chip mdc-chip" tabindex="0">
             <i class="material-icons icon -leading">face</i>
-            <div class="checkmark" >
-              <svg class="svg" viewBox="-2 -3 30 30">
-                <path class="path" fill="none" stroke="black" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-              </svg>
-            </div>
+            <div class="checkmark" ></div>
             <div class="text">David</div>
           </div>
         </div>
@@ -261,6 +229,24 @@
     <script src="/assets/material-components-web.js" async></script>
     <script>
       demoReady(function() {
+        [].forEach.call(document.querySelectorAll('.mdc-chip'), chip => {
+          const checkmark = chip.getElementsByClassName('checkmark')
+          if ( checkmark.length == 0 || chip.getElementsByClassName('svg').length > 0) { return }
+
+          const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+          svg.classList.add('svg')
+          svg.setAttribute('viewBox', '-2 -3 30 30')
+
+          const path = document.createElementNS('http://www.w3.org/2000/svg', 'path')
+          path.classList.add('path')
+          path.setAttribute('fill', 'none')
+          path.setAttribute('stroke', 'black')
+          path.setAttribute('d', 'M1.73,12.91 8.1,19.28 22.79,4.59')
+
+          checkmark[0].appendChild(svg)
+          svg.appendChild(path)
+        });
+
         var inputChipSetEl = document.getElementById('input-chip-set');
         var chipSets = document.querySelectorAll('.mdc-chip-set:not(#input-chip-set)');
         var input = document.getElementById('input-chip-set-input');

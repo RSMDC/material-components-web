@@ -1,0 +1,11 @@
+@import "@rsmdc/tab-indicator/mdc-tab-indicator";
+
+.mdc-tab > .indicator, 
+.mdc-tab > .content > .indicator {
+  @extend .mdc-tab-indicator;
+}
+
+// .mdc-tab > .indicator > .content, 
+// .mdc-tab > .content > .indicator > .content {
+//   @extend .content;
+// }

@@ -31,7 +31,7 @@ const strings = {
   ARIA_SELECTED: 'aria-selected',
   RIPPLE_SELECTOR: '.tabripple',
   CONTENT_SELECTOR: '.content',
-  TAB_INDICATOR_SELECTOR: '.mdc-tab-indicator',
+  TAB_INDICATOR_SELECTOR: '.indicator',
   TABINDEX: 'tabIndex',
   INTERACTED_EVENT: 'MDCTab:interacted',
 };

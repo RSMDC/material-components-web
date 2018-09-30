@@ -70,12 +70,7 @@
       <div class="demo-wrapper">
         <section class="hero">
           <div class="mdc-switch">
-            <div class="track"></div>
-            <div class="underlay">
-              <div class="thumb">
-                <input type="checkbox" class="nativecontrol" role="switch">
-              </div>
-            </div>
+            <input type="checkbox" class="nativecontrol" role="switch">
           </div>
         </section>
 
@@ -83,26 +78,16 @@
           <h2>Enabled</h2>
           <div class="demo-switch-wrapper">
             <div class="mdc-switch">
-              <div class="track"></div>
-              <div class="underlay">
-                <div class="thumb">
-                  <input type="checkbox" id="basic-switch" class="nativecontrol" role="switch">
-                </div>
-              </div>
+              <input type="checkbox" id="basic-switch" class="nativecontrol" role="switch">
             </div>
             <label for="basic-switch" class="mdc-switch-label">off/on</label>
           </div>
           <div class="demo-switch-wrapper">
             <div class="mdc-switch demo-switch--custom -checked">
-              <div class="track"></div>
-              <div class="underlay">
-                <div class="thumb">
-                  <input type="checkbox"
-                  id="basic-switch-custom"
-                  class="nativecontrol"
-                  role="switch" checked>
-                </div>
-              </div>
+              <input type="checkbox"
+              id="basic-switch-custom"
+              class="nativecontrol"
+              role="switch" checked>
             </div>
             <label for="basic-switch-custom" class="mdc-switch-label">custom color</label>
           </div>
@@ -111,16 +96,11 @@
           <h2>Disabled</h2>
           <div class="demo-switch-wrapper">
             <div class="mdc-switch -disabled">
-              <div class="track"></div>
-              <div class="underlay">
-                <div class="thumb">
-                  <input type="checkbox"
-                  id="basic-switch--disabled"
-                  class="nativecontrol"
-                  role="switch"
-                  disabled>
-                </div>
-              </div>
+              <input type="checkbox"
+              id="basic-switch--disabled"
+              class="nativecontrol"
+              role="switch"
+              disabled>
             </div>
             <label for="basic-switch--disabled" class="mdc-switch-label">off/on</label>
           </div>
@@ -131,15 +111,15 @@
         <div class="mdc-form-field">
           <div class="mdc-checkbox">
             <input type="checkbox"
-                  class="mdc-checkbox__native-control"
+                  class="nativecontrol"
                   id="toggle-rtl"
                   aria-labelledby="toggle-rtl-label" />
-            <div class="mdc-checkbox__background">
-              <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                <path class="mdc-checkbox__checkmark-path" fill="none"
+            <div class="background">
+              <svg class="checkmark" viewBox="0 0 24 24">
+                <path class="path" fill="none"
                       d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
               </svg>
-              <div class="mdc-checkbox__mixedmark"></div>
+              <div class="mixedmark"></div>
             </div>
           </div>
           <label for="toggle-rtl" id="toggle-rtl-label">Toggle RTL</label>
@@ -154,6 +134,25 @@
         this.checked ? demoWrapper.setAttribute('dir', 'rtl') : demoWrapper.removeAttribute('dir');
       });
       demoReady(function() {
+        [].forEach.call(document.querySelectorAll('.mdc-switch'), mdcswitch => {
+          if ( mdcswitch.getElementsByClassName('underlay').length > 0 ) { return }
+          const nativecontrol = mdcswitch.getElementsByClassName('nativecontrol')
+
+          const track = document.createElement('div')
+          track.classList.add('track')
+
+          const underlay = document.createElement('div')
+          underlay.classList.add('underlay')
+
+          const thumb = document.createElement('div')
+          thumb.classList.add('thumb')
+          
+          mdcswitch.appendChild(track)
+          mdcswitch.appendChild(underlay)
+          underlay.appendChild(thumb)
+          thumb.appendChild(nativecontrol[0])
+        });
+
         var switches = document.querySelectorAll('.mdc-switch');
         for (var i = 0, switchEl; switchEl = switches[i]; i++) {
           var switchInstance = new mdc.switchControl.MDCSwitch(switchEl);

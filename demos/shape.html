@@ -46,17 +46,9 @@
       <section class="hero">
         <div class="mdc-shape-container four-corner-container">
           <button class="mdc-button -unelevated">Filled Button</button>
-          <div class="corner -topleft"></div>
-          <div class="corner -topright"></div>
-          <div class="corner -bottomright"></div>
-          <div class="corner -bottomleft"></div>
         </div>
         <div class="mdc-shape-container four-corner-container four-corner-container--outlined">
           <button class="mdc-button -outlined">Outlined Button</button>
-          <div class="corner -topleft"></div>
-          <div class="corner -topright"></div>
-          <div class="corner -bottomright"></div>
-          <div class="corner -bottomleft"></div>
         </div>
       </section>
 
@@ -71,10 +63,6 @@
         </div>
         <div class="mdc-shape-container four-corner-container">
           <button class="mdc-button -unelevated">Finish</button>
-          <div class="corner -topleft"></div>
-          <div class="corner -topright"></div>
-          <div class="corner -bottomright"></div>
-          <div class="corner -bottomleft"></div>
         </div>
 
         <h2 class="typoheadline4">Outlined</h2>
@@ -85,10 +73,6 @@
         </div>
         <div class="mdc-shape-container four-corner-container four-corner-container--outlined">
           <button class="mdc-button -outlined">Finish</button>
-          <div class="corner -topleft"></div>
-          <div class="corner -topright"></div>
-          <div class="corner -bottomright"></div>
-          <div class="corner -bottomleft"></div>
         </div>
 
         <h1 class="typoheadline3">Card</h1>
@@ -105,10 +89,6 @@
               </div>
             </a>
           </div>
-          <div class="corner -topleft"></div>
-          <div class="corner -topright"></div>
-          <div class="corner -bottomright"></div>
-          <div class="corner -bottomleft"></div>
         </div>
       </section>
     </main>
@@ -117,6 +97,27 @@
     <script src="/assets/common.js" async></script>
     <script>
       demoReady(function() {
+        [].forEach.call(document.querySelectorAll('.mdc-shape-container'), shape => {
+          if ( shape.getElementsByClassName('corner').length > 0 ) { return }
+          
+          const topleft = document.createElement('div')
+          topleft.classList.add('corner', '-topleft')
+
+          const topright = document.createElement('div')
+          topright.classList.add('corner', '-topright')
+
+          const bottomleft = document.createElement('div')
+          bottomleft.classList.add('corner', '-bottomleft')
+
+          const bottomright = document.createElement('div')
+          bottomright.classList.add('corner', '-bottomright')
+
+          shape.appendChild(topleft)
+          shape.appendChild(topright)
+          shape.appendChild(bottomleft)
+          shape.appendChild(bottomright)
+
+        });
         // Attach ripples to demonstrate corner masking
         [].forEach.call(document.querySelectorAll('.mdc-button, .primaryaction'), function(surface) {
           mdc.ripple.MDCRipple.attachTo(surface);

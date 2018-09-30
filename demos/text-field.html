@@ -68,22 +68,20 @@
     <main>
       <div class="mdc-toolbar-fixed-adjust"></div>
       <section class="hero">
-        <div class="mdc-text-field">
+        <div class="mdc-text-field -ripple">
           <input type="text" class="input" id="my-text-field">
-          <label for="my-text-field" class="mdc-floating-label">Text Field</label>
-          <div class="mdc-line-ripple"></div>
+          <label for="my-text-field" class="label">Text Field</label>
         </div>
       </section>
 
       <section class="example">
         <h2>Full Functionality JS Component (Floating Label, Validation)</h2>
         <section id="demo-text-field-wrapper" class="demo-text-field-wrapper">
-          <div class="mdc-text-field">
+          <div class="mdc-text-field -ripple">
             <input type="text" class="input" id="full-func-text-field"
                    aria-controls="my-text-field-helper-text"
                    aria-describedby="my-text-field-helper-text">
-            <label for="full-func-text-field" class="mdc-floating-label">Email Address</label>
-            <div class="mdc-line-ripple"></div>
+            <label for="full-func-text-field" class="label">Email Address</label>
           </div>
           <p id="my-text-field-helper-text" class="mdc-text-field-helper-text"
              aria-hidden="true" style="visibility: hidden">Helper Text</p>
@@ -126,13 +124,12 @@
 
       <section class="example">
         <h2>Password field with validation</h2>
-        <div class="mdc-text-field">
+        <div class="mdc-text-field -ripple">
           <input required pattern=".{8,}" type="password" class="input" id="pw"
                  aria-controls="pw-validation-msg"
                  aria-describedby="pw-validation-msg"
                  autocomplete="current-password">
-          <label for="pw" class="mdc-floating-label">Choose password</label>
-          <div class="mdc-line-ripple"></div>
+          <label for="pw" class="label">Choose password</label>
         </div>
         <p class="mdc-text-field-helper-text -persistent -validation"
            id="pw-validation-msg">Must be at least 8 characters long</p>
@@ -145,13 +142,7 @@
             <input type="text" id="tf-outlined-input" class="input"
                    aria-controls="name-validation-message"
                    aria-describedby="name-validation-message">
-            <label for="tf-outlined-input" class="mdc-floating-label">Your Name</label>
-            <div class="mdc-notched-outline">
-              <svg>
-                <path class="path"/>
-              </svg>
-            </div>
-            <div class="mdc-notched-outline-idle"></div>
+            <label for="tf-outlined-input" class="label">Your Name</label>
           </div>
           <p class="mdc-text-field-helper-text -validation"
              id="name-validation-message">Helper Text</p>
@@ -190,20 +181,18 @@
         <h2>Text Field - Leading/Trailing icons</h2>
         <div id="demo-tf-leading-wrapper" class="demo-tf-add-space">
           <div id="tf-leading-example"
-            class="mdc-text-field -leadingicon" data-demo-no-auto-js>
+            class="mdc-text-field -leadingicon -ripple" data-demo-no-auto-js>
             <i class="material-icons icon" tabindex="0" role="button">event</i>
             <input type="text" id="tf-leading" class="input">
-            <label for="tf-leading" class="mdc-floating-label">Your name</label>
-            <div class="mdc-line-ripple"></div>
+            <label for="tf-leading" class="label">Your name</label>
           </div>
         </div>
         <div id="demo-tf-trailing-wrapper" class="demo-tf-add-space">
           <div id="tf-trailing-example"
-            class="mdc-text-field -trailingicon" data-demo-no-auto-js>
+            class="mdc-text-field -trailingicon -ripple" data-demo-no-auto-js>
             <input type="text" id="tf-trailing" class="input">
-            <label for="tf-trailing" class="mdc-floating-label">Your other name</label>
+            <label for="tf-trailing" class="label">Your other name</label>
             <i class="material-icons icon" tabindex="0" role="button">delete</i>
-            <div class="mdc-line-ripple"></div>
           </div>
         </div>
         <div id="demo-tf-outlined-leading-wrapper" class="demo-tf-add-space">
@@ -211,27 +200,15 @@
             class="mdc-text-field -outlined -leadingicon" data-demo-no-auto-js>
             <i class="material-icons icon" tabindex="0" role="button">event</i>
             <input type="text" id="tf-outlined-leading" class="input">
-            <label for="tf-outlined-leading" class="mdc-floating-label">Your other name</label>
-            <div class="mdc-notched-outline">
-              <svg>
-                <path class="path"/>
-              </svg>
-            </div>
-            <div class="mdc-notched-outline-idle"></div>
+            <label for="tf-outlined-leading" class="label">Your other name</label>
           </div>
         </div>
         <div id="demo-tf-outlined-trailing-wrapper" class="demo-text-field-wrapper demo-tf-add-space">
           <div id="tf-outlined-trailing-example"
             class="mdc-text-field -outlined -trailingicon" data-demo-no-auto-js>
             <input type="text" id="tf-outlined-trailing" class="input">
-            <label for="tf-outlined-trailing" class="mdc-floating-label">Your other name</label>
+            <label for="tf-outlined-trailing" class="label">Your other name</label>
             <i class="material-icons icon" tabindex="0" role="button">delete</i>
-            <div class="mdc-notched-outline">
-              <svg>
-                <path class="path"/>
-              </svg>
-            </div>
-            <div class="mdc-notched-outline-idle"></div>
           </div>
         </div>
         <div>
@@ -266,12 +243,11 @@
 
       <section class="example">
         <h2>Preventing FOUC</h2>
-        <div class="mdc-text-field">
+        <div class="mdc-text-field -ripple">
           <input id="fouc" type="text" class="input" value="Pre-filled value">
-          <label for="fouc" class="mdc-floating-label -floatabove">
+          <label for="fouc" class="label -floatabove">
             Label floating above
           </label>
-          <div class="mdc-line-ripple"></div>
         </div>
       </section>
 
@@ -280,7 +256,7 @@
         <section id="demo-text-field-textarea-wrapper" class="demo-text-field-wrapper">
           <div class="mdc-text-field -textarea">
             <textarea id="textarea" class="input" rows="8" cols="40"></textarea>
-            <label for="textarea" class="mdc-floating-label">Textarea Label</label>
+            <label for="textarea" class="label">Textarea Label</label>
           </div>
         </section>
         <div>
@@ -304,13 +280,12 @@
       <section class="example">
         <h2>Full-Width Text Field and Textarea</h2>
         <div id="demo-fullwidth-wrapper" class="demo-text-field-wrapper">
-          <div class="mdc-text-field -fullwidth">
+          <div class="mdc-text-field -fullwidth -ripple">
             <input class="input" type="text" placeholder="Subject" aria-label="Subject">
-            <div class="mdc-line-ripple"></div>
           </div>
           <div class="mdc-text-field -textarea -fullwidth full-width-textarea-example">
             <textarea id="full-width-textarea" class="input" rows="8"></textarea>
-            <label for="full-width-textarea" class="mdc-floating-label">Textarea Label</label>
+            <label for="full-width-textarea" class="label">Textarea Label</label>
           </div>
         </div>
         <div>
@@ -334,10 +309,9 @@
       <section class="example">
         <h2>Custom error state behaviour - remove error state as soon as invalid input is resolved</h2>
         <section id="demo-text-field-wrapper">
-          <div class="mdc-text-field" id="demo-textfield-error-state">
+          <div class="mdc-text-field -ripple" id="demo-textfield-error-state">
             <input type="text" pattern="^\d{10}$" id="demo-textfield-error-state-input" class="input">
-            <label class="mdc-floating-label" for="demo-textfield-error-state-input">Phone number</label>
-            <div class="mdc-line-ripple"></div>
+            <label class="label" for="demo-textfield-error-state-input">Phone number</label>
           </div>
           <p id="username-helper-text" class="mdc-text-field-helper-text -persistent -validation" aria-hidden="true"
             >Enter 10 digit phone number including area code</p>
@@ -356,6 +330,30 @@
       }
 
       demoReady(function() {
+        [].forEach.call(document.querySelectorAll('.-ripple'), ripple => {
+          const mdcRipple = document.createElement('div')
+          mdcRipple.classList.add('mdc-line-ripple')
+          ripple.appendChild(mdcRipple)
+        });
+
+        [].forEach.call(document.querySelectorAll('.-outlined'), outlined => {
+          if ( outlined.getElementsByClassName('mdc-notched-outline').length > 0 ) { return }
+          const notched = document.createElement('div')
+          notched.classList.add('mdc-notched-outline')
+
+          const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg')
+          const path = document.createElementNS('http://www.w3.org/2000/svg', 'path')
+          path.classList.add('path')
+
+          const idle = document.createElement('div')
+          idle.classList.add('mdc-notched-outline-idle')
+
+          outlined.appendChild(notched)
+          notched.appendChild(svg)
+          svg.appendChild(path)
+          outlined.appendChild(idle)
+        });
+
         var tfEl = document.getElementById('tf-outlined-example');
         var tfHelperText = document.getElementById('tf-outlined-validation-msg');
         var tf = new mdc.textField.MDCTextField(tfEl);

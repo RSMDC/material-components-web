@@ -32,7 +32,7 @@ const cssClasses = {
 const strings = {
   CHANGE_EVENT: 'MDCSelect:change',
   LINE_RIPPLE_SELECTOR: '.mdc-line-ripple',
-  LABEL_SELECTOR: '.mdc-floating-label',
+  LABEL_SELECTOR: '.label',
   NATIVE_CONTROL_SELECTOR: '.nativecontrol',
   OUTLINE_SELECTOR: '.mdc-notched-outline',
 };

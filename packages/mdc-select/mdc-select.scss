@@ -31,6 +31,7 @@
 @import "@rsmdc/ripple/common";
 @import "@rsmdc/ripple/mixins";
 @import "@rsmdc/rtl/mixins";
+@import "./custom";
 
 // postcss-bem-linter: define select
 .mdc-select {
@@ -141,7 +142,7 @@
   }
 
   // stylelint-disable-next-line plugin/selector-bem-pattern
-  .mdc-floating-label {
+  > .label {
     bottom: 20px;
     line-height: 1.15rem;
     pointer-events: auto;
@@ -152,12 +153,12 @@
   @include mdc-select-dd-arrow-svg-bg_($mdc-select-disabled-arrow-color);
   @include mdc-select-container-fill-color_($mdc-select-box-disabled-fill-color);
 
-  .mdc-floating-label {
+  > .label {
     @include mdc-floating-label-ink-color($mdc-select-disabled-label-color);
   }
 
   // stylelint-disable-next-line plugin/selector-bem-pattern
-  .mdc-line-ripple {
+  > .mdc-line-ripple {
     display: none;
   }
 

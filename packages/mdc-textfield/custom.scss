@@ -1,0 +1,5 @@
+@import "@rsmdc/floating-label/mdc-floating-label";
+
+.mdc-text-field > .label {
+  @extend .mdc-floating-label;
+}

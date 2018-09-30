@@ -25,7 +25,7 @@
 const strings = {
   ARIA_CONTROLS: 'aria-controls',
   INPUT_SELECTOR: '.input',
-  LABEL_SELECTOR: '.mdc-floating-label',
+  LABEL_SELECTOR: '.label',
   ICON_SELECTOR: '.icon',
   OUTLINE_SELECTOR: '.mdc-notched-outline',
   LINE_RIPPLE_SELECTOR: '.mdc-line-ripple',

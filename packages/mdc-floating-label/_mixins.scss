@@ -69,7 +69,7 @@
 }
 
 @mixin mdc-floating-label-shake-animation($modifier) {
-  &.-shake {
+  .-shake {
     animation: mdc-floating-label-shake-float-above-#{$modifier} 250ms 1;
   }
 }

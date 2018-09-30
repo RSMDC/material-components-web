@@ -23,12 +23,12 @@
 @import "./mixins";
 
 @for $z-value from 0 through 24 {
-  .-z#{$z-value} {
+  .-elevation#{$z-value} {
     @include mdc-elevation($z-value);
   }
-}
 
-.mdc-elevation.transition {
-  transition: mdc-elevation-transition-value();
-  will-change: $mdc-elevation-property;
+  .-elevation#{$z-value}.-transition {
+    transition: mdc-elevation-transition-value();
+    will-change: $mdc-elevation-property;
+  }
 }

@@ -10,7 +10,7 @@
 }
 
 @mixin mdc-tab-icon-ink-color($color) {
-  .content > .icon {
+  > .icon {
     @include mdc-theme-prop(color, $color);
   }
 }

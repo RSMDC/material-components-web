@@ -71,7 +71,7 @@ $mdc-tab-with-icon-and-text-height: 72px;
     padding: 0 12px;
   }
 
-  > .content > .icon {
+  > .icon {
     @include mdc-tabs-icon-tab-content;
 
     width: 24px;
@@ -83,12 +83,12 @@ $mdc-tab-with-icon-and-text-height: 72px;
     }
   }
 
-  > .content > .icontext {
+  > .icontext {
     @include mdc-tabs-icon-tab-content;
   }
 
   // postcss-bem-linter: ignore
-  > .content > .icon + .icontext {
+  > .icon + .icontext {
     padding-top: 6px;
   }
 }

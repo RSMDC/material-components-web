@@ -157,6 +157,16 @@
   }
 }
 
+.demo-card__music-row > .media {
+  @include mdc-card-media-aspect-ratio-base_;
+
+  position: relative; // Child element `__media-content` has `position: absolute`
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .demo-card__media--music {
   width: 110px;
   border-top-left-radius: inherit;

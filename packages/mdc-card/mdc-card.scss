@@ -45,7 +45,7 @@
 // Media
 //
 
-.mdc-card > .primaryaction .media {
+.mdc-card > .primaryaction > .media, .mdc-card > .media {
   @include mdc-card-media-aspect-ratio-base_;
 
   position: relative; // Child element `__media-content` has `position: absolute`
@@ -55,25 +55,25 @@
   background-size: cover;
 }
 
-.mdc-card > .primaryaction .media:first-child {
+.mdc-card > .primaryaction > .media:first-child, .mdc-card > .media:first-child {
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
 }
 
-.mdc-card > .primaryaction .media:last-child {
+.mdc-card > .primaryaction > .media:last-child, .mdc-card > .media:last-child {
   border-bottom-left-radius: inherit;
   border-bottom-right-radius: inherit;
 }
 
-.mdc-card > .primaryaction .media.-square {
+.mdc-card > .primaryaction > .media.-square, .mdc-card > .media.-square {
   @include mdc-card-media-aspect-ratio(1, 1);
 }
 
-.mdc-card > .primaryaction .media.-size169 {
+.mdc-card > .primaryaction > .media.-size169, .mdc-card > .media.-size169 {
   @include mdc-card-media-aspect-ratio(16, 9);
 }
 
-.mdc-card > .primaryaction .media > .content {
+.mdc-card > .primaryaction > .media > .content, .mdc-card > .media > .content {
   position: absolute;
   top: 0;
   right: 0;
@@ -189,7 +189,7 @@
 // Action icons
 //
 
-.mdc-card > .actions > .icons >  .action.-icon {
+.mdc-card > .actions > .icons > .action.-icon {
   // Icon toggles are taller than buttons, so we need to adjust their margins to prevent the action row from expanding.
   margin: -6px 0;
 

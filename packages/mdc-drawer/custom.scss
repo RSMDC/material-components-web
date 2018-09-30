@@ -1,0 +1,12 @@
+@import "@rsmdc/list/mdc-list";
+@import "@rsmdc/theme/mixins";
+
+.mdc-drawer .list {
+  @extend .mdc-list;
+}
+
+@mixin custom-mdc-list-item-graphic-ink-color($color) {
+  > .item.-activated > .graphic {
+    @include mdc-theme-prop(color, $color);
+  }
+}

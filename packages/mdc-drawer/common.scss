@@ -64,7 +64,7 @@
   }
 
   // postcss-bem-linter: ignore
-  .mdc-list > .item {
+  > .content > .list > .item {
     @include mdc-typography(subtitle2);
 
     height: calc(48px - 2 * #{$mdc-drawer-list-item-spacing});
@@ -74,17 +74,17 @@
   }
 
   // postcss-bem-linter: ignore
-  .mdc-list > .item:nth-child(1) {
+  > .content > .list > .item:nth-child(1) {
     margin-top: 2px;
   }
 
   // postcss-bem-linter: ignore
-  .mdc-list > .item:nth-last-child(1) {
+  > .content > .list > .item:nth-last-child(1) {
     margin-bottom: 0;
   }
 
   // postcss-bem-linter: ignore
-  .mdc-list > .subheader {
+  > .content > .list > .subheader {
     @include mdc-typography(body2);
     @include mdc-typography-baseline-top(24px);
 
@@ -93,14 +93,14 @@
   }
 
   // postcss-bem-linter: ignore
-  .mdc-list-divider {
+  > .content > .list > .divider {
     margin: 3px 0 4px 0;
   }
 
   // Prevents list item children from being included in the click target.
   // postcss-bem-linter: ignore
-  .mdc-list > .item > .text,
-  .mdc-list > .item > .graphic {
+  > .content > .list > .item > .text,
+  > .content > .list > .item > .graphic {
     pointer-events: none;
   }
 }

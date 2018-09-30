@@ -24,6 +24,7 @@
 @import "@rsmdc/list/mixins";
 @import "@rsmdc/ripple/mixins";
 @import "./variables";
+@import "./custom";
 
 @mixin mdc-drawer-activated-overlay-color($color) {
   :not(.-noninteractive) > .item {
@@ -78,21 +79,24 @@
 @mixin mdc-drawer-item-icon-ink-color($color) {
   $value: rgba(mdc-theme-prop-value($color), $mdc-drawer-item-inactive-icon-ink-opacity);
 
-  @include mdc-list-item-graphic-ink-color($value);
+  > .content > .list {
+    @include mdc-list-item-graphic-ink-color($value);
+  }
 }
 
 @mixin mdc-drawer-item-activated-icon-ink-color($color) {
   $value: rgba(mdc-theme-prop-value($color), $mdc-drawer-item-active-icon-ink-opacity);
 
-  .mdc-list > .item.-activated {
-    @include mdc-list-item-graphic-ink-color($value);
+  > .content > .list {
+    // @include mdc-list-item-graphic-ink-color($value);
+    @include custom-mdc-list-item-graphic-ink-color($value);
   }
 }
 
 @mixin mdc-drawer-item-activated-text-ink-color($color) {
   $value: rgba(mdc-theme-prop-value($color), $mdc-drawer-item-active-text-ink-opacity);
 
-  .mdc-list > .item.-activated {
+  > .content > .list > .item.-activated {
     @include mdc-list-item-primary-text-ink-color($value);
   }
 }
@@ -100,7 +104,7 @@
 @mixin mdc-drawer-item-text-ink-color($color) {
   $value: rgba(mdc-theme-prop-value($color), $mdc-drawer-item-inactive-text-ink-opacity);
 
-  .mdc-list > .item {
+  > .content > .list > .item {
     @include mdc-list-item-primary-text-ink-color($value);
   }
 }

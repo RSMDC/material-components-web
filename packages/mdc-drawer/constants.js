@@ -37,6 +37,7 @@ const strings = {
   SCRIM_SELECTOR: '.mdc-drawer-scrim',
   CLOSE_EVENT: 'MDCDrawer:closed',
   OPEN_EVENT: 'MDCDrawer:opened',
+  CUSTOM_LIST_ROOT: 'list'
 };
 
 export {cssClasses, strings};

@@ -40,7 +40,7 @@
         <h6 class="subtitle">email@rsmdc.io</h6>
       </div>
       <div class="content">
-        <nav class="mdc-list">
+        <nav class="list">
           <a class="item -activated" href="#" tabindex="0">
             <i class="material-icons graphic" aria-hidden="true">inbox</i>
             <span class="text">
@@ -66,7 +66,7 @@
             </span>
           </a>
 
-          <hr class="mdc-list-divider">
+          <hr class="divider">
           <h6 class="subheader">Labels</h6>
           <a class="item" href="#">
             <i class="material-icons graphic" aria-hidden="true">bookmark</i>
@@ -87,7 +87,7 @@
             </span>
           </a>
 
-          <hr class="mdc-list-divider">
+          <hr class="divider">
           <a class="item" href="#">
             <i class="material-icons graphic" aria-hidden="true">settings</i>
             <span class="text">
@@ -160,11 +160,11 @@
         </div>
         <div class="extra-content-wrapper">
           <button id="toggle-wide" class="mdc-button -outlined -dense">Toggle extra-wide content</button>
-          <div id="extra-wide-content" class="mdc-elevation -z2">&nbsp;</div>
+          <div id="extra-wide-content" class="-elevation2">&nbsp;</div>
         </div>
         <div class="extra-content-wrapper">
           <button id="toggle-tall" class="mdc-button -outlined -dense">Toggle extra-tall content</button>
-          <div id="extra-tall-content" class="mdc-elevation -z2">&nbsp;</div>
+          <div id="extra-tall-content" class="-elevation2">&nbsp;</div>
         </div>
       </main>
     </div>
@@ -210,7 +210,7 @@
           drawer.open = !drawer.open;
         });
 
-        var listEl = drawerEl.querySelector('.mdc-list');
+        var listEl = drawerEl.querySelector('.list');
         var selectedDestinationEl = document.querySelector('.demo-selected-destination');
         var mainEl = document.querySelector('.demo-main');
         listEl.addEventListener('click', function(event) {

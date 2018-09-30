@@ -97,7 +97,7 @@ class MDCDrawer extends MDCComponent {
   initialize(
     focusTrapFactory = createFocusTrap,
     listFactory = (el) => new MDCList(el)) {
-    const listEl = /** @type {!Element} */ (this.root_.querySelector(`.${MDCListFoundation.cssClasses.ROOT}`));
+    const listEl = /** @type {!Element} */ (this.root_.querySelector(`.${strings.CUSTOM_LIST_ROOT}`));
     if (listEl) {
       this.list_ = listFactory(listEl);
       this.list_.wrapFocus = true;

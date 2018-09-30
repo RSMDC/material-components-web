@@ -53,18 +53,10 @@
 
         <div class="mdc-radio">
           <input class="nativecontrol" type="radio" checked name="hero">
-          <div class="background">
-            <div class="outer"></div>
-            <div class="inner"></div>
-          </div>
         </div>
 
         <div class="mdc-radio">
           <input class="nativecontrol" type="radio" checked name="hero">
-          <div class="background">
-            <div class="outer"></div>
-            <div class="inner"></div>
-          </div>
         </div>
 
       </section>
@@ -76,20 +68,12 @@
           <div class="mdc-form-field">
             <div class="mdc-radio">
               <input class="nativecontrol" type="radio" id="ex0-default-radio1" checked name="ex0-default">
-              <div class="background">
-                <div class="outer"></div>
-                <div class="inner"></div>
-              </div>
             </div>
             <label id="ex0-default-radio1-label" for="ex0-default-radio1">Default Radio 1</label>
           </div>
           <div class="mdc-form-field">
             <div class="mdc-radio">
               <input class="nativecontrol" type="radio" id="ex0-default-radio2" name="ex0-default">
-              <div class="background">
-                <div class="outer"></div>
-                <div class="inner"></div>
-              </div>
             </div>
             <label id="ex0-default-radio2-label" for="ex0-default-radio2">Default Radio 2</label>
           </div>
@@ -98,20 +82,12 @@
           <div class="mdc-form-field">
             <div class="mdc-radio demo-radio--custom">
               <input class="nativecontrol" type="radio" id="ex0-custom-radio1" checked name="ex0-custom">
-              <div class="background">
-                <div class="outer"></div>
-                <div class="inner"></div>
-              </div>
             </div>
             <label id="ex0-custom-radio1-label" for="ex0-custom-radio1">Custom Radio 1</label>
           </div>
           <div class="mdc-form-field">
             <div class="mdc-radio demo-radio--custom">
               <input class="nativecontrol" type="radio" id="ex0-custom-radio2" name="ex0-custom">
-              <div class="background">
-                <div class="outer"></div>
-                <div class="inner"></div>
-              </div>
             </div>
             <label id="ex0-custom-radio2-label" for="ex0-custom-radio2">Custom Radio 2</label>
           </div>
@@ -124,20 +100,12 @@
           <div class="mdc-form-field">
             <div class="mdc-radio" data-demo-no-js>
               <input class="nativecontrol" type="radio" id="ex1-default-radio1" checked name="ex1-default">
-              <div class="background">
-                <div class="outer"></div>
-                <div class="inner"></div>
-              </div>
             </div>
             <label id="ex1-default-radio1-label" for="ex1-default-radio1">Default Radio 1</label>
           </div>
           <div class="mdc-form-field">
             <div class="mdc-radio" data-demo-no-js>
               <input class="nativecontrol" type="radio" id="ex1-default-radio2" name="ex1-default">
-              <div class="background">
-                <div class="outer"></div>
-                <div class="inner"></div>
-              </div>
             </div>
             <label id="ex1-default-radio2-label" for="ex1-default-radio2">Default Radio 2</label>
           </div>
@@ -146,20 +114,12 @@
           <div class="mdc-form-field">
             <div class="mdc-radio demo-radio--custom" data-demo-no-js>
               <input class="nativecontrol" type="radio" id="ex1-custom-radio1" checked name="ex1-custom">
-              <div class="background">
-                <div class="outer"></div>
-                <div class="inner"></div>
-              </div>
             </div>
             <label id="ex1-custom-radio1-label" for="ex1-custom-radio1">Custom Radio 1</label>
           </div>
           <div class="mdc-form-field">
             <div class="mdc-radio demo-radio--custom" data-demo-no-js>
               <input class="nativecontrol" type="radio" id="ex1-custom-radio2" name="ex1-custom">
-              <div class="background">
-                <div class="outer"></div>
-                <div class="inner"></div>
-              </div>
             </div>
             <label id="ex1-custom-radio2-label" for="ex1-custom-radio2">Custom Radio 2</label>
           </div>
@@ -173,20 +133,12 @@
           <div class="mdc-form-field">
             <div class="mdc-radio -disabled">
               <input class="nativecontrol" type="radio" id="ex4a-radio1" checked disabled name="ex4a">
-              <div class="background">
-                <div class="outer"></div>
-                <div class="inner"></div>
-              </div>
             </div>
             <label id="ex4a-radio1-label" for="ex4a-radio1">Disabled Radio 1</label>
           </div>
           <div class="mdc-form-field">
             <div class="mdc-radio -disabled">
               <input class="nativecontrol" type="radio" id="ex4a-radio2" disabled name="ex4a">
-              <div class="background">
-                <div class="outer"></div>
-                <div class="inner"></div>
-              </div>
             </div>
             <label id="ex4a-radio2-label" for="ex4a-radio2">Disabled Radio 2</label>
           </div>
@@ -196,6 +148,22 @@
     <script src="/assets/material-components-web.js" async></script>
     <script>
       demoReady(function() {
+        [].forEach.call(document.querySelectorAll('.mdc-radio'), radio => {
+          if ( radio.getElementsByClassName('background').length > 0 ) { return }
+          const background = document.createElement('div')
+          background.classList.add('background')
+
+          const outer = document.createElement('div')
+          outer.classList.add('outer')
+
+          const inner = document.createElement('div')
+          inner.classList.add('inner')
+          
+          radio.appendChild(background)
+          background.appendChild(outer)
+          background.appendChild(inner)
+        });
+
         var formFields = document.querySelectorAll('.mdc-form-field');
         for (var i = 0, formField; formField = formFields[i]; i++) {
           var formFieldInstance = new mdc.formField.MDCFormField(formField);

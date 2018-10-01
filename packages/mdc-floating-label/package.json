@@ -1,7 +1,7 @@
 {
   "name": "@rsmdc/floating-label",
   "description": "The Material Components for the web floating-label component",
-  "version": "0.39.1",
+  "version": "0.39.1-beta.2",
   "license": "MIT",
   "keywords": [
     "material components",
@@ -21,6 +21,6 @@
     "@rsmdc/base": "^0.39.0",
     "@rsmdc/rtl": "^0.39.1",
     "@rsmdc/theme": "^0.39.1",
-    "@rsmdc/typography": "^0.39.0"
+    "@rsmdc/typography": "^0.39.0-beta.2"
   }
 }

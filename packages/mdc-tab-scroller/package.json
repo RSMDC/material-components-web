@@ -1,7 +1,7 @@
 {
   "name": "@rsmdc/tab-scroller",
   "description": "The Material Components for the web tab scroller component",
-  "version": "0.39.1",
+  "version": "0.39.1-beta.2",
   "license": "MIT",
   "keywords": [
     "material components",
@@ -17,7 +17,7 @@
   "dependencies": {
     "@rsmdc/animation": "^0.39.0",
     "@rsmdc/base": "^0.39.0",
-    "@rsmdc/tab": "^0.39.1"
+    "@rsmdc/tab": "^0.39.1-beta.2"
   },
   "publishConfig": {
     "access": "public"

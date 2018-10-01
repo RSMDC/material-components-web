@@ -1,6 +1,6 @@
 {
   "name": "@rsmdc/grid-list",
-  "version": "0.39.1",
+  "version": "0.39.1-beta.2",
   "description": "The Material Components for the web grid list component",
   "license": "MIT",
   "repository": {
@@ -16,7 +16,7 @@
     "@rsmdc/base": "^0.39.0",
     "@rsmdc/rtl": "^0.39.1",
     "@rsmdc/theme": "^0.39.1",
-    "@rsmdc/typography": "^0.39.0"
+    "@rsmdc/typography": "^0.39.0-beta.2"
   },
   "publishConfig": {
     "access": "public"

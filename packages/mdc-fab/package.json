@@ -1,7 +1,7 @@
 {
   "name": "@rsmdc/fab",
   "description": "The Material Components for the web floating action button component",
-  "version": "0.39.1",
+  "version": "0.39.1-beta.2",
   "license": "MIT",
   "keywords": [
     "material components",
@@ -15,10 +15,10 @@
   },
   "dependencies": {
     "@rsmdc/animation": "^0.39.0",
-    "@rsmdc/elevation": "^0.39.1",
-    "@rsmdc/ripple": "^0.39.1",
+    "@rsmdc/elevation": "^0.39.1-beta.2",
+    "@rsmdc/ripple": "^0.39.1-beta.2",
     "@rsmdc/rtl": "^0.39.1",
     "@rsmdc/theme": "^0.39.1",
-    "@rsmdc/typography": "^0.39.0"
+    "@rsmdc/typography": "^0.39.0-beta.2"
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "@rsmdc/select",
   "description": "The Material Components web select (text field drop-down) component",
-  "version": "0.39.1",
+  "version": "0.39.1-beta.2",
   "license": "MIT",
   "keywords": [
     "material components",
@@ -17,12 +17,12 @@
   "dependencies": {
     "@rsmdc/animation": "^0.39.0",
     "@rsmdc/base": "^0.39.0",
-    "@rsmdc/floating-label": "^0.39.1",
-    "@rsmdc/line-ripple": "^0.39.1",
-    "@rsmdc/notched-outline": "^0.39.1",
-    "@rsmdc/ripple": "^0.39.1",
+    "@rsmdc/floating-label": "^0.39.1-beta.2",
+    "@rsmdc/line-ripple": "^0.39.1-beta.2",
+    "@rsmdc/notched-outline": "^0.39.1-beta.2",
+    "@rsmdc/ripple": "^0.39.1-beta.2",
     "@rsmdc/rtl": "^0.39.1",
     "@rsmdc/theme": "^0.39.1",
-    "@rsmdc/typography": "^0.39.0"
+    "@rsmdc/typography": "^0.39.0-beta.2"
   }
 }
